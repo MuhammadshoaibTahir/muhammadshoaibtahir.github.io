@@ -1,0 +1,159 @@
+/* === Reset and Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right top, #e6f0ff, #f9fcff);
+  color: #2c3e50;
+  line-height: 1.7;
+}
+
+/* === Container === */
+.container {
+  max-width: 950px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffffd9;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid #e0e0e0;
+}
+
+/* === Header === */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #546e7a;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.contact p {
+  font-size: 14px;
+  color: #37474f;
+  margin: 4px 0;
+}
+
+.contact a {
+  color: #0d47a1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+/* === Section Titles === */
+section {
+  margin-bottom: 40px;
+  padding: 25px;
+  background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+section:hover {
+  transform: translateY(-4px);
+}
+
+section h2 {
+  font-size: 22px;
+  color: #0d47a1;
+  margin-bottom: 15px;
+  border-left: 5px solid #7e57c2;
+  padding-left: 12px;
+}
+
+/* === List and Items === */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+ul li::marker {
+  color: #7e57c2;
+}
+
+/* === Skills Badges === */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin-top: 10px;
+  list-style: none;
+}
+
+.skills-list li {
+  background: linear-gradient(to right, #7b1fa2, #512da8);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.skills-list li:hover {
+  background: linear-gradient(to right, #512da8, #7b1fa2);
+  transform: scale(1.05);
+}
+
+/* === Links === */
+a {
+  color: #1e88e5;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+    margin: 20px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-list li {
+    width: fit-content;
+  }
+}

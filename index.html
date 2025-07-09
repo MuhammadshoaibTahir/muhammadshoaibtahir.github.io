@@ -4,8 +4,268 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhammad Shoaib Tahir - CV</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- CSS Reset & Styling -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f4f9ff, #eef7ff);
+      color: #2c3e50;
+      line-height: 1.7;
+      overflow-x: hidden;
+      overflow-y: auto;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* 🌙 DARK MODE */
+    body.dark {
+      background: #121212;
+      color: #f5f5f5;
+    }
+
+    body.dark, 
+    body.dark p,
+    body.dark li,
+    body.dark h1,
+    body.dark h2,
+    body.dark h3,
+    body.dark a {
+      color: #f5f5f5 !important;
+    }
+
+    body.dark .container {
+      background-color: #1e1e1e;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      border: 1px solid #333;
+    }
+
+    body.dark .subtitle {
+      color: #ccc;
+    }
+
+    body.dark .contact p,
+    body.dark .contact a {
+      color: #bbb;
+    }
+
+    body.dark section {
+      background: linear-gradient(to right, #2c2c2c, #1f1f1f);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
+    }
+
+    body.dark section h2 {
+      color: #f0f0f0;
+      border-left: 5px solid #00c6ff;
+    }
+
+    body.dark .animated-name {
+      background: linear-gradient(270deg, #ffffff, #80cbc4, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowingText 6s ease infinite;
+    }
+
+    /* 🔘 Toggle Button */
+    #darkModeToggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 14px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s ease;
+      z-index: 9999;
+    }
+
+    #darkModeToggle:hover {
+      background: #555;
+    }
+
+    /* 🧩 Layout */
+    .container {
+      max-width: 950px;
+      margin: 50px auto;
+      padding: 40px 30px;
+      background: #ffffffd9;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(4px);
+      border: 1px solid #e0e0e0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .animated-name {
+      font-size: 38px;
+      font-weight: bold;
+      text-align: center;
+      background: linear-gradient(270deg, #00c6ff, #ff00c8, #00ffe7);
+      background-size: 600% 600%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowingText 6s ease infinite;
+    }
+
+    @keyframes glowingText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #546e7a;
+      margin: 10px 0;
+    }
+
+    .contact p {
+      font-size: 14px;
+      color: #37474f;
+      margin: 4px 0;
+    }
+
+    .contact a {
+      color: #0d47a1;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: #1565c0;
+      text-decoration: underline;
+    }
+
+    section {
+      position: relative;
+      margin-bottom: 40px;
+      padding: 25px;
+      background: linear-gradient(to right, #e3f2fd, #ede7f6);
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+      z-index: 1;
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 2px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #7e57c2, #00c6ff);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+    }
+
+    section h2 {
+      font-size: 22px;
+      color: #0d47a1;
+      margin-bottom: 15px;
+      border-left: 5px solid #7e57c2;
+      padding-left: 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    ul li::marker {
+      color: #7e57c2;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 0;
+      margin-top: 10px;
+      list-style: none;
+    }
+
+    .skills-list li {
+      background: linear-gradient(to right, #7b1fa2, #512da8);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .skills-list li:hover {
+      background: linear-gradient(to right, #512da8, #7b1fa2);
+      transform: scale(1.05);
+    }
+
+    a {
+      color: #1e88e5;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    a:hover {
+      color: #0d47a1;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+        margin: 20px;
+      }
+
+      header h1,
+      .animated-name {
+        font-size: 28px;
+      }
+
+      .skills-list {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .skills-list li {
+        width: fit-content;
+      }
+
+      section h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -14,7 +274,7 @@
 
   <div class="container">
     <header data-aos="fade-down">
-      <h1 class="typewriter">Muhammad Shoaib Tahir</h1>
+      <h1 class="animated-name">Muhammad Shoaib Tahir</h1>
       <p class="subtitle">Computational Linguist | NLP Researcher</p>
       <div class="contact">
         <p>📍 Sheikh Colony, Jhang Road, Faisalabad</p>
@@ -31,262 +291,24 @@
     <section data-aos="fade-up">
       <h2>🎓 Education</h2>
       <ul>
-        <li>
-          <strong>Government College University, Faisalabad</strong> (2020–2022)<br />
-          MPhil in Applied Linguistics – GPA: 3.33/4.00<br />
-          Specialization: Applied Linguistics<br />
-          Thesis: <em>Development of Punjabi Synset Using Expansion Approach from English WordNet</em>
-        </li><br/>
-        <li>
-          <strong>University of Education, Lahore</strong> (2016–2020)<br />
-          BS in English – GPA: 3.16/4.00<br />
-          Specialization: English Linguistics
-        </li>
+        <li><strong>GCU Faisalabad:</strong> MPhil in Applied Linguistics (2020–2022)</li>
+        <li><strong>UE Lahore:</strong> BS English Linguistics (2016–2020)</li>
       </ul>
     </section>
 
     <section data-aos="fade-up">
-      <h2>🔬 Research Experience</h2>
-      <p>
-        <strong>Research Assistant</strong> – Government College University Faisalabad (Oct 2022 – Oct 2024)
-      </p>
-      <p>
-        I worked as a Research Assistant at Government College University Faisalabad for 2 years.
-        As a Research Assistant, I developed various linguistic tools for my mother tongue (Punjabi), such as:
-      </p>
-      <ul>
-        <li>Rule-Based Stemmer</li>
-        <li>Morphological Analyzer</li>
-        <li>Multidimensional Analysis Tagger</li>
-        <li>Punjabi WordNet</li>
-        <li>POS Tagger</li>
-        <li>Corpus Generator</li>
-      </ul>
-    </section>
-
-    <section data-aos="fade-up">
-      <h2>💡 Research Interests</h2>
-      <ul>
-        <li>Computational Linguistics</li>
-        <li>Corpus Linguistics</li>
-        <li>Low Resourced Languages</li>
-        <li>Multilingual NLP</li>
-        <li>Sentiment Analysis</li>
-        <li>Natural Language Processing</li>
-      </ul>
-    </section>
-
-    <section data-aos="fade-up">
-      <h2>💼 Employment</h2>
-      <ul>
-        <li><strong>National Resource Person</strong> – Pakistan Corpus Studio (Nov 2024 – Present)</li>
-        <li><strong>Assistant Manager HR</strong> – Linguistic Association of Pakistan (Mar 2024 – Present)</li>
-        <li><strong>Visiting Lecturer</strong> – Government College University Faisalabad (Oct 2024 – Jul 2025)<br>Courses: CALL, Functional English, English Comprehension</li>
-        <li><strong>Visiting Lecturer</strong> – University of Education Lahore, Faisalabad Campus (Sep 2024 – Feb 2025)<br>Courses: English Linguistics and Literature</li>
-        <li><strong>Instructor Corpus Linguistics</strong> – University of Agriculture, Faisalabad (Jan – Apr 2025)<br>Course: Corpus Linguistics</li>
-      </ul>
-    </section>
-
-    <section data-aos="fade-up">
-      <h2>📇 Professional Memberships</h2>
-      <ul>
-        <li>Linguistic Association of Pakistan (LAP) – Dec 2023 – Present</li>
-        <li>Linguistic Society of America (LSA) – Dec 2024 – Present</li>
-      </ul>
-    </section>
-    
-    <section data-aos="fade-up">
-      <h2>🛠️ Skills</h2>
+      <h2>🛠 Skills</h2>
       <ul class="skills-list">
-        <li>Python programming</li>
-        <li>Web App development</li>
-        <li>Linguistic tools development</li>
-        <li>Data Annotation</li>
-        <li>Database Development</li>
-        <li>Web Scraping</li>
+        <li>Python</li>
+        <li>Web Development</li>
+        <li>Corpus Linguistics</li>
+        <li>NLP</li>
         <li>Teaching</li>
-        <li>Research & Development</li>
-      </ul>
-    </section>
-
-    <section data-aos="fade-up">
-      <h2>💻 Programming Skills</h2>
-      <ul>
-        <li>Python (Advanced)</li>
-        <li>HTML/CSS (Intermediate)</li>
-        <li>Google Apps Script (Intermediate)</li>
-        <li>GitHub Pages deployment</li>
-        <li>MySQL (Basics)</li>
-      </ul>
-    </section>
-
-  <section data-aos="fade-up">
-    <h2>🔬 Research Experience</h2>
-    <p>
-      <strong>Research Assistant</strong> – Government College University Faisalabad (Oct 2022 – Oct 2024)
-    </p>
-    <p>
-      I worked as a Research Assistant at GCU Faisalabad for 2 years. As a Research Assistant, I developed various linguistic tools for my mother tongue (Punjabi), such as:
-    </p>
-    <ul>
-      <li>Rule-Based Stemmer</li>
-      <li>Morphological Analyzer</li>
-      <li>Multidimensional Analysis Tagger</li>
-      <li>Punjabi WordNet</li>
-      <li>POS Tagger</li>
-      <li>Corpus Generator</li>
-    </ul>
-  </section>
-
-    <section data-aos="fade-up">
-      <h2>📚 Research Publications</h2>
-        <ul>
-          <li>
-            <strong>A Computational Approach to Understanding Agglutinative Structures in Urdu</strong> (2024) –
-            <a href="https://journals.au.edu.pk/ojscrc/index.php/crc/article/view/309/180" target="_blank">Read Paper</a>
-          </li>
-          <li>
-            <strong>Developing Digital Resources of Shahmukhi Punjabi</strong> (2024) –
-            <a href="https://www.russianlawjournal.org/index.php/journal/article/view/3858" target="_blank">Read Paper</a>
-          </li>
-          <li>
-            <strong>Mapping of English and Punjabi Verb Classes; A Corpus Based Study</strong> (2024) –
-            <a href="https://jals.miard.org/index.php/jals/article/view/116" target="_blank">Read Paper</a>
-          </li>
-          <li>
-            <strong>Adaptation and Development of Universal Dependencies for Punjabi (Shahmukhi): Challenges and Linguistic Insights</strong> (2024) –
-            <a href="https://prjss.com/index.php/prjss/article/view/157/157" target="_blank">Read Paper</a>
-          </li>
-          <li>
-            <strong>Morphological Description Of Nouns In Shahmukhi Punjabi; A Corpus Based Study</strong> (2023) –
-            <a href="https://journalppw.com/index.php/jpsp/article/view/17217" target="_blank">Read Paper</a>
-          </li>
-          <li>
-            <strong>Latest Computational Methods of Data Wrangling in Applied Linguistics</strong> (2024) –
-            <a href="https://jprpk.com/index.php/jpr/article/download/603/834/1679" target="_blank">Read Paper</a>
-          </li>
-        </ul>
-      </section>
-
-    <section data-aos="fade-up">
-      <h2>📚 Courses</h2>
-      <ul>
-        <li>
-          <strong>Complete Python Mastery</strong> – March 2023<br>
-          <em>From <a href="https://codewithmosh.com/" target="_blank">Codewithmosh.com</a></em>
-        </li>
-        <li>
-          <strong>Corpus Linguistics: Methods, Analysis, Interpretation</strong> – Oct 2022<br>
-          <em>From Lancaster University, U.K</em>
-        </li>
-        <li>
-          <strong>English Works!</strong> – Oct 2019<br>
-          <em>By collaboration of University of Education and U.S Consulate General, Lahore</em>
-        </li>
-      </ul>
-    </section>
-
-
-<section data-aos="fade-up">
-  <h2>🎓 Certifications & Conferences</h2>
-  <ul>
-    <li>
-      <strong>A Two-Day International Conference – "Weaving Unity in Diversity: Many Threads, One Tapestry"</strong><br>
-      <em>May 7–8, 2025</em> — Participated in the Pre-Conference Workshop at Air University, Islamabad
-    </li>
-    <li>
-      <strong>10th International Conference of Linguistic Association of Pakistan</strong><br>
-      <em>Oct 2024</em> — Held at University of Balochistan, Quetta
-    </li>
-    <li>
-      <strong>Using Corpus to Find Useful Phrases for Novice Writers in Health Sciences</strong><br>
-      <em>Aug 2024</em> — Conducted by Bahria University, Islamabad
-    </li>
-    <li>
-      <strong>Exploring Corpus Linguistics: An Introduction to Tools, Techniques, and Analysis</strong><br>
-      <em>May 2024</em> — Organized by Linguistic Association of Pakistan
-    </li>
-    <li>
-      <strong>Webinar Series on Corpus Linguistics</strong><br>
-      <em>March 2024</em> — Hosted by University of Sialkot
-    </li>
-    <li>
-      <strong>9th International Conference of the Linguistic Association of Pakistan</strong><br>
-      <em>Dec 2023</em> — Held at Government College University Faisalabad
-    </li>
-    <li>
-      <strong>Developing and Teaching Academic Writing Courses (MOOC)</strong><br>
-      <em>Dec 2023</em> — By OPEN MOOCs – U.S Department of State
-    </li>
-    <li>
-      <strong>Scope and Direction of Linguistics</strong><br>
-      <em>April 2018</em> — By University of Education Lahore, Faisalabad Campus
-    </li>
-  </ul>
-</section>
-
-
-      <section data-aos="fade-up">
-        <h2>🧠 Training & Workshops</h2>
-        <ul>
-          <li><strong>Computational Linguistics</strong> – Nov 14, 2024  
-            <br>Workshop conducted at The University of Faisalabad.
-          </li>
-          <li><strong>Corpus Linguistics Essentials: From Theory to Practical Applications</strong> – Nov 25, 2024  
-            <br>Conducted as a National Resource Person at Pakistan Corpus Studio.
-          </li>
-          <li><strong>Computational Linguistics</strong> – Dec 15, 2024  
-            <br>Workshop conducted at The University of Faisalabad.
-          </li>
-          <li><strong>Introduction to Python, Corpus and Computational Linguistics</strong> – Jan 8, 2025  
-            <br>Workshop conducted at The University of Faisalabad.
-          </li>
-          <li><strong>Basics of Corpus and Computational Linguistics</strong> – Jan 15, 2025  
-            <br>Webinar for MPhil Applied Linguistics students, UMT Sialkot.
-          </li>
-          <li><strong>Three-Day Training Workshop on Corpus Linguistics Tools</strong> – Apr 15–17, 2025  
-            <br>Trainer/Resource Person at University of Agriculture, Faisalabad.
-          </li>
-          <li><strong>Decoding Translation Using Corpora: Frameworks, Tools, and Empirical Studies</strong> – May 13, 2025  
-            <br>Invited Speaker at Department of Linguistics & Communications, UMT Lahore.
-          </li>
-        </ul>
-      </section>
-
-    <section data-aos="fade-up">
-      <h2>📞 References</h2>
-      <ul>
-        <li>
-          <strong>Prof. Dr. Muhammad Asim Mahmood</strong><br />
-          Dean, Faculty of Arts and Social Sciences<br />
-          Head, Department of Applied Linguistics<br />
-          Government College University, Faisalabad<br />
-          📞 +92 300-7644579<br />
-          ✉️ <a href="mailto:masimmahmood@gcuf.edu.pk">masimmahmood@gcuf.edu.pk</a>
-        </li><br />
-        <li>
-          <strong>Dr. Hafiz Muhammad Qasim</strong><br />
-          Assistant Professor, GCU Faisalabad<br />
-          📞 +92 301-7475864<br />
-          ✉️ <a href="mailto:muhammadqasim@gcuf.edu.pk">muhammadqasim@gcuf.edu.pk</a>
-        </li><br />
-        <li>
-          <strong>Dr. Samina Ali Asghar</strong><br />
-          Assistant Professor, University of Education, Lahore (Faisalabad Campus)<br />
-          📞 +92 332-0638527<br />
-          ✉️ <a href="mailto:samina.asghar@ue.edu.pk">samina.asghar@ue.edu.pk</a>
-        </li><br />
-        <li>
-          <strong>Dr. Sumrah Arshad</strong><br />
-          Postdoctoral Researcher, University of Goettingen / Goethe University Frankfurt<br />
-          📞 +49 1521-0877522<br />
-          ✉️ <a href="mailto:sumraharshad@yahoo.com">sumraharshad@yahoo.com</a>
-        </li>
       </ul>
     </section>
   </div>
 
-  <!-- AOS Animation JS -->
+  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -295,18 +317,19 @@
     });
   </script>
 
-  <!-- ✅ Dark Mode Toggle Script -->
+  <!-- Dark Mode Script -->
   <script>
-    const toggle = document.getElementById('darkModeToggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-    });
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('darkModeToggle');
 
-    window.addEventListener('DOMContentLoaded', () => {
       if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark');
       }
+
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      });
     });
   </script>
 </body>

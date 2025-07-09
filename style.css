@@ -52,8 +52,9 @@ body.dark section h2 {
 body.dark .animated-name {
   background: linear-gradient(270deg, #ffffff, #80cbc4, #ffffff);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: glowingText 6s ease infinite;
+  animation: glowingText 8s ease-in-out infinite;
 }
 
 /* === Dark Mode Toggle Button === */
@@ -101,13 +102,14 @@ header {
   background: linear-gradient(270deg, #00c6ff, #ff00c8, #00ffe7);
   background-size: 600% 600%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glowingText 8s ease-in-out infinite;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
 
-/* Animation Keyframes */
+/* === Animation Keyframes === */
 @keyframes glowingText {
   0% {
     background-position: 0% 50%;
@@ -118,14 +120,6 @@ header {
   100% {
     background-position: 0% 50%;
   }
-}
-
-/* 🌙 Dark mode fix */
-body.dark .animated-name {
-  background: linear-gradient(270deg, #ffffff, #80cbc4, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowingText 8s ease-in-out infinite;
 }
 
 /* === Subtitle === */

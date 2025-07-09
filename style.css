@@ -67,12 +67,28 @@ header h1 {
 
 /* === Section Styling === */
 section {
+  position: relative;
   margin-bottom: 40px;
   padding: 25px;
   background: linear-gradient(to right, #e3f2fd, #ede7f6);
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s;
+  z-index: 1;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* Slightly thick border */
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7e57c2, #00c6ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
 }
 
 section:hover {

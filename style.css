@@ -5,6 +5,19 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f4f9ff, #eef7ff);
+  color: #2c3e50;
+  line-height: 1.7;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 /* === Dark Mode === */
 body.dark {
   background: #121212;
@@ -15,12 +28,6 @@ body.dark .container {
   background-color: #1e1e1e;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
   border: 1px solid #333;
-}
-
-body.dark header h1,
-body.dark h1.typewriter {
-  color: #ffffff;
-  border-right: 2px solid #ffffff; /* for typewriter effect */
 }
 
 body.dark .subtitle {
@@ -42,7 +49,14 @@ body.dark section h2 {
   border-left: 5px solid #00c6ff;
 }
 
-/* Optional: dark mode button style */
+body.dark .animated-name {
+  background: linear-gradient(270deg, #ffffff, #80cbc4, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowingText 6s ease infinite;
+}
+
+/* === Dark Mode Toggle Button === */
 #darkModeToggle {
   position: absolute;
   top: 20px;
@@ -59,19 +73,6 @@ body.dark section h2 {
 
 #darkModeToggle:hover {
   background: #555;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f4f9ff, #eef7ff);
-  color: #2c3e50;
-  line-height: 1.7;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 /* === Container === */
@@ -92,18 +93,39 @@ header {
   margin-bottom: 40px;
 }
 
-header h1 {
+/* === Glowing Animated Name === */
+.animated-name {
   font-size: 38px;
   font-weight: bold;
-  color: #1a237e;
+  text-align: center;
+  background: linear-gradient(270deg, #00c6ff, #ff00c8, #00ffe7);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowingText 6s ease infinite;
 }
 
+/* Glowing Text Animation */
+@keyframes glowingText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* === Subtitle === */
 .subtitle {
   font-size: 18px;
   color: #546e7a;
   margin: 10px 0;
 }
 
+/* === Contact === */
 .contact p {
   font-size: 14px;
   color: #37474f;
@@ -137,7 +159,7 @@ section::before {
   content: '';
   position: absolute;
   inset: 0;
-  padding: 2px; /* Slightly thick border */
+  padding: 2px;
   border-radius: 12px;
   background: linear-gradient(135deg, #7e57c2, #00c6ff);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -147,7 +169,6 @@ section::before {
   pointer-events: none;
   z-index: -1;
 }
-
 
 section:hover {
   transform: translateY(-4px);
@@ -161,7 +182,7 @@ section h2 {
   padding-left: 12px;
 }
 
-/* === List Styling === */
+/* === Lists === */
 ul {
   padding-left: 20px;
 }
@@ -237,7 +258,8 @@ a:hover {
     margin: 20px;
   }
 
-  header h1 {
+  header h1,
+  .animated-name {
     font-size: 28px;
   }
 

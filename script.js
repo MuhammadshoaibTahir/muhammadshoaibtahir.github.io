@@ -1,7 +1,11 @@
+// Select the toggle button
 const toggle = document.getElementById('darkModeToggle');
+
+// Toggle event
 toggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
 
+  // Save theme preference
   if (document.body.classList.contains('dark')) {
     localStorage.setItem('theme', 'dark');
   } else {
@@ -9,8 +13,10 @@ toggle.addEventListener('click', () => {
   }
 });
 
+// On page load, apply saved theme
 window.addEventListener('DOMContentLoaded', () => {
-  if (localStorage.getItem('theme') === 'dark') {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
     document.body.classList.add('dark');
   }
 });

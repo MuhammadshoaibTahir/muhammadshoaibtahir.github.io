@@ -101,25 +101,22 @@ header {
   text-align: center;
   background: linear-gradient(270deg, #00c6ff, #ff00c8, #00ffe7);
   background-size: 600% 600%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowingText 8s ease-in-out infinite;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+
+  /* Cross-browser compatibility for background-clip: text */
+  -webkit-background-clip: text;   /* Chrome, Safari */
+  -moz-background-clip: text;      /* Firefox (partial support) */
+  background-clip: text;           /* Standard */
+
+  -webkit-text-fill-color: transparent; /* Chrome, Safari */
+  -moz-text-fill-color: transparent;    /* Firefox (partial) */
+
+  animation: glowingText 6s ease infinite;
 }
 
-/* === Animation Keyframes === */
 @keyframes glowingText {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* === Subtitle === */

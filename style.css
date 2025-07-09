@@ -86,10 +86,12 @@ section::before {
   background: linear-gradient(135deg, #7e57c2, #00c6ff);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   pointer-events: none;
   z-index: -1;
 }
+
 
 section:hover {
   transform: translateY(-4px);

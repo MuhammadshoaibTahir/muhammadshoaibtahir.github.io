@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
               img.src = imgPath;
               img.alt = `Gallery Image ${index}`;
               img.className = "carousel-img";
+              img.loading = "lazy";
               track.appendChild(img);
 
               loaded++;

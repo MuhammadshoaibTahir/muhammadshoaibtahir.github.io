@@ -1,14 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 🔘 DARK MODE TOGGLE
   const toggle = document.getElementById('darkModeToggle');
-  if (toggle) {
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark');
-    }
 
+  const applyTheme = (theme) => {
+    if (theme === 'dark') {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  };
+
+  // Set initial theme
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
+
+  if (toggle) {
     toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      const currentTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
     });
   }
 
@@ -34,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
               const img = document.createElement('img');
               img.src = imgPath;
               img.alt = `Gallery Image ${index}`;
-              img.className = "carousel-img"; // use CSS for styling
+              img.className = "carousel-img";
               track.appendChild(img);
 
               loaded++;
@@ -45,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
           };
 
           testImg.onerror = () => {
-            // silently fail if image not found
+            // Uncomment below to debug missing images
+            // console.warn(`Image not found: ${imgPath}`);
           };
 
           testImg.src = imgPath;

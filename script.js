@@ -1,16 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log("🔄 DOM fully loaded.");
+
   // 🔘 DARK MODE TOGGLE
   const toggle = document.getElementById('darkModeToggle');
 
   const applyTheme = (theme) => {
     if (theme === 'dark') {
       document.body.classList.add('dark');
+      console.log("🌙 Dark mode applied.");
     } else {
       document.body.classList.remove('dark');
+      console.log("☀️ Light mode applied.");
     }
   };
 
-  // Set initial theme
+  // Set initial theme from localStorage
   const savedTheme = localStorage.getItem('theme') || 'light';
   applyTheme(savedTheme);
 
@@ -20,7 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       applyTheme(newTheme);
       localStorage.setItem('theme', newTheme);
+      console.log(`📝 Theme changed to: ${newTheme}`);
     });
+  } else {
+    console.warn("⚠️ No darkModeToggle button found in DOM.");
   }
 
   // 🎥 AUTO CAROUSEL LOADING
@@ -56,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
           };
 
           testImg.onerror = () => {
-            // Uncomment below to debug missing images
-            // console.warn(`Image not found: ${imgPath}`);
+            // Optionally log missing images
+            // console.warn(`❌ Image not found: ${imgPath}`);
           };
 
           testImg.src = imgPath;
@@ -87,5 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       animateScroll();
     }
+  } else {
+    console.warn("⚠️ No carouselTrack found in DOM.");
   }
 });

@@ -8,6 +8,11 @@
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+  <section data-aos="fade-up" id="gallery">
+  <h2>🎥 Conferences / Workshops / Webinars Gallery</h2>
+  <button onclick="document.getElementById('galleryModal').style.display='block'" class="download-btn">View Gallery</button>
+</section>
+
   <!-- CSS Reset & Styling -->
   <style>
     * {
@@ -547,6 +552,25 @@
       </ul>
     </section>
   </div>
+
+
+<!-- Gallery Modal -->
+<div id="galleryModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000000cc; z-index:9999; overflow:auto;">
+  <div style="background:white; margin:50px auto; padding:30px; border-radius:8px; max-width:95%; box-shadow:0 0 20px rgba(0,0,0,0.3); position:relative;">
+    <span onclick="document.getElementById('galleryModal').style.display='none'" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer;">&times;</span>
+    <h2 style="text-align:center; margin-bottom:20px;">📸 Gallery: Conferences, Workshops & Webinars</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+
+      <!-- Replace these with your actual image/video paths -->
+      <img src="gallery/conference1.jpg" alt="Conference 1" style="max-width:300px; border-radius:10px;">
+      <img src="gallery/workshop1.jpg" alt="Workshop 1" style="max-width:300px; border-radius:10px;">
+      <video src="gallery/webinar1.mp4" controls style="max-width:300px; border-radius:10px;"></video>
+      <img src="gallery/conference2.jpg" alt="Conference 2" style="max-width:300px; border-radius:10px;">
+      <video src="gallery/workshop2.mp4" controls style="max-width:300px; border-radius:10px;"></video>
+
+    </div>
+  </div>
+</div>
 
   <!-- AOS Animation JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

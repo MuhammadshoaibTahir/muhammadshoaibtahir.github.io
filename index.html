@@ -232,11 +232,18 @@
         localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
       });
 
-      // 🎞 Populate carousel with 24 images
-      const imagesHTML = Array.from({length: 24}, (_, i) => {
-        return `<img src="gallery/${i + 1}.jpg" alt="Gallery Image ${i + 1}" />`;
-      }).join('');
-      document.getElementById('carouselTrack').innerHTML = imagesHTML;
+          // 🎞 Populate carousel with 24 images
+    const imageExtensions = [
+      'jpg', 'jpg', 'jpg', 'jpg', // 1–4
+      'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',
+      'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',
+      'jpeg','jpeg','jpeg','jpeg','jpeg' // 5–24
+    ];
+
+    const imagesHTML = imageExtensions.map((ext, i) => {
+      return `<img src="gallery/${i + 1}.${ext}" alt="Gallery Image ${i + 1}" />`;
+    }).join('');
+    document.getElementById('carouselTrack').innerHTML = imagesHTML;
     });
   </script>
 </body>
@@ -799,21 +806,5 @@
   AOS.init({
     duration: 800,
     once: true
-  });
-</script>
-
-<!-- Dark Mode Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('darkModeToggle');
-
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark');
-    }
-
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-    });
   });
 </script>

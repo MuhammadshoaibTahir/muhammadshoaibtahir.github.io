@@ -235,33 +235,40 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const imageCount = 24;
-  const imageExt = 'webp';  // Change based on your compressed images
-  const track = document.getElementById('carouselTrack');
+  const extensions = [
+    'jpg', 'jpg', 'jpg', 'jpg',             // 1–4
+    'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',  // 5–12
+    'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',  // 13–20
+    'jpeg','jpeg','jpeg','jpeg'             // 21–24
+  ];
 
-  // Preload all images and build HTML
+  const track = document.getElementById('carouselTrack');
   let imagesHTML = '';
+
   for (let i = 1; i <= imageCount; i++) {
-    const src = `gallery/${i}.${imageExt}`;
-    
-    // Preload via JS
+    const ext = extensions[i - 1];
+    const src = `gallery/${i}.${ext}`;
+
+    // Preload the image
     const preImg = new Image();
     preImg.src = src;
 
-    // Build the gallery image tag (initially hidden)
-    imagesHTML += `<img src="${src}" alt="Image ${i}" style="display: none;" loading="eager" />`;
+    // Create image HTML with eager loading, initially hidden
+    imagesHTML += `<img src="${src}" alt="Image ${i}" loading="eager" style="display: none;" />`;
   }
 
+  // Set the inner HTML of the track
   track.innerHTML = imagesHTML;
 
-  // Show images when modal opens
+  // Show all images when modal opens
   document.querySelector('.download-btn').addEventListener('click', () => {
-    track.querySelectorAll('img').forEach(img => {
+    document.querySelectorAll('#carouselTrack img').forEach(img => {
       img.style.display = 'block';
     });
     document.getElementById('galleryModal').style.display = 'block';
   });
 
-  // Hide modal on close
+  // Hide the modal when ✖ is clicked
   document.querySelector('#galleryModal span').addEventListener('click', () => {
     document.getElementById('galleryModal').style.display = 'none';
   });

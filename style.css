@@ -79,9 +79,14 @@ body.dark .animated-name {
 
 /* === Container === */
 .container {
-  max-width: 950px;
-  margin: 50px auto;
-  padding: 0 30px; /* ✅ Internal space inside container (left/right) */
+  max-width: 850px;        /* 👈 make it slightly narrower */
+  margin: 60px auto;       /* 👈 more space vertically and horizontally */
+  padding: 30px 25px;      /* 👈 inner padding */
+  background: #ffffffd9;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid #e0e0e0;
 }
 
 /* === Header === */

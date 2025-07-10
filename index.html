@@ -237,9 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const imageCount = 24;
   const extensions = [
     'jpg', 'jpg', 'jpg', 'jpg',             // 1–4
-    'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',  // 5–12
-    'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',  // 13–20
-    'jpeg','jpeg','jpeg','jpeg'             // 21–24
+    'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',
+    'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',
+    'jpeg','jpeg','jpeg','jpeg'             // 5–24
   ];
 
   const track = document.getElementById('carouselTrack');
@@ -249,26 +249,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const ext = extensions[i - 1];
     const src = `gallery/${i}.${ext}`;
 
-    // Preload the image
-    const preImg = new Image();
-    preImg.src = src;
+    // Preload via JavaScript
+    const img = new Image();
+    img.src = src;
 
-    // Create image HTML with eager loading, initially hidden
-    imagesHTML += `<img src="${src}" alt="Image ${i}" loading="eager" style="display: none;" />`;
+    // Add directly to carousel (no delay or hiding)
+    imagesHTML += `<img src="${src}" alt="Image ${i}" style="max-height: 400px; border-radius: 12px;" />`;
   }
 
-  // Set the inner HTML of the track
+  // Inject into DOM early
   track.innerHTML = imagesHTML;
 
-  // Show all images when modal opens
+  // Show modal
   document.querySelector('.download-btn').addEventListener('click', () => {
-    document.querySelectorAll('#carouselTrack img').forEach(img => {
-      img.style.display = 'block';
-    });
     document.getElementById('galleryModal').style.display = 'block';
   });
 
-  // Hide the modal when ✖ is clicked
+  // Hide modal
   document.querySelector('#galleryModal span').addEventListener('click', () => {
     document.getElementById('galleryModal').style.display = 'none';
   });

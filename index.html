@@ -201,38 +201,25 @@
     <!-- You can include your other sections like Education, Research, etc. here -->
   </div>
 
-  <!-- 🔘 Gallery Modal -->
-  <div id="galleryModal">
-    <span onclick="document.getElementById('galleryModal').style.display='none'"
-          style="position:absolute; top:20px; right:30px; font-size:30px; color:white; cursor:pointer;">&times;</span>
-    <div class="carousel-container">
-      <div class="carousel-track" id="carouselTrack"></div>
-    </div>
+<!-- 🔘 Gallery Modal -->
+<div id="galleryModal">
+  <span onclick="document.getElementById('galleryModal').style.display='none'"
+        style="position:absolute; top:20px; right:30px; font-size:30px; color:white; cursor:pointer;">&times;</span>
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack"></div>
   </div>
+</div>
 
-  <!-- AOS Animation JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true });
-  </script>
+<!-- AOS Animation JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
 
-  <!-- Dark Mode + Gallery Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('darkModeToggle');
-
-      // Apply saved theme
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark');
-      }
-
-      // Toggle theme
-      toggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-      });
-
-          // 🎞 Populate carousel with 24 images
+<!-- Gallery Carousel Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 🎞 Populate carousel with 24 images
     const imageExtensions = [
       'jpg', 'jpg', 'jpg', 'jpg', // 1–4
       'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',
@@ -243,12 +230,15 @@
     const imagesHTML = imageExtensions.map((ext, i) => {
       return `<img src="gallery/${i + 1}.${ext}" alt="Gallery Image ${i + 1}" />`;
     }).join('');
-    document.getElementById('carouselTrack').innerHTML = imagesHTML;
-    });
-  </script>
+
+    const track = document.getElementById('carouselTrack');
+    if (track) {
+      track.innerHTML = imagesHTML;
+    }
+  });
+</script>
 </body>
 </html>
-
 
   <!-- CSS Reset & Styling -->
   <style>

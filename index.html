@@ -511,10 +511,9 @@
     }
   </style>
 </head>
-
-<body>
   <!-- 🔘 Dark Mode Toggle -->
-  <button id="darkModeToggle">🌓 Toggle Dark Mode</button>
+<button id="darkModeToggle">🌓 Toggle Dark Mode</button>
+<body>
 
   <div class="container">
     <header data-aos="fade-down">
@@ -807,4 +806,19 @@
     duration: 800,
     once: true
   });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('darkModeToggle');
+
+  // Set dark mode on page load if saved
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+  }
+
+  // Toggle dark mode on click
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+  });
+});
 </script>

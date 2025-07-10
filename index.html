@@ -8,10 +8,234 @@
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <section data-aos="fade-up" id="gallery">
-  <h2>🎥 Conferences / Workshops / Webinars Gallery</h2>
-  <button onclick="document.getElementById('galleryModal').style.display='block'" class="download-btn">View Gallery</button>
-</section>
+  <!-- CSS Reset & Styling -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f4f9ff, #eef7ff);
+      color: #2c3e50;
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background: #121212;
+      color: #f5f5f5;
+    }
+
+    body.dark * {
+      color: #f5f5f5 !important;
+    }
+
+    #darkModeToggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 14px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      z-index: 9999;
+    }
+
+    #darkModeToggle:hover {
+      background: #555;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 50px auto;
+      padding: 40px 30px;
+      background: #ffffffd9;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .animated-name {
+      font-size: 38px;
+      font-weight: bold;
+      background: linear-gradient(270deg, #00c6ff, #ff00c8, #00ffe7);
+      background-size: 600% 600%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowingText 6s ease infinite;
+    }
+
+    @keyframes glowingText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 25px;
+      background: linear-gradient(to right, #e3f2fd, #ede7f6);
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    section h2 {
+      font-size: 22px;
+      color: #0d47a1;
+      margin-bottom: 15px;
+      border-left: 5px solid #7e57c2;
+      padding-left: 12px;
+    }
+
+    ul { padding-left: 20px; }
+    ul li { margin-bottom: 10px; }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skills-list li {
+      background: linear-gradient(to right, #7b1fa2, #512da8);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-size: 14px;
+    }
+
+    a { color: #1e88e5; text-decoration: none; }
+    a:hover { color: #0d47a1; text-decoration: underline; }
+
+    .download-btn {
+      background: #673ab7;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #5e35b1;
+    }
+
+    /* 🎞 Carousel Modal */
+    #galleryModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      overflow: hidden;
+    }
+
+    .carousel-container {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-track {
+      display: flex;
+      animation: scrollCarousel 60s linear infinite;
+      gap: 20px;
+    }
+
+    .carousel-track img {
+      max-height: 400px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    @keyframes scrollCarousel {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle">🌓 Toggle Dark Mode</button>
+
+  <div class="container">
+    <header data-aos="fade-down">
+      <h1 class="animated-name">Muhammad Shoaib Tahir</h1>
+      <p class="subtitle">Computational Linguist | NLP Researcher</p>
+      <p>📧 <a href="mailto:shoaibtahir410@gmail.com">shoaibtahir410@gmail.com</a></p>
+    </header>
+
+    <!-- Gallery Button -->
+    <section data-aos="fade-up">
+      <h2>🎥 Conferences / Workshops / Webinars Gallery</h2>
+      <button onclick="document.getElementById('galleryModal').style.display='block'" class="download-btn">📸 View Gallery</button>
+    </section>
+
+    <!-- You can include your other sections like Education, Research, etc. here -->
+  </div>
+
+  <!-- 🔘 Gallery Modal -->
+  <div id="galleryModal">
+    <span onclick="document.getElementById('galleryModal').style.display='none'"
+          style="position:absolute; top:20px; right:30px; font-size:30px; color:white; cursor:pointer;">&times;</span>
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack"></div>
+    </div>
+  </div>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+
+  <!-- Dark Mode + Gallery Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('darkModeToggle');
+
+      // Apply saved theme
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+
+      // Toggle theme
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      });
+
+      // 🎞 Populate carousel with 24 images
+      const imagesHTML = Array.from({length: 24}, (_, i) => {
+        return `<img src="gallery/${i + 1}.jpg" alt="Gallery Image ${i + 1}" />`;
+      }).join('');
+      document.getElementById('carouselTrack').innerHTML = imagesHTML;
+    });
+  </script>
+</body>
+</html>
+
 
   <!-- CSS Reset & Styling -->
   <style>
@@ -552,25 +776,6 @@
       </ul>
     </section>
   </div>
-
-
-<!-- Gallery Modal -->
-<div id="galleryModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000000cc; z-index:9999; overflow:auto;">
-  <div style="background:white; margin:50px auto; padding:30px; border-radius:8px; max-width:95%; box-shadow:0 0 20px rgba(0,0,0,0.3); position:relative;">
-    <span onclick="document.getElementById('galleryModal').style.display='none'" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer;">&times;</span>
-    <h2 style="text-align:center; margin-bottom:20px;">📸 Gallery: Conferences, Workshops & Webinars</h2>
-    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
-
-      <!-- Replace these with your actual image/video paths -->
-      <img src="gallery/conference1.jpg" alt="Conference 1" style="max-width:300px; border-radius:10px;">
-      <img src="gallery/workshop1.jpg" alt="Workshop 1" style="max-width:300px; border-radius:10px;">
-      <video src="gallery/webinar1.mp4" controls style="max-width:300px; border-radius:10px;"></video>
-      <img src="gallery/conference2.jpg" alt="Conference 2" style="max-width:300px; border-radius:10px;">
-      <video src="gallery/workshop2.mp4" controls style="max-width:300px; border-radius:10px;"></video>
-
-    </div>
-  </div>
-</div>
 
   <!-- AOS Animation JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

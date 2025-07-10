@@ -188,11 +188,17 @@
 
     .carousel-track {
       display: flex;
-      animation: scrollCarousel 60s linear infinite;
       gap: 20px;
+      /* Comment this line temporarily to stop continuous animation */
+      /* animation: scrollCarousel 60s linear infinite; */
+      flex-wrap: nowrap;
+      overflow-x: auto;
     }
 
     .carousel-track img {
+      flex-shrink: 0;
+      width: auto;
+      height: 100%;
       max-height: 400px;
       border-radius: 12px;
       object-fit: cover;

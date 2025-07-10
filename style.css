@@ -15,6 +15,7 @@ body {
   color: #2c3e50;
   line-height: 1.7;
   transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
 }
 
 /* 🌙 Dark Mode */
@@ -22,179 +23,15 @@ body.dark {
   background: #121212;
   color: #f5f5f5;
 }
+
 body.dark * {
   color: #f5f5f5 !important;
-}
-
-/* 🔘 Toggle Button */
-#darkModeToggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 8px 14px;
-  background: #333;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
-  z-index: 9999;
-}
-#darkModeToggle:hover {
-  background: #555;
-}
-
-/* 📦 Container */
-.container {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 30px;
-  background: #ffffffd9;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* 🧾 Header */
-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.animated-name {
-  font-size: 38px;
-  font-weight: bold;
-  background: linear-gradient(270deg, #00c6ff, #ff00c8, #00ffe7);
-  background-size: 600% 600%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowingText 6s ease infinite;
-}
-@keyframes glowingText {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* 📸 Button */
-.download-btn {
-  background: #673ab7;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.download-btn:hover {
-  background: #5e35b1;
-}
-
-/* 🖼️ Gallery Modal */
-#galleryModal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.95);
-  z-index: 9999;
-  overflow: hidden;
-}
-.carousel-container {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.carousel-track {
-  display: flex;
-  gap: 30px;
-  animation: scrollCarousel 60s linear infinite;
-}
-.carousel-track img {
-  max-height: 400px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-@keyframes scrollCarousel {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-/* ❌ Close Button */
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 36px;
-  color: white;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-/* 📱 Responsive */
-@media (max-width: 768px) {
-  .carousel-track img {
-    max-height: 250px;
-  }
-}
-
-/* === Reset and Base === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f4f9ff, #eef7ff);
-  color: #2c3e50;
-  line-height: 1.7;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-/* === Dark Mode === */
-body.dark {
-  background: #121212;
-  color: #f5f5f5;
 }
 
 body.dark .container {
   background-color: #1e1e1e;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
   border: 1px solid #333;
-}
-
-body.dark .subtitle {
-  color: #ccc;
-}
-
-body.dark .contact p,
-body.dark .contact a {
-  color: #bbb;
-}
-
-body.dark section {
-  background: linear-gradient(to right, #2c2c2c, #1f1f1f);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
-}
-
-body.dark section h2 {
-  color: #f0f0f0;
-  border-left: 5px solid #00c6ff;
 }
 
 body.dark .animated-name {
@@ -205,9 +42,9 @@ body.dark .animated-name {
   animation: glowingText 8s ease-in-out infinite;
 }
 
-/* === Dark Mode Toggle Button === */
+/* 🔘 Dark Mode Toggle Button */
 #darkModeToggle {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   padding: 8px 14px;
@@ -217,6 +54,7 @@ body.dark .animated-name {
   border-radius: 20px;
   cursor: pointer;
   font-size: 14px;
+  z-index: 9999;
   transition: background 0.3s ease;
 }
 
@@ -224,7 +62,7 @@ body.dark .animated-name {
   background: #555;
 }
 
-/* === Container === */
+/* 📦 Container */
 .container {
   max-width: 950px;
   margin: 50px auto;
@@ -236,28 +74,21 @@ body.dark .animated-name {
   border: 1px solid #e0e0e0;
 }
 
-/* === Header === */
+/* 🧾 Header */
 header {
   text-align: center;
   margin-bottom: 40px;
 }
 
-/* === Glowing Animated Name === */
+/* ✨ Glowing Animated Name */
 .animated-name {
   font-size: 38px;
   font-weight: bold;
-  text-align: center;
   background: linear-gradient(270deg, #00c6ff, #ff00c8, #00ffe7);
   background-size: 600% 600%;
-
-  /* Cross-browser compatibility for background-clip: text */
-  -webkit-background-clip: text;   /* Chrome, Safari */
-  -moz-background-clip: text;      /* Firefox (partial support) */
-  background-clip: text;           /* Standard */
-
-  -webkit-text-fill-color: transparent; /* Chrome, Safari */
-  -moz-text-fill-color: transparent;    /* Firefox (partial) */
-
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: glowingText 6s ease infinite;
 }
 
@@ -267,32 +98,94 @@ header {
   100% { background-position: 0% 50%; }
 }
 
-/* === Subtitle === */
-.subtitle {
-  font-size: 18px;
-  color: #546e7a;
-  margin: 10px 0;
-}
-
-/* === Contact === */
-.contact p {
+/* 📥 Download Button */
+.download-btn {
+  background: #673ab7;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
   font-size: 14px;
-  color: #37474f;
-  margin: 4px 0;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.contact a {
-  color: #0d47a1;
-  font-weight: 600;
-  text-decoration: none;
+.download-btn:hover {
+  background: #5e35b1;
 }
 
-.contact a:hover {
-  color: #1565c0;
-  text-decoration: underline;
+/* 🖼️ Carousel Styles (Fixed) */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px;
 }
 
-/* === Section Styling === */
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+.carousel-track img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+#carouselClone {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: flex;
+}
+
+/* ❌ Close Button (if used) */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+    margin: 20px;
+  }
+
+  header h1,
+  .animated-name {
+    font-size: 28px;
+  }
+
+  .carousel-track img {
+    width: 180px;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+}
+
+/* ✅ Section Styling (Optional) */
 section {
   position: relative;
   margin-bottom: 40px;
@@ -300,23 +193,8 @@ section {
   background: linear-gradient(to right, #e3f2fd, #ede7f6);
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
   z-index: 1;
-}
-
-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 2px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #7e57c2, #00c6ff);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: -1;
+  transition: transform 0.3s;
 }
 
 section:hover {
@@ -329,132 +207,4 @@ section h2 {
   margin-bottom: 15px;
   border-left: 5px solid #7e57c2;
   padding-left: 12px;
-}
-
-/* === Lists === */
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 10px;
-  color: #333;
-}
-
-ul li::marker {
-  color: #7e57c2;
-}
-
-/* === Skills List === */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 0;
-  margin-top: 10px;
-  list-style: none;
-}
-
-.skills-list li {
-  background: linear-gradient(to right, #7b1fa2, #512da8);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 25px;
-  font-size: 14px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease-in-out;
-}
-
-.skills-list li:hover {
-  background: linear-gradient(to right, #512da8, #7b1fa2);
-  transform: scale(1.05);
-}
-
-/* === Links === */
-a {
-  color: #1e88e5;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-a:hover {
-  color: #0d47a1;
-  text-decoration: underline;
-}
-
-/* === Download Button === */
-.download-btn {
-  display: inline-block;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 20px;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.download-btn:hover {
-  background: linear-gradient(to right, #0072ff, #00c6ff);
-  transform: scale(1.05);
-}
-
-.carousel-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding: 40px 0;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 20px;
-  animation: scrollGallery 60s linear infinite;
-}
-
-.carousel-item {
-  width: 300px;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(255,255,255,0.2);
-  transition: transform 0.3s ease;
-}
-
-.carousel-item:hover {
-  transform: scale(1.05);
-}
-
-@keyframes scrollGallery {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* === Responsive Design === */
-@media (max-width: 768px) {
-  .container {
-    padding: 25px;
-    margin: 20px;
-  }
-
-  header h1,
-  .animated-name {
-    font-size: 28px;
-  }
-
-  .skills-list {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .skills-list li {
-    width: fit-content;
-  }
-
-  section h2 {
-    font-size: 20px;
-  }
 }

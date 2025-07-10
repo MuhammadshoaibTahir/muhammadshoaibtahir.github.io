@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   // 🔘 DARK MODE TOGGLE
   const toggle = document.getElementById('darkModeToggle');
   if (toggle) {
@@ -17,41 +17,43 @@ window.addEventListener('load', () => {
   const extensions = ['jpg', 'jpeg', 'JPG', 'JPEG'];
 
   if (track) {
-    let loadedCount = 0;
     const totalImages = 24;
+    let loaded = 0;
 
     for (let i = 1; i <= totalImages; i++) {
-      let imageLoaded = false;
+      (function (index) {
+        let found = false;
 
-      for (let ext of extensions) {
-        const testImg = new Image();
-        const src = `gallery/${i}.${ext}`;
-        testImg.src = src;
+        extensions.forEach(ext => {
+          const imgPath = `gallery/${index}.${ext}`;
+          const testImg = new Image();
 
-        testImg.onload = function () {
-          if (!imageLoaded) {
-            imageLoaded = true;
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = `Gallery Image ${i}`;
-            img.style.maxWidth = '250px';
-            img.style.borderRadius = '10px';
-            img.style.margin = '10px';
-            img.style.objectFit = 'cover';
-            img.style.height = 'auto';
-            track.appendChild(img);
+          testImg.onload = () => {
+            if (!found) {
+              found = true;
+              const img = document.createElement('img');
+              img.src = imgPath;
+              img.alt = `Gallery Image ${index}`;
+              img.className = "carousel-img"; // use CSS for styling
+              track.appendChild(img);
 
-            loadedCount++;
-
-            if (loadedCount === totalImages) {
-              setupCarousel(track);
+              loaded++;
+              if (loaded === totalImages) {
+                startCarousel();
+              }
             }
-          }
-        };
-      }
+          };
+
+          testImg.onerror = () => {
+            // silently fail if image not found
+          };
+
+          testImg.src = imgPath;
+        });
+      })(i);
     }
 
-    function setupCarousel(track) {
+    function startCarousel() {
       const clone = track.cloneNode(true);
       clone.id = "carouselClone";
       track.parentNode.appendChild(clone);

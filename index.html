@@ -233,45 +233,39 @@
 
 <!-- Gallery Carousel Script -->
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const imageExtensions = [
-      'jpg', 'jpg', 'jpg', 'jpg',
-      'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',
-      'jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg','jpeg',
-      'jpeg','jpeg','jpeg','jpeg','jpeg'
-    ];
+document.addEventListener('DOMContentLoaded', () => {
+  const imageCount = 24;
+  const imageExt = 'webp';  // Change based on your compressed images
+  const track = document.getElementById('carouselTrack');
 
-    const track = document.getElementById('carouselTrack');
+  // Preload all images and build HTML
+  let imagesHTML = '';
+  for (let i = 1; i <= imageCount; i++) {
+    const src = `gallery/${i}.${imageExt}`;
+    
+    // Preload via JS
+    const preImg = new Image();
+    preImg.src = src;
 
-    const imagesHTML = imageExtensions.map((ext, i) => {
-      const src = `gallery/${i + 1}.${ext}`;
-      return `<img src="${src}" alt="Gallery Image ${i + 1}" style="display: none;" />`;
-    }).join('');
+    // Build the gallery image tag (initially hidden)
+    imagesHTML += `<img src="${src}" alt="Image ${i}" style="display: none;" loading="eager" />`;
+  }
 
-    // Inject images early
-    if (track) {
-      track.innerHTML = imagesHTML;
+  track.innerHTML = imagesHTML;
 
-      // Force browser to load them
-      track.querySelectorAll('img').forEach(img => {
-        const preloader = new Image();
-        preloader.src = img.src;
-      });
-    }
-
-    // When modal is opened, make them visible
-    document.querySelector('button').addEventListener('click', () => {
-      track.querySelectorAll('img').forEach(img => {
-        img.style.display = 'block';
-      });
-      document.getElementById('galleryModal').style.display = 'block';
+  // Show images when modal opens
+  document.querySelector('.download-btn').addEventListener('click', () => {
+    track.querySelectorAll('img').forEach(img => {
+      img.style.display = 'block';
     });
-
-    // Close button
-    document.querySelector('#galleryModal span').addEventListener('click', () => {
-      document.getElementById('galleryModal').style.display = 'none';
-    });
+    document.getElementById('galleryModal').style.display = 'block';
   });
+
+  // Hide modal on close
+  document.querySelector('#galleryModal span').addEventListener('click', () => {
+    document.getElementById('galleryModal').style.display = 'none';
+  });
+});
 </script>
 </body>
 </html>

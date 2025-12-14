@@ -23,9 +23,14 @@ body {
    Container (Academic Width)
 ================================ */
 .container {
-  max-width: 860px;
+  max-width: 980px;     /* wider, academic line length */
   margin: 50px auto;
-  padding: 0 20px;
+  padding: 0 24px;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 16.5px;
 }
 
 /* ===============================

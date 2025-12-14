@@ -1,4 +1,6 @@
-/* === Reset and Base === */
+/* ===============================
+   Reset & Base
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -10,34 +12,145 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: #f9fafb;
+  font-family: -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #ffffff;
   color: #111;
   line-height: 1.65;
-  overflow-x: hidden;
 }
 
-/* === Dark Mode === */
+/* ===============================
+   Container (Academic Width)
+================================ */
+.container {
+  max-width: 860px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* ===============================
+   Header
+================================ */
+header {
+  margin-bottom: 40px;
+}
+
+.animated-name {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #777;
+  margin: 6px 0 10px;
+}
+
+/* ===============================
+   Icons
+================================ */
+.icons a {
+  margin-right: 14px;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: #1a4fc2;
+}
+
+/* ===============================
+   Notice + Image Row (KEY FIX)
+================================ */
+.notice-row {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 30px;
+  align-items: start;     /* ← aligns image with notice */
+  margin: 20px 0;
+}
+
+.notice {
+  background: #e6f3ff;
+  padding: 14px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.profile-pic {
+  width: 180px;
+  border-radius: 6px;
+}
+
+/* ===============================
+   Paragraphs
+================================ */
+p {
+  margin-bottom: 14px;
+}
+
+/* ===============================
+   Sections
+================================ */
+section {
+  margin-top: 40px;
+}
+
+section h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ===============================
+   Lists
+================================ */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* ===============================
+   Links
+================================ */
+a {
+  color: #1a4fc2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   Dark Mode (Subtle)
+================================ */
 body.dark {
   background: #121212;
   color: #f2f2f2;
 }
 
-body.dark .container {
-  background: #1e1e1e;
-  border: 1px solid #333;
+body.dark a {
+  color: #8ab4f8;
 }
 
-body.dark section {
-  background: #1e1e1e;
-  border: 1px solid #333;
+body.dark .notice {
+  background: #1f2a3a;
 }
 
-body.dark h2 {
-  color: #e0e0e0;
+body.dark section h2 {
+  border-bottom: 1px solid #333;
 }
 
-/* === Dark Mode Toggle === */
+/* ===============================
+   Dark Mode Toggle
+================================ */
 #darkModeToggle {
   position: fixed;
   top: 20px;
@@ -52,141 +165,17 @@ body.dark h2 {
   z-index: 1000;
 }
 
-/* === Container === */
-.container {
-  max-width: 880px;
-  margin: 60px auto;
-  padding: 40px;
-  background: #ffffff;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
-}
-
-/* === Header === */
-header {
-  display: grid;
-  grid-template-columns: 1fr 160px;
-  gap: 30px;
-  align-items: start;
-  margin-bottom: 40px;
-}
-
-.profile-pic {
-  width: 160px;
-  border-radius: 6px;
-}
-
-/* === Name & Subtitle === */
-.animated-name {
-  font-size: 36px;
-  font-weight: 600;
-  color: #111;
-}
-
-.subtitle {
-  font-size: 17px;
-  color: #555;
-  margin: 6px 0 12px 0;
-}
-
-/* === Contact / Icons === */
-.contact p {
-  font-size: 14px;
-  margin-bottom: 4px;
-}
-
-.contact a {
-  color: #1a4fc2;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-.icons a {
-  margin-right: 12px;
-  font-size: 18px;
-  color: #111;
-}
-
-.icons a:hover {
-  color: #1a4fc2;
-}
-
-/* === Notice Box === */
-.notice {
-  background: #eef6ff;
-  border-left: 4px solid #1a4fc2;
-  padding: 14px 16px;
-  margin: 18px 0;
-  font-size: 15px;
-}
-
-/* === Sections === */
-section {
-  margin-top: 40px;
-  padding-top: 10px;
-}
-
-section h2 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 6px;
-}
-
-/* === Lists === */
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 6px;
-}
-
-/* === Skills Tags (Optional) === */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  padding-left: 0;
-}
-
-.skills-list li {
-  background: #f1f5f9;
-  color: #111;
-  padding: 6px 14px;
-  border-radius: 14px;
-  font-size: 13px;
-  border: 1px solid #e5e7eb;
-}
-
-/* === Links === */
-a {
-  color: #1a4fc2;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* === Responsive === */
+/* ===============================
+   Responsive
+================================ */
 @media (max-width: 768px) {
-  header {
+  .notice-row {
     grid-template-columns: 1fr;
   }
 
   .profile-pic {
+    width: 140px;
     margin-top: 20px;
-  }
-
-  .container {
-    padding: 24px;
-    margin: 20px;
   }
 
   .animated-name {

@@ -1,14 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Shoaib Tahir</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
 /* ===============================
-   Reset & Base
+   Base
 ================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -20,40 +28,32 @@ body {
 }
 
 /* ===============================
-   Container (Academic Width)
+   Layout (Key stretch)
 ================================ */
 .container {
-  max-width: 980px;     /* wider, academic line length */
+  max-width: 1040px;              /* ← wider academic measure */
   margin: 50px auto;
-  padding: 0 24px;
-}
-
-p {
-  margin-bottom: 16px;
-  font-size: 16.5px;
+  padding: 0 28px;
 }
 
 /* ===============================
    Header
 ================================ */
 header {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
-.animated-name {
+h1 {
   font-size: 36px;
   font-weight: 600;
 }
 
-.subtitle {
+.pronunciation {
   font-size: 18px;
   color: #777;
   margin: 6px 0 10px;
 }
 
-/* ===============================
-   Icons
-================================ */
 .icons a {
   margin-right: 14px;
   font-size: 18px;
@@ -66,25 +66,25 @@ header {
 }
 
 /* ===============================
-   Notice + Image Row (KEY FIX)
+   Notice + Image (Main fix)
 ================================ */
 .notice-row {
   display: grid;
-  grid-template-columns: 1.4fr 180px; /* 👈 MORE space for text */
-  gap: 30px;
+  grid-template-columns: 2.1fr 150px;  /* ← more width for text */
+  gap: 34px;
   align-items: start;
-  margin: 20px 0;
+  margin: 22px 0;
 }
 
 .notice {
   background: #e6f3ff;
-  padding: 14px 16px;
+  padding: 16px 18px;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .profile-pic {
-  width: 180px;
+  width: 150px;
   border-radius: 6px;
 }
 
@@ -92,14 +92,15 @@ header {
    Paragraphs
 ================================ */
 p {
-  margin-bottom: 14px;
+  font-size: 16.5px;
+  margin-bottom: 18px;
 }
 
 /* ===============================
    Sections
 ================================ */
 section {
-  margin-top: 40px;
+  margin-top: 44px;
 }
 
 section h2 {
@@ -114,7 +115,7 @@ section h2 {
    Lists
 ================================ */
 ul {
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
 li {
@@ -134,56 +135,124 @@ a:hover {
 }
 
 /* ===============================
-   Dark Mode (Subtle)
-================================ */
-body.dark {
-  background: #121212;
-  color: #f2f2f2;
-}
-
-body.dark a {
-  color: #8ab4f8;
-}
-
-body.dark .notice {
-  background: #1f2a3a;
-}
-
-body.dark section h2 {
-  border-bottom: 1px solid #333;
-}
-
-/* ===============================
-   Dark Mode Toggle
-================================ */
-#darkModeToggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 7px 14px;
-  background: #333;
-  color: #fff;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  font-size: 13px;
-  z-index: 1000;
-}
-
-/* ===============================
    Responsive
 ================================ */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .notice-row {
     grid-template-columns: 1fr;
   }
 
   .profile-pic {
     width: 140px;
-    margin-top: 20px;
+    margin-top: 16px;
   }
 
-  .animated-name {
-    font-size: 28px;
+  h1 {
+    font-size: 30px;
   }
 }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <h1>Muhammad Shoaib Tahir</h1>
+  <div class="pronunciation">/muːˈhæməd ʃoʊeɪb ˈtɑːhɪr/</div>
+
+  <div class="icons">
+    <a href="mailto:shoaibtahir410@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://scholar.google.com/citations?user=YNAz_0kAAAAJ" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
+    <a href="https://github.com/MuhammadshoaibTahir" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/muhammad-shoaib-tahir-3a9103179/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://www.facebook.com/muhammad.shoaib.tahir.166555" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+  </div>
+
+  <div class="notice-row">
+    <div class="notice">
+      I am seeking a PhD opportunity in <strong>Computational Linguistics and
+      Natural Language Processing</strong>. My research interests include NLP
+      model development, model evaluation and assessment, and linguistically
+      informed computational research. I am particularly interested in
+      integrating computational methods with linguistic insights and in
+      collaborative, interdisciplinary research.
+    </div>
+
+    <img src="assets/files/file.jpg"
+         alt="Muhammad Shoaib Tahir"
+         class="profile-pic">
+  </div>
+
+  <p>
+    I have a background in linguistics with hands-on research experience in
+    Natural Language Processing. My work includes the development of NLP tools
+    and linguistic resources, as well as model analysis and evaluation,
+    particularly for low-resource languages such as Shahmukhi Punjabi. I am
+    interested in research that integrates linguistic theory with computational
+    methods and values collaborative approaches to language technology.
+  </p>
+</header>
+
+<section>
+  <h2>Current Research Interests</h2>
+  <ul>
+    <li>NLP model development and assessment</li>
+    <li>Linguistically informed analysis of language models</li>
+    <li>Morphology and lexical semantics</li>
+    <li>Low-resource and multilingual NLP</li>
+    <li>Integration of linguistic theory and computational methods</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Research Projects</h2>
+  <ul>
+    <li><strong>Punjabi WordNet:</strong> Lexical-semantic resource development</li>
+    <li><strong>Morphological Analyzer:</strong> Rule-based morphology modeling</li>
+    <li><strong>POS Tagger:</strong> Corpus-driven syntactic annotation</li>
+    <li><strong>Rule-Based Stemmer:</strong> Morphological normalization</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <ul>
+    <li>Developing Digital Resources of Shahmukhi Punjabi (2024)</li>
+    <li>Mapping of English and Punjabi Verb Classes (2024)</li>
+    <li>Morphological Description of Nouns in Shahmukhi Punjabi (2023)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <ul>
+    <li><strong>MPhil in Applied Linguistics</strong>, GCU Faisalabad (2020–2022)</li>
+    <li><strong>BS in English (Linguistics)</strong>, University of Education Lahore (2016–2020)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Teaching</h2>
+  <ul>
+    <li>Visiting Lecturer, GCU Faisalabad (2024–2025)</li>
+    <li>Visiting Lecturer, University of Education Faisalabad (2024–2025)</li>
+    <li>Instructor, Corpus Linguistics, University of Agriculture Faisalabad (2025)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Invited Talks</h2>
+  <ul>
+    <li><strong>UMT Lahore</strong> — Decoding Translation Using Corpora (May 2025)</li>
+    <li><strong>University of Agriculture Faisalabad</strong> — Corpus Linguistics Tools Workshop (Apr 2025)</li>
+    <li><strong>Pakistan Corpus Studio</strong> — Corpus Linguistics Essentials (Nov 2024)</li>
+    <li><strong>The University of Faisalabad</strong> — Computational Linguistics (2024)</li>
+  </ul>
+</section>
+
+</div>
+
+</body>
+</html>

@@ -70,9 +70,9 @@ header {
 ================================ */
 .notice-row {
   display: grid;
-  grid-template-columns: 1fr 180px;
+  grid-template-columns: 1.4fr 180px; /* 👈 MORE space for text */
   gap: 30px;
-  align-items: start;     /* ← aligns image with notice */
+  align-items: start;
   margin: 20px 0;
 }
 

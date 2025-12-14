@@ -10,180 +10,131 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f4f9ff, #eef7ff);
-  color: #2c3e50;
-  line-height: 1.7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f9fafb;
+  color: #111;
+  line-height: 1.65;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 /* === Dark Mode === */
 body.dark {
   background: #121212;
-  color: #f5f5f5;
+  color: #f2f2f2;
 }
 
 body.dark .container {
-  background-color: #1e1e1e;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  background: #1e1e1e;
   border: 1px solid #333;
 }
 
-body.dark .subtitle {
-  color: #ccc;
-}
-
-body.dark .contact p,
-body.dark .contact a {
-  color: #bbb;
-}
-
 body.dark section {
-  background: linear-gradient(to right, #2c2c2c, #1f1f1f);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
+  background: #1e1e1e;
+  border: 1px solid #333;
 }
 
-body.dark section h2 {
-  color: #f0f0f0;
-  border-left: 5px solid #00c6ff;
+body.dark h2 {
+  color: #e0e0e0;
 }
 
-body.dark .animated-name {
-  background: linear-gradient(270deg, #ffffff, #80cbc4, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowingText 8s ease-in-out infinite;
-}
-
-/* === Dark Mode Toggle Button === */
+/* === Dark Mode Toggle === */
 #darkModeToggle {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
-  padding: 8px 14px;
+  padding: 7px 14px;
   background: #333;
   color: #fff;
   border: none;
-  border-radius: 20px;
+  border-radius: 16px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s ease;
-  z-index: 9999;
-}
-
-#darkModeToggle:hover {
-  background: #555;
+  font-size: 13px;
+  z-index: 1000;
 }
 
 /* === Container === */
 .container {
-  max-width: 850px;        /* 👈 make it slightly narrower */
-  margin: 60px auto;       /* 👈 more space vertically and horizontally */
-  padding: 30px 25px;      /* 👈 inner padding */
-  background: #ffffffd9;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4px);
-  border: 1px solid #e0e0e0;
+  max-width: 880px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
 }
 
 /* === Header === */
 header {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 30px;
+  align-items: start;
   margin-bottom: 40px;
 }
 
-/* === Glowing Animated Name === */
+.profile-pic {
+  width: 160px;
+  border-radius: 6px;
+}
+
+/* === Name & Subtitle === */
 .animated-name {
-  font-size: 38px;
-  font-weight: bold;
-  text-align: center;
-  background: linear-gradient(270deg, #00c6ff, #ff00c8, #00ffe7);
-  background-size: 600% 600%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowingText 6s ease infinite;
+  font-size: 36px;
+  font-weight: 600;
+  color: #111;
 }
 
-@keyframes glowingText {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* === Subtitle === */
 .subtitle {
-  font-size: 18px;
-  color: #546e7a;
-  margin: 10px 0;
+  font-size: 17px;
+  color: #555;
+  margin: 6px 0 12px 0;
 }
 
-/* === Contact === */
+/* === Contact / Icons === */
 .contact p {
   font-size: 14px;
-  color: #37474f;
-  margin: 4px 0;
+  margin-bottom: 4px;
 }
 
 .contact a {
-  color: #0d47a1;
-  font-weight: 600;
+  color: #1a4fc2;
   text-decoration: none;
 }
 
 .contact a:hover {
-  color: #1565c0;
   text-decoration: underline;
 }
 
-/* === Section Styling === */
+.icons a {
+  margin-right: 12px;
+  font-size: 18px;
+  color: #111;
+}
+
+.icons a:hover {
+  color: #1a4fc2;
+}
+
+/* === Notice Box === */
+.notice {
+  background: #eef6ff;
+  border-left: 4px solid #1a4fc2;
+  padding: 14px 16px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+
+/* === Sections === */
 section {
-  position: relative;
-  margin: 40px 0; /* ✅ Top and bottom spacing */
-  padding: 25px;
-  background: linear-gradient(to right, #e3f2fd, #ede7f6);
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
-  z-index: 1;
-}
-
-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 2px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #7e57c2, #00c6ff);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: -1;
-}
-
-section:hover {
-  transform: translateY(-4px);
+  margin-top: 40px;
+  padding-top: 10px;
 }
 
 section h2 {
   font-size: 22px;
-  color: #0d47a1;
-  margin-bottom: 15px;
-  border-left: 5px solid #7e57c2;
-  padding-left: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 6px;
 }
 
 /* === Lists === */
@@ -192,105 +143,53 @@ ul {
 }
 
 ul li {
-  margin-bottom: 10px;
-  color: #333;
+  margin-bottom: 6px;
 }
 
-ul li::marker {
-  color: #7e57c2;
-}
-
-/* === Skills List === */
+/* === Skills Tags (Optional) === */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  padding: 0;
-  margin-top: 10px;
+  gap: 10px;
   list-style: none;
+  padding-left: 0;
 }
 
 .skills-list li {
-  background: linear-gradient(to right, #7b1fa2, #512da8);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 25px;
-  font-size: 14px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease-in-out;
-}
-
-.skills-list li:hover {
-  background: linear-gradient(to right, #512da8, #7b1fa2);
-  transform: scale(1.05);
+  background: #f1f5f9;
+  color: #111;
+  padding: 6px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  border: 1px solid #e5e7eb;
 }
 
 /* === Links === */
 a {
-  color: #1e88e5;
+  color: #1a4fc2;
   text-decoration: none;
-  transition: all 0.3s;
 }
 
 a:hover {
-  color: #0d47a1;
   text-decoration: underline;
 }
 
-/* === Download Button === */
-.download-btn {
-  display: inline-block;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 20px;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.download-btn:hover {
-  background: linear-gradient(to right, #0072ff, #00c6ff);
-  transform: scale(1.05);
-}
-
-/* === Responsive Design === */
+/* === Responsive === */
 @media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-pic {
+    margin-top: 20px;
+  }
+
   .container {
-    padding: 0 20px; /* ✅ Safe padding on small screens */
+    padding: 24px;
     margin: 20px;
   }
 
-  header h1,
   .animated-name {
     font-size: 28px;
   }
-
-  .skills-list {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .skills-list li {
-    width: fit-content;
-  }
-
-  section h2 {
-    font-size: 20px;
-  }
-}
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #0056b3;
 }

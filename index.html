@@ -5,18 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muhammad Shoaib Tahir</title>
 
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      max-width: 960px;
-      margin: 60px auto;
-      padding: 0 20px;
+      background: #f9fafb;
       color: #111;
-      line-height: 1.6;
-      background: #ffffff;
+      line-height: 1.65;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
     }
 
     header {
@@ -28,21 +36,21 @@
     }
 
     h1 {
-      font-size: 38px;
+      font-size: 36px;
       font-weight: 600;
       margin-bottom: 6px;
     }
 
     .pronunciation {
-      font-size: 18px;
-      color: #888;
+      font-size: 16px;
+      color: #777;
       margin-bottom: 10px;
     }
 
     .icons a {
-      margin-right: 14px;
-      color: #000;
+      margin-right: 12px;
       font-size: 18px;
+      color: #111;
       text-decoration: none;
     }
 
@@ -51,11 +59,24 @@
     }
 
     .notice {
-      background: #dff5fb;
+      background: #eef6ff;
+      border-left: 4px solid #1a4fc2;
       padding: 14px 16px;
-      border-radius: 6px;
-      margin: 20px 0;
+      margin: 18px 0;
       font-size: 15px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    .photo-wrapper {
+      margin-top: 95px;
+    }
+
+    .profile-pic {
+      width: 160px;
+      border-radius: 6px;
     }
 
     section {
@@ -63,10 +84,10 @@
     }
 
     h2 {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 600;
       margin-bottom: 12px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #e5e7eb;
       padding-bottom: 6px;
     }
 
@@ -76,16 +97,6 @@
 
     li {
       margin-bottom: 6px;
-    }
-
-    .profile-pic {
-      width: 160px;
-      border-radius: 6px;
-      object-fit: cover;
-    }
-
-    .photo-wrapper {
-      margin-top: 98px; /* aligns image with notice box */
     }
 
     a {
@@ -101,14 +112,21 @@
       header {
         grid-template-columns: 1fr;
       }
+
       .photo-wrapper {
         margin-top: 20px;
+      }
+
+      .container {
+        margin: 20px;
+        padding: 24px;
       }
     }
   </style>
 </head>
 
 <body>
+<div class="container">
 
 <header>
   <div>
@@ -116,27 +134,26 @@
     <div class="pronunciation">/muːˈhæməd ʃoʊeɪb ˈtɑːhɪr/</div>
 
     <div class="icons">
-      <a href="mailto:shoaibtahir410@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://scholar.google.com/citations?user=YNAz_0kAAAAJ" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-      <a href="https://github.com/MuhammadshoaibTahir" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/muhammad-shoaib-tahir-3a9103179/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://www.facebook.com/muhammad.shoaib.tahir.166555" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="mailto:shoaibtahir410@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://scholar.google.com/citations?user=YNAz_0kAAAAJ" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
+      <a href="https://github.com/MuhammadshoaibTahir" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/muhammad-shoaib-tahir-3a9103179/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/muhammad.shoaib.tahir.166555" target="_blank"><i class="fa-brands fa-facebook"></i></a>
     </div>
 
     <div class="notice">
       I am seeking a PhD opportunity in Computational Linguistics and Natural Language Processing,
       with interests in NLP model development, model evaluation and assessment, and research on
       low-resource languages. I am particularly interested in integrating computational methods
-      with linguistic insights and collaborating on interdisciplinary research.
+      with linguistic insights and in collaborative research.
     </div>
 
     <p>
       I have a background in linguistics with hands-on research experience in Natural Language
-      Processing. My work involves the development of NLP tools and linguistic resources, as well
+      Processing. My work includes the development of NLP tools and linguistic resources, as well
       as model analysis and evaluation, particularly for low-resource languages such as Shahmukhi
       Punjabi. I am interested in research that integrates linguistic theory with computational
-      methods, and I value collaborative, interdisciplinary approaches to language and language
-      technology.
+      methods and values collaborative, interdisciplinary approaches.
     </p>
   </div>
 
@@ -148,11 +165,11 @@
 <section>
   <h2>Current Research Interests</h2>
   <ul>
-    <li>NLP model development and assessment</li>
-    <li>Linguistically informed evaluation of language models</li>
-    <li>Corpus-based and diagnostic approaches to NLP</li>
+    <li>NLP model development and evaluation</li>
+    <li>Linguistically informed analysis of language models</li>
     <li>Morphology and lexical semantics</li>
-    <li>Low-resource and multilingual language processing</li>
+    <li>Low-resource and multilingual NLP</li>
+    <li>Integration of linguistic theory and computational methods</li>
   </ul>
 </section>
 
@@ -196,18 +213,19 @@
 <section>
   <h2>Invited Talks</h2>
   <ul>
-    <li>Opportunities and Trends in Computational Linguistics, Capital University of Science and Technology, Islamabad (Oct 29, 2025)</li>
-    <li>Python for Computational Linguistics: Practical NLP for Linguists, Linguistic Association of Pakistan (Oct 26, 2025)</li>
-    <li>Introduction to Corpus Analysis Using LancsBox, Ghazi University, Dera Ghazi Khan (Oct 21, 2025)</li>
-    <li>Decoding Translation Using Corpora, University of Management and Technology, Lahore (May 13, 2025)</li>
-    <li>Three-Day Training Workshop on Corpus Linguistics Tools, University of Agriculture, Faisalabad (Apr 15–17, 2025)</li>
-    <li>Basics of Corpus and Computational Linguistics, University of Management and Technology, Sialkot (Jan 15, 2025)</li>
-    <li>Introduction to Python, Corpus and Computational Linguistics, The University of Faisalabad (Jan 8, 2025)</li>
-    <li>Computational Linguistics, The University of Faisalabad (Dec 15, 2024)</li>
-    <li>Corpus Linguistics Essentials: From Theory to Practical Applications, Pakistan Corpus Studio (Nov 25, 2024)</li>
-    <li>Computational Linguistics, The University of Faisalabad (Nov 14, 2024)</li>
+    <li><strong>Opportunities and Trends in Computational Linguistics</strong>, Capital University of Science and Technology, Islamabad (Oct 29, 2025)</li>
+    <li><strong>Python for Computational Linguistics: Practical NLP for Linguists</strong>, Linguistic Association of Pakistan (Oct 26, 2025)</li>
+    <li><strong>Introduction to Corpus Analysis Using LancsBox</strong>, Ghazi University, Dera Ghazi Khan (Oct 21, 2025)</li>
+    <li><strong>Decoding Translation Using Corpora</strong>, University of Management and Technology, Lahore (May 13, 2025)</li>
+    <li><strong>Three-Day Training Workshop on Corpus Linguistics Tools</strong>, University of Agriculture, Faisalabad (Apr 15–17, 2025)</li>
+    <li><strong>Basics of Corpus and Computational Linguistics</strong>, University of Management and Technology, Sialkot (Jan 15, 2025)</li>
+    <li><strong>Introduction to Python, Corpus and Computational Linguistics</strong>, The University of Faisalabad (Jan 8, 2025)</li>
+    <li><strong>Computational Linguistics</strong>, The University of Faisalabad (Dec 15, 2024)</li>
+    <li><strong>Corpus Linguistics Essentials: From Theory to Practical Applications</strong>, Pakistan Corpus Studio (Nov 25, 2024)</li>
+    <li><strong>Computational Linguistics</strong>, The University of Faisalabad (Nov 14, 2024)</li>
   </ul>
 </section>
 
+</div>
 </body>
 </html>

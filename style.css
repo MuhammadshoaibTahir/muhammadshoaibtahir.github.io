@@ -70,18 +70,20 @@ h1 {
 ================================ */
 .notice-row {
   display: grid;
-  grid-template-columns: 2.1fr 150px;  /* ← more width for text */
-  gap: 34px;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  column-gap: 40px;
   align-items: start;
-  margin: 22px 0;
+  margin: 24px 0;
 }
 
 .notice {
+  width: 100%;              /* ← IMPORTANT */
   background: #e6f3ff;
-  padding: 16px 18px;
+  padding: 18px 22px;
   border-radius: 6px;
   font-size: 16px;
 }
+
 
 .profile-pic {
   width: 150px;

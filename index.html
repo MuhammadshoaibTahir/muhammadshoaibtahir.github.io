@@ -1,159 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muhammad Shoaib Tahir</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     body {
-      font-family: Georgia, "Times New Roman", serif;
-      max-width: 900px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 960px;
       margin: 60px auto;
       padding: 0 20px;
-      color: #222;
+      color: #111;
       line-height: 1.6;
       background: #ffffff;
     }
 
     header {
-      display: flex;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 160px;
       gap: 30px;
-      margin-bottom: 50px;
-    }
-
-    header img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 6px;
+      align-items: start;
+      margin-bottom: 40px;
     }
 
     h1 {
-      font-size: 34px;
-      font-weight: normal;
+      font-size: 38px;
+      font-weight: 600;
       margin-bottom: 6px;
     }
 
-    .subtitle {
+    .pronunciation {
       font-size: 18px;
-      color: #555;
+      color: #888;
       margin-bottom: 10px;
     }
 
-    .contact {
+    .icons a {
+      margin-right: 14px;
+      color: #000;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .icons a:hover {
+      color: #1a4fc2;
+    }
+
+    .notice {
+      background: #dff5fb;
+      padding: 14px 16px;
+      border-radius: 6px;
+      margin: 20px 0;
       font-size: 15px;
     }
 
-    .contact a {
-      color: #1a4fc2;
-      text-decoration: none;
-      margin-right: 14px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
     section {
-      margin-bottom: 45px;
+      margin-top: 40px;
     }
 
     h2 {
-      font-size: 22px;
-      font-weight: normal;
-      border-bottom: 1px solid #ccc;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #ddd;
       padding-bottom: 6px;
-      margin-bottom: 14px;
     }
 
     ul {
       padding-left: 20px;
-      margin-top: 8px;
     }
 
     li {
       margin-bottom: 6px;
     }
 
-    .pub-list li {
-      margin-bottom: 10px;
+    .profile-pic {
+      width: 160px;
+      border-radius: 6px;
+      object-fit: cover;
     }
 
-    footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #666;
+    a {
+      color: #1a4fc2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <img src="assets/files/file.jpg" alt="Muhammad Shoaib Tahir" />
   <div>
     <h1>Muhammad Shoaib Tahir</h1>
-    <div class="subtitle">Computational Linguistics · Corpus Linguistics · Low-Resource NLP</div>
-    <div class="contact">
-      <span><i class="fa-solid fa-location-dot"></i> Faisalabad, Pakistan</span><br />
-      <a href="mailto:shoaibtahir410@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-      <a href="https://scholar.google.com/citations?user=YNAz_0kAAAAJ" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
-      <a href="https://github.com/MuhammadshoaibTahir" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+    <div class="pronunciation">/muːˈhæməd ʃoʊeɪb ˈtɑːhɪr/</div>
+
+    <div class="icons">
+      <a href="mailto:shoaibtahir410@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://scholar.google.com/citations?user=YNAz_0kAAAAJ" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
+      <a href="https://github.com/MuhammadshoaibTahir" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>
+
+    <div class="notice">
+      I am seeking a PhD opportunity in Computational Linguistics, with the aim of integrating
+      computational methods and linguistic theory, particularly in corpus-based analysis,
+      language model evaluation, and low-resource languages.
+    </div>
+
+    <p>
+      I am a computational linguist with a background in corpus linguistics and the development
+      of linguistic resources for low-resource languages. My work combines linguistic theory
+      with computational methods to analyze and evaluate language models, particularly with
+      respect to morphology and lexical semantics in under-resourced languages such as
+      Shahmukhi Punjabi.
+    </p>
   </div>
+
+  <img src="assets/files/file.jpg" alt="Muhammad Shoaib Tahir" class="profile-pic" />
 </header>
 
 <section>
-  <h2>About</h2>
-  <p>
-    I am a computational linguist with a background in corpus linguistics and the development of
-    linguistic resources for low-resource languages. My research focuses on linguistically informed
-    evaluation of language models, with particular attention to morphology and lexical semantics in
-    under-resourced languages such as Shahmukhi Punjabi.
-  </p>
-</section>
-
-<section>
-  <h2>Research Interests</h2>
+  <h2>Current Research Interests</h2>
   <ul>
-    <li>Linguistic evaluation of language models</li>
-    <li>Corpus-based diagnostic methods</li>
+    <li>Linguistically informed evaluation of language models</li>
+    <li>Corpus-based diagnostic methods for NLP</li>
     <li>Morphology and lexical semantics</li>
     <li>Low-resource and multilingual NLP</li>
-    <li>Language models as models of language learning</li>
+    <li>Integration of linguistic theory and computational methods</li>
   </ul>
 </section>
 
 <section>
   <h2>Research Projects</h2>
-  <p><strong>Punjabi WordNet</strong><br />
-  Development of a WordNet-style lexical semantic resource for Shahmukhi Punjabi by expanding
-  synsets and semantic relations from English WordNet.</p>
-
-  <p><strong>Morphological Analyzer for Punjabi</strong><br />
-  A rule-based morphological analyzer designed to capture inflectional patterns in Shahmukhi Punjabi
-  and support corpus-based linguistic analysis.</p>
-
-  <p><strong>Part-of-Speech Tagger for Punjabi</strong><br />
-  A corpus-driven, rule-based POS tagger developed for Shahmukhi Punjabi to support syntactic and
-  morphological research.</p>
-
-  <p><strong>Rule-Based Stemmer for Punjabi</strong><br />
-  A deterministic stemmer aimed at morphological normalization for corpus processing in a
-  low-resource setting.</p>
+  <ul>
+    <li><strong>Punjabi WordNet:</strong> Lexical-semantic resource development for Shahmukhi Punjabi</li>
+    <li><strong>Morphological Analyzer for Punjabi:</strong> Rule-based modeling of inflectional morphology</li>
+    <li><strong>POS Tagger for Punjabi:</strong> Corpus-driven syntactic annotation</li>
+    <li><strong>Rule-Based Stemmer:</strong> Morphological normalization for low-resource corpora</li>
+  </ul>
 </section>
 
 <section>
   <h2>Publications</h2>
-  <ul class="pub-list">
-    <li><strong>Effectiveness of AI Integration into Computer-Assisted Language Learning (CALL) on Student Writing Skills Based on Gender</strong> (2024)</li>
-    <li><strong>Developing Digital Resources of Shahmukhi Punjabi</strong> (2024)</li>
-    <li><strong>Mapping of English and Punjabi Verb Classes: A Corpus-Based Study</strong> (2024)</li>
-    <li><strong>Morphological Description of Nouns in Shahmukhi Punjabi: A Corpus-Based Study</strong> (2023)</li>
+  <ul>
+    <li>Effectiveness of AI Integration into Computer-Assisted Language Learning (CALL) on Student Writing Skills Based on Gender (2024)</li>
+    <li>Developing Digital Resources of Shahmukhi Punjabi (2024)</li>
+    <li>Mapping of English and Punjabi Verb Classes: A Corpus-Based Study (2024)</li>
+    <li>Morphological Description of Nouns in Shahmukhi Punjabi: A Corpus-Based Study (2023)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <ul>
+    <li><strong>MPhil in Applied Linguistics</strong>, Government College University Faisalabad (2020–2022)</li>
+    <li><strong>BS in English (Linguistics)</strong>, University of Education Lahore (2016–2020)</li>
   </ul>
 </section>
 
@@ -167,16 +175,20 @@
 </section>
 
 <section>
-  <h2>Education</h2>
+  <h2>Invited Talks</h2>
   <ul>
-    <li><strong>MPhil in Applied Linguistics</strong>, Government College University Faisalabad (2022)</li>
-    <li><strong>BS in English (Linguistics)</strong>, University of Education Lahore (2020)</li>
+    <li>Opportunities and Trends in Computational Linguistics, Capital University of Science and Technology, Islamabad (Oct 29, 2025)</li>
+    <li>Python for Computational Linguistics: Practical NLP for Linguists, Linguistic Association of Pakistan (Oct 26, 2025)</li>
+    <li>Introduction to Corpus Analysis Using LancsBox, Ghazi University, Dera Ghazi Khan (Oct 21, 2025)</li>
+    <li>Decoding Translation Using Corpora, University of Management and Technology, Lahore (May 13, 2025)</li>
+    <li>Three-Day Training Workshop on Corpus Linguistics Tools, University of Agriculture, Faisalabad (Apr 15–17, 2025)</li>
+    <li>Basics of Corpus and Computational Linguistics, University of Management and Technology, Sialkot (Jan 15, 2025)</li>
+    <li>Introduction to Python, Corpus and Computational Linguistics, The University of Faisalabad (Jan 8, 2025)</li>
+    <li>Computational Linguistics, The University of Faisalabad (Dec 15, 2024)</li>
+    <li>Corpus Linguistics Essentials: From Theory to Practical Applications, Pakistan Corpus Studio (Nov 25, 2024)</li>
+    <li>Computational Linguistics, The University of Faisalabad (Nov 14, 2024)</li>
   </ul>
 </section>
-
-<footer>
-  <p>This page serves as an academic homepage. A full CV is available upon request.</p>
-</footer>
 
 </body>
 </html>

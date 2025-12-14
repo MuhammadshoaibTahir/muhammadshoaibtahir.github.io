@@ -1,279 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhammad Shoaib Tahir - Academic Profile</title>
+    <meta charset="UTF-8">
+    <title>Muhammad Shoaib Tahir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* ===== Reset and Base Styles ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
             background: #ffffff;
-            color: #111;
-            line-height: 1.65;
+            color: #222;
+            line-height: 1.6;
         }
 
-        /* ===== Layout ===== */
-        .container {
-            max-width: 860px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
-        /* ===== Header (Name & Pronunciation) ===== */
-        header {
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 36px;
-            font-weight: 600;
-        }
-
-        .pronunciation {
-            font-size: 18px;
-            color: #777;
-            margin: 6px 0 10px;
-            font-family: Consolas, "Liberation Mono", Courier, monospace;
-        }
-
-        /* ===== Icon Bar ===== */
-        .icons {
-            margin-bottom: 20px;
-        }
-        .icons a {
-            margin-right: 18px;
-            font-size: 20px;
-            color: #000;
-            text-decoration: none;
-        }
-        .icons a:hover {
-            color: #1a4fc2;
-        }
-
-        /* ===== Notice + Image Row ===== */
-        .notice-row {
-            display: flex;
-            gap: 30px;
-            align-items: flex-start;
-            margin: 20px 0;
-        }
-
-        .notice-content {
-            flex-grow: 1;
-            order: 1;
-        }
-        
-        .profile-pic-wrapper {
-            width: 150px;
-            flex-shrink: 0;
-            order: 2;
-        }
-
-        .notice {
-            /* Blue Notice Box Style */
-            background: #e6f3ff;
-            padding: 14px 16px;
-            border-radius: 6px;
-            font-size: 15px;
-            margin-bottom: 18px;
-        }
-
-        .profile-pic {
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-            display: block;
-        }
-
-        /* ===== Main Content Paragraphs (p tags) and Links ===== */
-        p {
-            margin-bottom: 18px;
-            font-size: 15px;
-        }
-        
         a {
-            color: #1a4fc2;
+            color: #c40000;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        
-        /* ===== Sections (H2 and Lists) ===== */
+
+        .container {
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-left h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .pronunciation {
+            color: #999;
+            font-style: italic;
+            margin-top: 6px;
+        }
+
+        .icons {
+            margin-top: 16px;
+        }
+
+        .icons a {
+            color: #000;
+            margin-right: 18px;
+            font-size: 1.3rem;
+            transition: color 0.2s ease;
+        }
+
+        .icons a:hover {
+            color: #c40000;
+        }
+
+        .profile-pic {
+            width: 180px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        .highlight-box {
+            background: #e8f7fb;
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin: 30px 0;
+        }
+
         section {
             margin-top: 40px;
-        }
-
-        section h2 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 6px;
-            font-size: 15px;
-        }
-
-        /* Specific styling for the Invited Talks section to bold the institution/title */
-        .invited-talks li span.institution {
-            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<header>
-    <h1>Muhammad Shoaib Tahir</h1>
-    <div class="pronunciation">/muːˈhæməd ʃoʊeɪb ˈtɑːhɪr/</div>
+    <!-- HEADER -->
+    <header>
+        <div class="header-left">
+            <h1>Muhammad Shoaib Tahir</h1>
+            <div class="pronunciation">/məˈhɑːməd ʃoʊˈeɪb ˈtɑːhɪr/</div>
 
-    <div class="icons">
-        <a href="mailto:shoaibtahir410@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://scholar.google.com/citations?user=YNAz_0kAAAAJ" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-        <a href="https://github.com/MuhammadshoaibTahir" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/muhammad-shoaib-tahir-3a9103179/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a> 
-    </div>
+            <div class="icons">
+                <a href="mailto:shoaibtahir410@gmail.com" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
 
-    <div class="notice-row">
-        <div class="notice-content">
-            <div class="notice">
-                I am actively seeking **PhD opportunities** in Computational Linguistics and Natural Language Processing. My research focuses on developing NLP resources and models for low-resource languages, particularly **Shahmukhi Punjabi**.
+                <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" title="Google Scholar">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </a>
             </div>
-
-            <p>
-                I have a strong background in Applied Linguistics with hands-on research experience in Natural Language Processing. My expertise includes the development of linguistic tools (like POS Taggers and Morphological Analyzers) and lexical resources (Punjabi WordNet) for low-resource languages, such as Shahmukhi Punjabi.
-            </p>
-            <p>
-                My professional experience includes teaching Corpus Linguistics and Morphology at various universities and working as a Research Assistant on an HEC-NRPU Project focused on Shahmukhi Punjabi. I am proficient in Python, Git/GitHub, and Research Design.
-            </p>
         </div>
 
-        <div class="profile-pic-wrapper">
-            <img src="assets/files/file.jpg" class="profile-pic" alt="Muhammad Shoaib Tahir Profile">
-        </div>
+        <!-- PROFILE PHOTO -->
+        <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
+    </header>
+
+    <!-- HIGHLIGHT -->
+    <div class="highlight-box">
+        I am a <strong>Computational Linguist and Corpus Linguistics Researcher</strong> based in Faisalabad, Pakistan,
+        with expertise in Punjabi language resources, NLP, and linguistic tool development.
     </div>
-</header>
 
+    <!-- BIO -->
+    <section>
+        <p>
+            I hold an <strong>M.Phil. in Applied Linguistics</strong> from Government College University Faisalabad.
+            My research focuses on <strong>computational morphology, corpus linguistics, and Punjabi NLP</strong>,
+            including the development of lexical resources such as WordNet, POS taggers, and morphological analyzers.
+        </p>
+
+        <p>
+            I have teaching experience across multiple universities in Pakistan, delivering courses in
+            <strong>Corpus Linguistics, Morphology, Syntax, Sociolinguistics, and CALL</strong>.
+            I have also worked as a Research Assistant under an HEC-NRPU funded project on Shahmukhi Punjabi.
+        </p>
+    </section>
+
+    <!-- RESEARCH INTERESTS -->
+    <section>
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Corpus Linguistics</li>
+            <li>Computational Linguistics & NLP</li>
+            <li>Punjabi Language Resources</li>
+            <li>Morphology and Syntax</li>
+            <li>Lexical Semantics and WordNet Development</li>
+        </ul>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <h2>Education</h2>
+
+        <div class="cv-block">
+            <div class="cv-title">M.Phil. in Applied Linguistics</div>
+            <div class="cv-meta">
+                Government College University Faisalabad (2020–2022) <br>
+                Thesis: Development of Punjabi Synset Using Expansion Approach from English WordNet <br>
+                CGPA: 3.33 / 4.00
+            </div>
+        </div>
+
+        <div class="cv-block">
+            <div class="cv-title">B.S. in English (Linguistics)</div>
+            <div class="cv-meta">
+                University of Education, Lahore (2016–2020) <br>
+                CGPA: 3.16 / 4.00
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+        <h2>Professional Experience</h2>
+
+        <div class="cv-block">
+            <div class="cv-title">Freelance Language Expert (Western Punjabi Translator)</div>
+            <div class="cv-meta">Uliza | Dec 2025 – Jan 2026</div>
+        </div>
+
+        <div class="cv-block">
+            <div class="cv-title">Visiting Lecturer</div>
+            <div class="cv-meta">
+                Government College University Faisalabad (Oct 2024 – July 2025) <br>
+                University of Education Lahore – Faisalabad Campus (Sept 2024 – Feb 2025)
+            </div>
+        </div>
+
+        <div class="cv-block">
+            <div class="cv-title">Corpus Linguistics Course Instructor</div>
+            <div class="cv-meta">University of Agriculture Faisalabad (Jan 2025 – Apr 2025)</div>
+        </div>
+
+        <div class="cv-block">
+            <div class="cv-title">Research Assistant (HEC-NRPU Project)</div>
+            <div class="cv-meta">Government College University Faisalabad (Oct 2022 – Oct 2024)</div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section>
+        <h2>Publications</h2>
+        <ul>
+            <li>Developing Digital Resources of Shahmukhi Punjabi (2024), <em>Russian Law Journal</em></li>
+            <li>Mapping of English and Punjabi Verb Classes (2024), <em>Journal of Applied Linguistics Studies</em></li>
+            <li>Morphological Description of Nouns in Shahmukhi Punjabi (2023), <em>Journal of Positive School Psychology</em></li>
+        </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+        <h2>Projects & Tools</h2>
+        <ul>
+            <li>Punjabi POS Tagger (Rule-Based)</li>
+            <li>Punjabi WordNet</li>
+            <li>Morphological Analyzer for Punjabi</li>
+            <li>Rule-Based Punjabi Stemmer</li>
+        </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Python, HTML, CSS, JavaScript</li>
+            <li>Git, GitHub, GitHub Pages</li>
+            <li>Corpus Tools, Web Scraping, Automation</li>
+            <li>Statistical Analysis & Research Design</li>
+        </ul>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section>
+        <h2>Languages</h2>
+        <ul>
+            <li>Urdu</li>
+            <li>Punjabi</li>
+            <li>English</li>
+            <li>Hindi (Speaking)</li>
+        </ul>
+    </section>
+
+<!-- INVITED TALKS -->
 <section>
-    <h2>Education</h2>
+    <h2>Invited Talks & Guest Lectures</h2>
     <ul>
         <li>
-            **M.Phil. in Applied Linguistics**, Government College University, Faisalabad (2020-2022)
-            <br>Thesis: Development of Punjabi Synset Using Expansion Approach from English WordNet
-            <br>Cumulative GPA: 3.33/4.00
+            <strong>Opportunities and Trends in Computational Linguistics</strong><br>
+            Capital University of Science and Technology, Islamabad — October 29, 2025
         </li>
         <li>
-            **B.S. in English (Linguistics)**, University of Education, Lahore (2016-2020)
-            <br>Cumulative GPA: 3.16/4.00
-        </li>
-    </ul>
-</section>
-
-<section>
-    <h2>Projects / Research Tools Developed</h2>
-    <ul>
-        <li>**Punjabi WordNet:** Built a lexical database of Punjabi synsets and semantic relations.</li>
-        <li>**Punjabi POS Tagger:** Developed a rule-based POS tagger for Shahmukhi Punjabi.</li>
-        <li>**Morphological Analyzer for Punjabi:** Created a rule-based analyzer for Punjabi word forms.</li>
-        <li>**Rule-Based Stemmer for Punjabi:** Implemented a deterministic stemmer for Punjabi morphology.</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Technical and Computational Skills</h2>
-    <ul>
-        <li>Python, HTML/CSS / JavaScript [cite: 60, 67]</li>
-        <li>Git/GitHub / GitHub Pages </li>
-        <li>Google Colab / Jupyter Notebook </li>
-        <li>Web Scraping and Automation </li>
-        <li>Research Design and Statistical Analysis </li>
-    </ul>
-</section>
-
-
-<section>
-    <h2>Professional Experience</h2>
-    <ul>
-        <li>
-            **Visiting Lecturer**, Government College University Faisalabad (Oct 2024–July 2025)
-            <br>Courses Taught: Corpus Linguistics, Computer Assisted Language Learning, Morphology
+            <strong>Python for Computational Linguistics: Practical NLP for Linguists</strong><br>
+            Linguistic Association of Pakistan — October 26, 2025
         </li>
         <li>
-            **Visiting Lecturer**, University of Education Lahore (Faisalabad Campus) (Sept 2024–Feb 2025)
-            <br>Courses Taught: Morphology, Corpus Linguistics, Syntax, Sociolinguistics
+            <strong>Introduction to Corpus Analysis Using LancsBox</strong><br>
+            Ghazi University, Dera Ghazi Khan — October 21, 2025
         </li>
         <li>
-            **Research Assistant**, Government College University Faisalabad (Oct 2022–Oct 2024)
-            <br>Worked under the HEC-NRPU Project. Developed linguistic tools for Shahmukhi Punjabi.
+            <strong>Decoding Translation Using Corpora: Frameworks, Tools, and Empirical Studies</strong><br>
+            University of Management and Technology (UMT), Lahore — May 13, 2025
         </li>
         <li>
-            **Corpus Linguistics Course Instructor**, University of Agriculture, Faisalabad (Jan 2025–Apr 2025)
-            <br>Teaching Corpus Linguistics to undergraduate and graduate students.
+            <strong>Three-Day Training Workshop on Corpus Linguistics Tools</strong><br>
+            University of Agriculture, Faisalabad — April 15–17, 2025
         </li>
         <li>
-            **Freelance Language Expert (Western Punjabi Translator)**, Uliza (Dec 2025–Jan 2026)
-            <br>Responsibilities included translating batches of documents from source language to Western Punjabi.
+            <strong>Basics of Corpus and Computational Linguistics</strong><br>
+            University of Management and Technology, Sialkot — January 15, 2025
+        </li>
+        <li>
+            <strong>Introduction to Python, Corpus and Computational Linguistics</strong><br>
+            The University of Faisalabad — January 8, 2025
+        </li>
+        <li>
+            <strong>Computational Linguistics</strong><br>
+            The University of Faisalabad — December 15, 2024
+        </li>
+        <li>
+            <strong>Corpus Linguistics Essentials: From Theory to Practical Applications</strong><br>
+            Pakistan Corpus Studio — November 25, 2024
+        </li>
+        <li>
+            <strong>Computational Linguistics</strong><br>
+            The University of Faisalabad — November 14, 2024
         </li>
     </ul>
 </section>
 
-<section>
-    <h2>Research Publications</h2>
-    <ul>
-        <li>Developing Digital Resources of Shahmukhi Punjabi (2024) </li>
-        <li>Mapping of English and Punjabi Verb Classes; A Corpus Based Study (2024) </li>
-        <li>Morphological Description Of Nouns In Shahmukhi Punjabi; A Corpus Based Study (2023) </li>
-        <li>Book Chapter (In Progress): "Natural Language Processing with Corpora" in Handbook of Corpus Linguistics [cite: 46]</li>
-    </ul>
-</section>
+    <!-- FOOTER -->
+    <footer>
+        © Muhammad Shoaib Tahir · Faisalabad, Pakistan · shoaibtahir410@gmail.com
+    </footer>
 
-<section class="invited-talks">
-    <h2>Invited Talks and Guest Lectures</h2>
-    <ul>
-        <li><span class="institution">Capital University of Science and Technology, Islamabad</span> — Opportunities and Trends in Computational Linguistics (Oct 29, 2025) </li>
-        <li><span class="institution">Linguistic Association of Pakistan</span> — Python for Computational Linguistics: Practical NLP for Linguists (Oct 26, 2025) </li>
-        <li><span class="institution">Ghazi University, Dera Ghazi Khan</span> — Introduction to Corpus Analysis Using LancsBox (Oct 21, 2025) </li>
-        <li><span class="institution">University of Management and Technology (UMT), Lahore</span> — Decoding Translation Using Corpora: Frameworks, Tools, and Empirical Studies (May 13, 2025) </li>
-        <li><span class="institution">University of Agriculture, Faisalabad</span> — Three-Day Training Workshop on Corpus Linguistics Tools (Apr 15-17, 2025) </li>
-        <li><span class="institution">University of Management and Technology, Sialkot</span> — Basics of Corpus and Computational Linguistics (Jan 15, 2025) </li>
-        <li><span class="institution">The University of Faisalabad</span> — Introduction to Python, Corpus and Computational Linguistics (Jan 8, 2025) </li>
-        <li><span class="institution">The University of Faisalabad</span> — Computational Linguistics (Dec 15, 2024) </li>
-        <li><span class="institution">Pakistan Corpus Studio</span> — Corpus Linguistics Essentials: From Theory to Practical Applications (Nov 25, 2024) </li>
-        <li><span class="institution">The University of Faisalabad</span> — Computational Linguistics (Nov 14, 2024) </li>
-    </ul>
-</section>
-
-<section>
-    <h2>Conferences and Workshops</h2>
-    <ul>
-        <li>A Two-Day International Conference: Weaving Unity in Diversity, Many Threads, One Tapestry (May 7-8, 2025) - Pre-Conference Workshop, Air University, Islamabad </li>
-        <li>10th International Conference of the Linguistic Association of Pakistan (October 2024) - University of Balochistan, Quetta </li>
-        <li>Using Corpus to Find Useful Phrases for Novice Writers in Health Sciences (August 2024) - Bahria University, Islamabad </li>
-        <li>Exploring Corpus Linguistics: An Introduction to Tools, Techniques, and Analysis (May 2024) - Linguistic Association of Pakistan </li>
-        <li>9th International Conference of the Linguistic Association of Pakistan (December 2023) - Government College University, Faisalabad </li>
-    </ul>
-</section>
 
 </div>
 </body>

@@ -6,43 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
       color: #111;
       background: #fff;
+      line-height: 1.6;
+      margin: 0;
     }
 
-    /* Layout */
+    /* Main content width */
     .container {
-      max-width: 900px;
-      margin: 60px 0 60px 120px; /* 👈 left offset */
-      padding-right: 20px;
-    }
-
-    header {
-      margin-bottom: 40px;
+      max-width: 860px;
+      margin: 50px auto;
+      padding: 0 20px;
     }
 
     h1 {
       font-size: 36px;
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .pronunciation {
-      font-size: 16px;
-      color: #777;
+      color: #888;
+      font-size: 18px;
       margin-bottom: 10px;
     }
 
     .icons a {
-      margin-right: 12px;
+      margin-right: 14px;
+      color: #000;
       font-size: 18px;
-      color: #111;
       text-decoration: none;
     }
 
@@ -50,39 +49,36 @@
       color: #1a4fc2;
     }
 
-    /* Notice + Image Row */
-    .notice-row {
+    /* Top layout */
+    .top {
       display: grid;
-      grid-template-columns: 1fr 160px;
+      grid-template-columns: 1fr 180px;
       gap: 30px;
       align-items: start;
-      margin: 20px 0;
-    }
-
-    .notice {
-      background: #eef6ff;
-      border-left: 4px solid #1a4fc2;
-      padding: 14px 16px;
-      font-size: 15px;
     }
 
     .profile-pic {
-      width: 160px;
+      width: 180px;
       border-radius: 6px;
     }
 
+    /* Info box */
+    .notice {
+      background: #e6f6fb;
+      padding: 14px 16px;
+      border-radius: 6px;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+
     p {
-      margin-top: 16px;
-      max-width: 720px;
+      margin-bottom: 14px;
     }
 
-    section {
-      margin-top: 48px;
-    }
-
-    section h2 {
+    h2 {
       font-size: 22px;
       font-weight: 600;
+      margin-top: 40px;
       margin-bottom: 12px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 6px;
@@ -93,7 +89,7 @@
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     a {
@@ -105,19 +101,13 @@
       text-decoration: underline;
     }
 
-    /* Mobile */
-    @media (max-width: 1200px) {
-      .container {
-        margin: 40px 20px;
-      }
-    }
-
     @media (max-width: 768px) {
-      .notice-row {
+      .top {
         grid-template-columns: 1fr;
       }
 
       .profile-pic {
+        width: 140px;
         margin-top: 20px;
       }
     }
@@ -125,62 +115,61 @@
 </head>
 
 <body>
+
 <div class="container">
 
-<header>
-  <h1>Muhammad Shoaib Tahir</h1>
-  <div class="pronunciation">/muːˈhæməd ʃoʊeɪb ˈtɑːhɪr/</div>
+  <div class="top">
+    <div>
+      <h1>Muhammad Shoaib Tahir</h1>
+      <div class="pronunciation">/muːˈhæməd ʃoʊeɪb ˈtɑːhɪr/</div>
 
-  <div class="icons">
-    <a href="mailto:shoaibtahir410@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://scholar.google.com/citations?user=YNAz_0kAAAAJ" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
-    <a href="https://github.com/MuhammadshoaibTahir" target="_blank"><i class="fa-brands fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/muhammad-shoaib-tahir-3a9103179/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://www.facebook.com/muhammad.shoaib.tahir.166555" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-  </div>
+      <div class="icons">
+        <a href="mailto:shoaibtahir410@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://scholar.google.com/citations?user=YNAz_0kAAAAJ" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
+        <a href="https://github.com/MuhammadshoaibTahir" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-shoaib-tahir-3a9103179/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/muhammad.shoaib.tahir.166555" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      </div>
 
-  <div class="notice-row">
-    <div class="notice">
-      I am seeking a PhD opportunity in Computational Linguistics and Natural Language Processing,
-      with interests in NLP model development, model evaluation and assessment, and research on
-      low-resource languages. I am particularly interested in integrating computational methods
-      with linguistic insights and collaborating on interdisciplinary research.
+      <div class="notice">
+        I am seeking a PhD opportunity in <strong>Computational Linguistics and Natural Language Processing</strong>.
+        My research interests include NLP model development, model evaluation and assessment,
+        and linguistically informed computational research. I am particularly interested in
+        integrating computational methods with linguistic insights and collaborating on
+        interdisciplinary research.
+      </div>
+
+      <p>
+        I have a background in linguistics with hands-on research experience in Natural Language Processing.
+        My work involves developing NLP tools and linguistic resources, as well as model analysis
+        and evaluation, particularly for low-resource languages such as Shahmukhi Punjabi.
+        I am interested in research that integrates linguistic theory with computational methods
+        and values collaborative, interdisciplinary approaches to language technology.
+      </p>
     </div>
 
-    <img src="assets/files/file.jpg" alt="Muhammad Shoaib Tahir" class="profile-pic">
+    <img src="assets/files/file.jpg"
+         alt="Muhammad Shoaib Tahir"
+         class="profile-pic">
   </div>
 
-  <p>
-    I have a background in linguistics with hands-on research experience in Natural Language
-    Processing. My work focuses on the development of NLP tools and linguistic resources, as well
-    as model analysis and evaluation, particularly for low-resource languages such as Shahmukhi
-    Punjabi. I am interested in research that integrates linguistic theory with computational
-    methods and values collaborative, interdisciplinary approaches to language technology.
-  </p>
-</header>
-
-<section>
   <h2>Current Research Interests</h2>
   <ul>
     <li>NLP model development and assessment</li>
-    <li>Linguistically informed evaluation of language models</li>
+    <li>Linguistically informed analysis of language models</li>
     <li>Morphology and lexical semantics</li>
     <li>Low-resource and multilingual NLP</li>
     <li>Integration of linguistic theory and computational methods</li>
   </ul>
-</section>
 
-<section>
   <h2>Research Projects</h2>
   <ul>
     <li><strong>Punjabi WordNet:</strong> Lexical-semantic resource development for Shahmukhi Punjabi</li>
     <li><strong>Morphological Analyzer:</strong> Rule-based modeling of Punjabi morphology</li>
-    <li><strong>POS Tagger:</strong> Corpus-driven syntactic annotation</li>
+    <li><strong>POS Tagger:</strong> Corpus-driven syntactic annotation for Punjabi</li>
     <li><strong>Rule-Based Stemmer:</strong> Morphological normalization for low-resource corpora</li>
   </ul>
-</section>
 
-<section>
   <h2>Publications</h2>
   <ul>
     <li>Effectiveness of AI Integration into CALL on Student Writing Skills (2024)</li>
@@ -188,41 +177,30 @@
     <li>Mapping of English and Punjabi Verb Classes (2024)</li>
     <li>Morphological Description of Nouns in Shahmukhi Punjabi (2023)</li>
   </ul>
-</section>
 
-<section>
   <h2>Education</h2>
   <ul>
     <li><strong>MPhil in Applied Linguistics</strong>, Government College University Faisalabad (2020–2022)</li>
     <li><strong>BS in English (Linguistics)</strong>, University of Education Lahore (2016–2020)</li>
   </ul>
-</section>
 
-<section>
   <h2>Teaching</h2>
   <ul>
-    <li>Visiting Lecturer, Government College University Faisalabad (Oct 2024 – Jul 2025)</li>
-    <li>Visiting Lecturer, University of Education Lahore – Faisalabad Campus (Sept 2024 – Feb 2025)</li>
-    <li>Corpus Linguistics Course Instructor, University of Agriculture Faisalabad (Jan – Apr 2025)</li>
+    <li>Visiting Lecturer, Government College University Faisalabad (2024–2025)</li>
+    <li>Visiting Lecturer, University of Education Lahore – Faisalabad Campus (2024–2025)</li>
+    <li>Corpus Linguistics Instructor, University of Agriculture Faisalabad (2025)</li>
   </ul>
-</section>
 
-<section>
   <h2>Invited Talks</h2>
   <ul>
-    <li><strong>Capital University of Science and Technology, Islamabad</strong> — Oct 29, 2025</li>
-    <li><strong>Linguistic Association of Pakistan</strong> — Oct 26, 2025</li>
-    <li><strong>Ghazi University, Dera Ghazi Khan</strong> — Oct 21, 2025</li>
-    <li><strong>University of Management and Technology, Lahore</strong> — May 13, 2025</li>
-    <li><strong>University of Agriculture, Faisalabad</strong> — Apr 15–17, 2025</li>
-    <li><strong>University of Management and Technology, Sialkot</strong> — Jan 15, 2025</li>
-    <li><strong>The University of Faisalabad</strong> — Jan 8, 2025</li>
-    <li><strong>The University of Faisalabad</strong> — Dec 15, 2024</li>
-    <li><strong>Pakistan Corpus Studio</strong> — Nov 25, 2024</li>
-    <li><strong>The University of Faisalabad</strong> — Nov 14, 2024</li>
+    <li><strong>Capital University of Science and Technology</strong> — Opportunities and Trends in Computational Linguistics (Oct 29, 2025)</li>
+    <li><strong>Linguistic Association of Pakistan</strong> — Python for Computational Linguistics (Oct 26, 2025)</li>
+    <li><strong>Ghazi University</strong> — Introduction to Corpus Analysis Using LancsBox (Oct 21, 2025)</li>
+    <li><strong>University of Management and Technology, Lahore</strong> — Decoding Translation Using Corpora (May 13, 2025)</li>
+    <li><strong>University of Agriculture, Faisalabad</strong> — Three-Day Workshop on Corpus Linguistics Tools (Apr 2025)</li>
   </ul>
-</section>
 
 </div>
+
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Stats in Corpus Linguistics - Guide Book</title>
+    <title>Books | Muhammad Shoaib Tahir</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google Font -->
@@ -11,17 +11,8 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Your main CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Analytics GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'YOUR_GA_MEASUREMENT_ID');
-    </script>
 
     <style>
         body {
@@ -49,27 +40,36 @@
 
         h1 {
             font-size: 2rem;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
         }
 
-        .book-desc {
+        .book {
             background: #e8f7fb;
             padding: 20px;
             border-radius: 6px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
-        .download-btn {
+        .book h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .book p {
+            margin: 10px 0 15px;
+        }
+
+        .buy-btn {
             display: inline-block;
             background: #c40000;
             color: #fff;
-            padding: 12px 20px;
+            padding: 10px 18px;
             border-radius: 6px;
             font-weight: 600;
             transition: background 0.2s ease;
         }
 
-        .download-btn:hover {
+        .buy-btn:hover {
             background: #9f0000;
         }
 
@@ -85,20 +85,39 @@
 <body>
 <div class="container">
 
-    <h1>Stats in Corpus Linguistics</h1>
+    <h1>Books</h1>
 
-    <div class="book-desc">
-        <p><strong>Guide Book (2025)</strong></p>
-        <p>This guide book covers the fundamentals and practical applications of statistics in corpus linguistics. 
-           It is designed for students, researchers, and anyone interested in computational and corpus-based analysis of language.</p>
+    <!-- Book 1 -->
+    <div class="book">
+        <h2>Statistics in Corpus Linguistics</h2>
+        <p><strong>Guide Book</strong></p>
+        <p>
+            This book introduces statistical concepts essential for corpus linguistics.
+            It bridges theory and practice, making statistical analysis accessible for
+            students, researchers, and computational linguists.
+        </p>
+        <a href="https://www.amazon.com/dp/B0GGV3Z78K"
+           class="buy-btn"
+           target="_blank">
+            <i class="fa-brands fa-amazon"></i> View on Amazon
+        </a>
     </div>
 
-    <a href="https://drive.google.com/file/d/10fOJuLeJGD5FfYnijBTrsOScnCkimjDR/view"
-       class="download-btn"
-       target="_blank"
-       onclick="gtag('event', 'download', {'event_category':'book','event_label':'Stats in Corpus Linguistics'});">
-        <i class="fa-solid fa-book"></i> Download Book (PDF)
-    </a>
+    <!-- Book 2 -->
+    <div class="book">
+        <h2>Introduction to Computational Linguistics</h2>
+        <p><strong>Research & Practice-Oriented Book</strong></p>
+        <p>
+            This book focuses on practical computational linguistics. corpus-driven methods, covering real-world
+            linguistic data analysis, examples, and applications for language research
+            and NLP-oriented studies.
+        </p>
+        <a href="https://www.amazon.com/dp/B0GCNVSDN6"
+           class="buy-btn"
+           target="_blank">
+            <i class="fa-brands fa-amazon"></i> View on Amazon
+        </a>
+    </div>
 
     <footer>
         © Muhammad Shoaib Tahir · Faisalabad, Pakistan · shoaibtahir410@gmail.com

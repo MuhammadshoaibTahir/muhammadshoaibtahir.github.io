@@ -1,260 +1,222 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Shoaib Tahir</title>
-
-<!-- Font Awesome -->
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<style>
 /* ===============================
-   Base
+RESET / BASE
 ================================ */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+  }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: #ffffff;
-  color: #111;
-  line-height: 1.65;
+font-family: -apple-system, BlinkMacSystemFont,
+"Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+background: #ffffff;
+color: #111;
+line-height: 1.65;
+transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* ===============================
-   Layout (Key stretch)
+DARK MODE
+================================ */
+body.dark {
+background: #121212;
+color: #f1f1f1;
+}
+
+/* ===============================
+LAYOUT
 ================================ */
 .container {
-  max-width: 1040px;              /* ← wider academic measure */
-  margin: 50px auto;
-  padding: 0 28px;
+max-width: 1040px;
+margin: 50px auto;
+padding: 0 28px;
 }
 
 /* ===============================
-   Header
+HEADER
 ================================ */
 header {
-  margin-bottom: 42px;
+margin-bottom: 42px;
 }
 
 h1 {
-  font-size: 36px;
-  font-weight: 600;
+font-size: 36px;
+font-weight: 600;
 }
 
 .pronunciation {
-  font-size: 18px;
-  color: #777;
-  margin: 6px 0 10px;
+font-size: 18px;
+color: #777;
+margin: 6px 0 10px;
 }
 
+body.dark .pronunciation {
+color: #aaa;
+}
+
+/* ===============================
+ICONS
+================================ */
 .icons a {
-  margin-right: 14px;
-  font-size: 18px;
-  color: #000;
-  text-decoration: none;
+margin-right: 14px;
+font-size: 18px;
+color: #000;
+text-decoration: none;
+transition: 0.2s;
+}
+
+body.dark .icons a {
+color: #fff;
 }
 
 .icons a:hover {
-  color: #1a4fc2;
+color: #1a4fc2;
 }
 
 /* ===============================
-   Notice + Image (Main fix)
+NOTICE + IMAGE
 ================================ */
 .notice-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 160px;
-  column-gap: 40px;
-  align-items: start;
-  margin: 24px 0;
+display: grid;
+grid-template-columns: minmax(0, 1fr) 160px;
+column-gap: 40px;
+align-items: start;
+margin: 24px 0;
 }
 
 .notice {
-  width: 100%;              /* ← IMPORTANT */
-  background: #e6f3ff;
-  padding: 18px 22px;
-  border-radius: 6px;
-  font-size: 16px;
+width: 100%;
+background: #e6f3ff;
+padding: 18px 22px;
+border-radius: 6px;
+font-size: 16px;
 }
 
+body.dark .notice {
+background: #1c2a35;
+}
 
 .profile-pic {
-  width: 150px;
-  border-radius: 6px;
+width: 150px;
+border-radius: 6px;
 }
 
 /* ===============================
-   Paragraphs
+TEXT
 ================================ */
 p {
-  font-size: 16.5px;
-  margin-bottom: 18px;
+font-size: 16.5px;
+margin-bottom: 18px;
 }
 
 /* ===============================
-   Sections
+SECTIONS
 ================================ */
 section {
-  margin-top: 44px;
+margin-top: 44px;
 }
 
 section h2 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #ddd;
+font-size: 22px;
+font-weight: 600;
+margin-bottom: 12px;
+padding-bottom: 6px;
+border-bottom: 1px solid #ddd;
+}
+
+body.dark section h2 {
+border-color: #333;
 }
 
 /* ===============================
-   Lists
+LISTS
 ================================ */
 ul {
-  padding-left: 22px;
+padding-left: 22px;
 }
 
 li {
-  margin-bottom: 6px;
+margin-bottom: 6px;
 }
 
 /* ===============================
-   Links
+LINKS
 ================================ */
 a {
-  color: #1a4fc2;
-  text-decoration: none;
+color: #1a4fc2;
+text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 /* ===============================
-   Responsive
+BUTTON
+================================ */
+.btn {
+display: inline-block;
+padding: 10px 16px;
+background: #1a4fc2;
+color: #fff;
+border-radius: 6px;
+font-size: 14px;
+margin-top: 10px;
+transition: 0.3s;
+}
+
+.btn:hover {
+background: #123a91;
+}
+
+/* ===============================
+PROJECT CARD
+================================ */
+.project-card {
+border: 1px solid #ddd;
+padding: 18px;
+border-radius: 6px;
+margin-top: 16px;
+background: #fafafa;
+transition: all 0.3s ease;
+}
+
+body.dark .project-card {
+background: #1e1e1e;
+border-color: #333;
+}
+
+.project-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+DARK MODE BUTTON
+================================ */
+#darkModeToggle {
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 999;
+}
+
+/* ===============================
+RESPONSIVE
 ================================ */
 @media (max-width: 900px) {
-  .notice-row {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-pic {
-    width: 140px;
-    margin-top: 16px;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
+.notice-row {
+grid-template-columns: 1fr;
 }
-</style>
-</head>
 
-<body>
+.profile-pic {
+width: 140px;
+margin-top: 16px;
+}
 
-<div class="container">
-
-<header>
-  <h1>Muhammad Shoaib Tahir</h1>
-  <div class="pronunciation">/muːˈhæməd ʃoʊeɪb ˈtɑːhɪr/</div>
-
-  <div class="icons">
-    <a href="mailto:shoaibtahir410@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://scholar.google.com/citations?user=YNAz_0kAAAAJ" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
-    <a href="https://github.com/MuhammadshoaibTahir" target="_blank"><i class="fa-brands fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/muhammad-shoaib-tahir-3a9103179/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://www.facebook.com/muhammad.shoaib.tahir.166555" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-  </div>
-
-  <div class="notice-row">
-    <div class="notice">
-      I am seeking a PhD opportunity in <strong>Computational Linguistics and
-      Natural Language Processing</strong>. My research interests include NLP
-      model development, model evaluation and assessment, and linguistically
-      informed computational research. I am particularly interested in
-      integrating computational methods with linguistic insights and in
-      collaborative, interdisciplinary research.
-    </div>
-
-    <img src="assets/files/files.jpeg"
-         alt="Muhammad Shoaib Tahir"
-         class="profile-pic">
-  </div>
-
-  <p>
-    I have a background in linguistics with hands-on research experience in
-    Natural Language Processing. My work includes the development of NLP tools
-    and linguistic resources, as well as model analysis and evaluation,
-    particularly for low-resource languages such as Shahmukhi Punjabi. I am
-    interested in research that integrates linguistic theory with computational
-    methods and values collaborative approaches to language technology.
-  </p>
-</header>
-
-<section>
-  <h2>Current Research Interests</h2>
-  <ul>
-    <li>NLP model development and assessment</li>
-    <li>Linguistically informed analysis of language models</li>
-    <li>Morphology and lexical semantics</li>
-    <li>Low-resource and multilingual NLP</li>
-    <li>Integration of linguistic theory and computational methods</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Research Projects</h2>
-  <ul>
-    <li><strong>Punjabi WordNet:</strong> Lexical-semantic resource development</li>
-    <li><strong>Morphological Analyzer:</strong> Rule-based morphology modeling</li>
-    <li><strong>POS Tagger:</strong> Corpus-driven syntactic annotation</li>
-    <li><strong>Rule-Based Stemmer:</strong> Morphological normalization</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Publications</h2>
-  <ul>
-    <li>Developing Digital Resources of Shahmukhi Punjabi (2024)</li>
-    <li>Mapping of English and Punjabi Verb Classes (2024)</li>
-    <li>Morphological Description of Nouns in Shahmukhi Punjabi (2023)</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Education</h2>
-  <ul>
-    <li><strong>MPhil in Applied Linguistics</strong>, GCU Faisalabad (2020–2022)</li>
-    <li><strong>BS in English (Linguistics)</strong>, University of Education Lahore (2016–2020)</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Teaching</h2>
-  <ul>
-    <li>Visiting Lecturer, GCU Faisalabad (2024–2025)</li>
-    <li>Visiting Lecturer, University of Education Faisalabad (2024–2025)</li>
-    <li>Instructor, Corpus Linguistics, University of Agriculture Faisalabad (2025)</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Invited Talks</h2>
-  <ul>
-    <li><strong>UMT Lahore</strong> — Decoding Translation Using Corpora (May 2025)</li>
-    <li><strong>University of Agriculture Faisalabad</strong> — Corpus Linguistics Tools Workshop (Apr 2025)</li>
-    <li><strong>Pakistan Corpus Studio</strong> — Corpus Linguistics Essentials (Nov 2024)</li>
-    <li><strong>The University of Faisalabad</strong> — Computational Linguistics (2024)</li>
-  </ul>
-</section>
-
-</div>
-
-</body>
-</html>
+h1 {
+font-size: 30px;
+}
+}

@@ -1,290 +1,233 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Muhammad Shoaib Tahir</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+```
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            background: #ffffff;
-            color: #222;
-            line-height: 1.6;
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        background: #ffffff;
+        color: #222;
+        line-height: 1.6;
+    }
+
+    a {
+        color: #c40000;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .container {
+        max-width: 1050px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .header-left h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    .pronunciation {
+        color: #999;
+        font-style: italic;
+        margin-top: 6px;
+    }
+
+    .icons {
+        margin-top: 16px;
+    }
+
+    .icons a {
+        color: #000;
+        margin-right: 18px;
+        font-size: 1.3rem;
+        transition: 0.2s;
+    }
+
+    .icons a:hover {
+        color: #c40000;
+    }
+
+    .profile-pic {
+        width: 180px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+    }
+
+    .highlight-box {
+        background: #e8f7fb;
+        border-radius: 6px;
+        padding: 15px 20px;
+        margin: 30px 0;
+    }
+
+    section {
+        margin-top: 40px;
+    }
+
+    /* BUTTON */
+    .btn {
+        display: inline-block;
+        padding: 10px 16px;
+        background: #c40000;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #900000;
+        text-decoration: none;
+    }
+
+    /* PROJECT CARD */
+    .project-card {
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+        background: #fafafa;
+        transition: 0.3s;
+    }
+
+    .project-card:hover {
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        transform: translateY(-4px);
+    }
+
+    footer {
+        margin-top: 60px;
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    @media(max-width:768px){
+        header{
+            flex-direction: column;
+            gap:20px;
         }
+    }
+</style>
+```
 
-        a {
-            color: #c40000;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1050px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .header-left h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        .pronunciation {
-            color: #999;
-            font-style: italic;
-            margin-top: 6px;
-        }
-
-        .icons {
-            margin-top: 16px;
-        }
-
-        .icons a {
-            color: #000;
-            margin-right: 18px;
-            font-size: 1.3rem;
-            transition: color 0.2s ease;
-        }
-
-        .icons a:hover {
-            color: #c40000;
-        }
-
-        .profile-pic {
-            width: 180px;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-        }
-
-        .highlight-box {
-            background: #e8f7fb;
-            border-radius: 6px;
-            padding: 15px 20px;
-            margin: 30px 0;
-        }
-
-        section {
-            margin-top: 40px;
-        }
-    </style>
 </head>
 
 <body>
 <div class="container">
 
-    <!-- HEADER -->
-    <header>
-        <div class="header-left">
-            <h1>Muhammad Shoaib Tahir</h1>
-            <div class="pronunciation">/məˈhɑːməd ʃoʊˈeɪb ˈtɑːhɪr/</div>
+```
+<!-- HEADER -->
+<header>
+    <div class="header-left">
+        <h1>Muhammad Shoaib Tahir</h1>
+        <div class="pronunciation">/məˈhɑːməd ʃoʊˈeɪb ˈtɑːhɪr/</div>
 
-            <div class="icons">
-                <a href="mailto:shoaibtahir410@gmail.com" title="Email">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-
-                <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" title="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-
-                <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-
-                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" title="Google Scholar">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </a>
-            </div>
+        <div class="icons">
+            <a href="mailto:shoaibtahir410@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/MuhammadshoaibTahir" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
         </div>
-
-        <!-- PROFILE PHOTO -->
-        <img src="assets/files/files.jpeg" class="profile-pic" alt="Profile">
-    </header>
-
-    <!-- HIGHLIGHT -->
-    <div class="highlight-box">
-        I am seeking a PhD position in <strong>Computational Linguistics</strong>. I have research
-        experience and a strong interest in training, analyzing, and assessing natural language
-        processing models, as well as in developing linguistic resources, with the goal of exploring
-        language through computational and linguistically informed methods.
     </div>
 
-    <!-- BIO -->
-    <section>
-        <p>
-            I hold a Bachelor’s degree in English Linguistics and an M.Phil. in Applied Linguistics
-            from Government College University Faisalabad.
-        </p>
-    </section>
+    <img src="assets/files/files.jpeg" class="profile-pic" alt="Profile">
+</header>
 
-    <!-- RESEARCH INTERESTS -->
-    <section>
-        <h2>Research Interests</h2>
-        <ul>
-            <li>Corpus Linguistics</li>
-            <li>Computational Linguistics & NLP</li>
-            <li>Punjabi Language Resources</li>
-            <li>Morphology and Syntax</li>
-            <li>Lexical Semantics and WordNet Development</li>
-        </ul>
-    </section>
-
-    <!-- EDUCATION -->
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <strong>M.Phil. in Applied Linguistics</strong>,
-                Government College University Faisalabad (2020–2022).<br>
-                Thesis: Development of Punjabi Synset Using Expansion Approach from English WordNet
-            </li>
-            <li>
-                <strong>B.S. in English (Linguistics)</strong>,
-                University of Education, Lahore (2016–2020)
-            </li>
-        </ul>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section>
-        <h2>Professional Experience</h2>
-        <ul>
-            <li><strong>Freelance Language Expert (Western Punjabi Translator)</strong>, Uliza (Dec 2025 – Jan 2026)</li>
-            <li><strong>Visiting Lecturer</strong>, Government College University Faisalabad (Oct 2024 – July 2025)</li>
-            <li><strong>Visiting Lecturer</strong>, University of Education Lahore – Faisalabad Campus (Sept 2024 – Feb 2025)</li>
-            <li><strong>Corpus Linguistics Course Instructor</strong>, University of Agriculture Faisalabad (Jan 2025 – Apr 2025)</li>
-            <li><strong>Research Assistant (HEC-NRPU Project)</strong>, Government College University Faisalabad (Oct 2022 – Oct 2024)</li>
-        </ul>
-    </section>
-
-    <!-- PUBLICATIONS -->
-    <section>
-        <h2>Publications</h2>
-        <ul>
-            <li>Developing Digital Resources of Shahmukhi Punjabi (2024), <em>Russian Law Journal</em></li>
-            <li>Mapping of English and Punjabi Verb Classes (2024), <em>Journal of Applied Linguistics Studies</em></li>
-            <li>Morphological Description of Nouns in Shahmukhi Punjabi (2023), <em>Journal of Positive School Psychology</em></li>
-        </ul>
-    </section>
-
-    <!-- BOOKS -->
-    <section>
-        <h2>Books</h2>
-        <ul>
-            <li style="margin-bottom: 20px;">
-                <strong>Statistics in Corpus Linguistics</strong> (2025) – Guide Book<br>
-                <em>
-                    A student-focused introduction to statistical methods in corpus linguistics,
-                    with practical explanations and corpus-based examples.
-                </em><br>
-                <a href="https://www.amazon.com/dp/B0GCNVSDN6" target="_blank">
-                    <i class="fa-brands fa-amazon"></i> View on Amazon
-                </a>
-            </li>
-
-            <li>
-                <strong>Introduction to Computational Linguistics</strong> (2025) – Introductory Textbook<br>
-                <em>
-                    An accessible introduction to computational linguistics, covering corpus
-                    processing, basic NLP concepts, annotation, and computational approaches to
-                    language analysis.
-                </em><br>
-                <a href="https://www.amazon.com/dp/B0GGV3Z78K" target="_blank">
-                    <i class="fa-brands fa-amazon"></i> View on Amazon
-                </a>
-            </li>
-        </ul>
-    </section>
-
-    <!-- BOOK CHAPTER -->
-    <section>
-        <h2>Book Chapter</h2>
-        <ul>
-            <li>
-                <strong>Natural Language Processing with Corpora</strong> (In Progress)<br>
-                In <em>Handbook of Corpus Linguistics: Theories, Methods, and Applications</em>,<br>
-                The Corpus Research Center (CRC), Minhaj University Lahore
-            </li>
-        </ul>
-    </section>
-
-    <!-- PROJECTS -->
-    <section>
-        <h2>Projects & Tools</h2>
-        <ul>
-            <li>Punjabi POS Tagger (Rule-Based)</li>
-            <li>Punjabi WordNet</li>
-            <li>Morphological Analyzer for Punjabi</li>
-            <li>Rule-Based Punjabi Stemmer</li>
-        </ul>
-    </section>
-
-    <!-- SKILLS -->
-    <section>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>Python, HTML, CSS, JavaScript</li>
-            <li>Git, GitHub, GitHub Pages</li>
-            <li>Corpus Tools, Web Scraping, Automation</li>
-            <li>Statistical Analysis & Research Design</li>
-        </ul>
-    </section>
-
-    <!-- INVITED TALKS -->
-    <section>
-        <h2>Invited Talks & Guest Lectures</h2>
-        <ul>
-            <li><strong>Opportunities and Trends in Computational Linguistics</strong>, CUST Islamabad — Oct 29, 2025</li>
-            <li><strong>Python for Computational Linguistics</strong>, Linguistic Association of Pakistan — Oct 26, 2025</li>
-            <li><strong>Corpus Analysis Using LancsBox</strong>, Ghazi University — Oct 21, 2025</li>
-            <li><strong>Decoding Translation Using Corpora</strong>, UMT Lahore — May 13, 2025</li>
-            <li><strong>Corpus Linguistics Tools Workshop</strong>, UAF — Apr 15–17, 2025</li>
-        </ul>
-    </section>
-
-
-    <section>
-        <a href="Resources.html" class="btn">
-            Learning Resources (Computational Linguistics)
-        </a>
-    
-        <a href="corpus-tools.html" class="btn" style="margin-left: 12px;">
-            Corpus Tools Directory
-        </a>
-    </section>
-
-    <div class="project-card">
-  <h3>Lisān City — 3D Language Explorer</h3>
-  <p>Interactive 3D linguistic map of Pakistan with dialect system</p>
-  
-  <a href="Lisan_City.html" target="_blank" class="btn">
-    View Project
-  </a>
+<!-- HIGHLIGHT -->
+<div class="highlight-box">
+    I am seeking a PhD position in <strong>Computational Linguistics</strong>.
+    My research focuses on NLP, corpus linguistics, and linguistic resource development.
 </div>
-    
-    <!-- FOOTER -->
-    <footer>
-        © Muhammad Shoaib Tahir · Faisalabad, Pakistan · shoaibtahir410@gmail.com
-    </footer>
+
+<!-- BIO -->
+<section>
+    <p>
+        I hold a Bachelor’s degree in English Linguistics and an M.Phil. in Applied Linguistics
+        from Government College University Faisalabad.
+    </p>
+</section>
+
+<!-- RESEARCH -->
+<section>
+    <h2>Research Interests</h2>
+    <ul>
+        <li>Corpus Linguistics</li>
+        <li>Computational Linguistics & NLP</li>
+        <li>Punjabi Language Resources</li>
+        <li>Morphology and Syntax</li>
+        <li>Lexical Semantics and WordNet Development</li>
+    </ul>
+</section>
+
+<!-- EDUCATION -->
+<section>
+    <h2>Education</h2>
+    <ul>
+        <li><strong>M.Phil. Applied Linguistics</strong> — GCU Faisalabad</li>
+        <li><strong>B.S. English (Linguistics)</strong> — UE Lahore</li>
+    </ul>
+</section>
+
+<!-- PROJECTS -->
+<section>
+    <h2>Projects & Tools</h2>
+
+    <ul>
+        <li>Punjabi POS Tagger</li>
+        <li>Punjabi WordNet</li>
+        <li>Morphological Analyzer</li>
+        <li>Punjabi Stemmer</li>
+    </ul>
+
+    <!-- FEATURED PROJECT -->
+    <div class="project-card">
+        <h3>⭐ Lisān City — 3D Explorer</h3>
+        <p>
+            A futuristic 3D visualization of Pakistani languages and dialects using Three.js.
+            Languages are represented as buildings and dialects as sub-structures.
+        </p>
+
+        <a href="Lisan_City.html" target="_blank" class="btn">
+            🚀 View Live Project
+        </a>
+    </div>
+</section>
+
+<!-- LINKS -->
+<section>
+    <a href="Resources.html" class="btn">Learning Resources</a>
+    <a href="corpus-tools.html" class="btn" style="margin-left:10px;">Corpus Tools</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © Muhammad Shoaib Tahir · Faisalabad, Pakistan
+</footer>
+```
 
 </div>
 </body>

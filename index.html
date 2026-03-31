@@ -86,18 +86,18 @@
 
         .hero-content {
             display: grid;
-            grid-template-columns: 1fr 280px;
-            gap: 80px;
+            grid-template-columns: 1fr 200px;
+            gap: 60px;
             align-items: center;
             position: relative;
             z-index: 1;
         }
 
         .hero-text h1 {
-            font-size: 4.5rem;
+            font-size: 3rem;
             font-weight: 900;
-            margin-bottom: 15px;
-            letter-spacing: -2px;
+            margin-bottom: 12px;
+            letter-spacing: -1.5px;
             line-height: 1.1;
         }
 
@@ -105,21 +105,21 @@
             font-family: 'Source Sans 3', sans-serif;
             font-style: italic;
             opacity: 0.8;
-            font-size: 1.05rem;
-            margin-bottom: 25px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
         }
 
         .hero-subtitle {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             font-weight: 300;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-family: 'Playfair Display', serif;
         }
 
         .hero-location {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             opacity: 0.9;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
 
         .hero-location i {
@@ -154,11 +154,11 @@
         }
 
         .profile-pic {
-            width: 280px;
-            height: 280px;
-            border-radius: 20px;
-            border: 6px solid rgba(255,255,255,0.3);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            border: 4px solid rgba(255,255,255,0.3);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
             object-fit: cover;
         }
 
@@ -166,11 +166,11 @@
         .phd-banner {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
             color: white;
-            padding: 50px;
-            margin: -50px auto 60px;
+            padding: 35px 40px;
+            margin: -50px auto 50px;
             max-width: 1300px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border-radius: 15px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
             position: relative;
             overflow: hidden;
         }
@@ -178,24 +178,24 @@
         .phd-banner::after {
             content: '🎓';
             position: absolute;
-            font-size: 200px;
-            right: 30px;
-            bottom: -40px;
+            font-size: 150px;
+            right: 20px;
+            bottom: -30px;
             opacity: 0.1;
         }
 
         .phd-banner h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .phd-banner p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 25px;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
             max-width: 900px;
         }
 
@@ -222,9 +222,9 @@
 
         .section {
             background: var(--bg-white);
-            border-radius: 20px;
-            padding: 50px;
-            margin-bottom: 40px;
+            border-radius: 15px;
+            padding: 35px 40px;
+            margin-bottom: 30px;
             box-shadow: 0 4px 20px var(--shadow);
             border: 1px solid var(--border);
         }
@@ -232,41 +232,39 @@
         .section-header {
             display: flex;
             align-items: center;
-            gap: 20px;
-            margin-bottom: 40px;
-            padding-bottom: 25px;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
             border-bottom: 3px solid var(--primary);
         }
 
         .section-icon {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            border-radius: 15px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             color: white;
             box-shadow: 0 4px 15px rgba(139, 0, 0, 0.2);
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             color: var(--text-dark);
         }
 
         /* ABOUT */
         .about-text {
-            font-size: 1.15rem;
-            line-height: 1.9;
+            font-size: 1rem;
+            line-height: 1.8;
             color: var(--text-medium);
-            columns: 2;
-            column-gap: 50px;
         }
 
         .about-text p {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         /* STATS BAR */
@@ -279,32 +277,32 @@
 
         .stat-item {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             background: var(--bg-white);
-            border-radius: 15px;
+            border-radius: 12px;
             border: 2px solid var(--border);
             transition: all 0.3s ease;
         }
 
         .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px var(--shadow);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow);
             border-color: var(--primary);
         }
 
         .stat-number {
-            font-size: 3rem;
+            font-size: 2.2rem;
             font-weight: 900;
             color: var(--primary);
             font-family: 'Playfair Display', serif;
         }
 
         .stat-label {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--text-light);
-            margin-top: 8px;
+            margin-top: 6px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         /* RESEARCH INTERESTS */
@@ -315,27 +313,28 @@
         }
 
         .interest-card {
-            padding: 30px;
+            padding: 25px;
             background: linear-gradient(135deg, var(--bg-cream) 0%, #ffffff 100%);
-            border-radius: 15px;
-            border-left: 5px solid var(--primary);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
             transition: all 0.3s ease;
         }
 
         .interest-card:hover {
-            transform: translateX(10px);
-            box-shadow: 0 8px 25px var(--shadow);
+            transform: translateX(8px);
+            box-shadow: 0 6px 20px var(--shadow);
         }
 
         .interest-card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 12px;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
             color: var(--primary);
         }
 
         .interest-card p {
             color: var(--text-medium);
-            line-height: 1.7;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         /* EDUCATION */
@@ -346,36 +345,37 @@
         }
 
         .education-item {
-            padding: 35px;
+            padding: 28px;
             background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
-            border-radius: 15px;
-            border-left: 6px solid var(--accent);
+            border-radius: 12px;
+            border-left: 5px solid var(--accent);
             position: relative;
         }
 
         .education-item h3 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             color: var(--text-dark);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .education-institution {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             color: var(--primary);
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .education-years {
             color: var(--text-light);
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
         }
 
         .education-details {
             color: var(--text-medium);
-            line-height: 1.8;
+            line-height: 1.7;
+            font-size: 0.95rem;
         }
 
         /* EXPERIENCE */
@@ -396,27 +396,27 @@
 
         .experience-item {
             position: relative;
-            margin-bottom: 40px;
-            padding: 30px;
+            margin-bottom: 30px;
+            padding: 25px;
             background: var(--bg-cream);
-            border-radius: 15px;
+            border-radius: 12px;
         }
 
         .experience-item::before {
             content: '';
             position: absolute;
             left: -38px;
-            top: 35px;
-            width: 16px;
-            height: 16px;
+            top: 30px;
+            width: 14px;
+            height: 14px;
             background: var(--primary);
             border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 0 0 4px var(--primary-light);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary-light);
         }
 
         .experience-item h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             color: var(--text-dark);
             margin-bottom: 8px;
         }
@@ -424,9 +424,10 @@
         .experience-meta {
             display: flex;
             gap: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: var(--text-light);
             font-weight: 600;
+            font-size: 0.9rem;
         }
 
         .experience-meta i {
@@ -435,13 +436,15 @@
 
         .experience-description {
             color: var(--text-medium);
-            line-height: 1.8;
+            line-height: 1.7;
+            font-size: 0.95rem;
         }
 
         .experience-courses {
-            margin-top: 12px;
+            margin-top: 10px;
             font-style: italic;
             color: var(--text-light);
+            font-size: 0.9rem;
         }
 
         /* PUBLICATIONS */
@@ -452,43 +455,44 @@
         }
 
         .publication-item {
-            padding: 25px;
+            padding: 20px;
             background: var(--bg-cream);
-            border-radius: 12px;
-            border-left: 5px solid var(--gold);
+            border-radius: 10px;
+            border-left: 4px solid var(--gold);
             transition: all 0.3s ease;
         }
 
         .publication-item:hover {
             background: white;
-            box-shadow: 0 6px 20px var(--shadow);
-            transform: translateX(8px);
+            box-shadow: 0 5px 15px var(--shadow);
+            transform: translateX(6px);
         }
 
         .publication-number {
             display: inline-block;
-            width: 35px;
-            height: 35px;
+            width: 30px;
+            height: 30px;
             background: var(--primary);
             color: white;
             border-radius: 50%;
             text-align: center;
-            line-height: 35px;
+            line-height: 30px;
             font-weight: 700;
-            margin-right: 12px;
+            margin-right: 10px;
+            font-size: 0.9rem;
         }
 
         .publication-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             color: var(--text-dark);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .publication-meta {
             color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
         /* BOOKS */
@@ -499,9 +503,9 @@
         }
 
         .book-card {
-            padding: 35px;
+            padding: 28px;
             background: linear-gradient(135deg, #fff5e6 0%, #ffffff 100%);
-            border-radius: 15px;
+            border-radius: 12px;
             border: 2px solid var(--gold);
             position: relative;
             overflow: hidden;
@@ -510,33 +514,34 @@
         .book-card::before {
             content: '📚';
             position: absolute;
-            font-size: 100px;
-            right: -20px;
-            bottom: -20px;
+            font-size: 80px;
+            right: -15px;
+            bottom: -15px;
             opacity: 0.1;
         }
 
         .book-badge {
             display: inline-block;
-            padding: 6px 15px;
+            padding: 5px 12px;
             background: var(--gold);
             color: white;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .book-title {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             color: var(--text-dark);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .book-meta {
             color: var(--text-medium);
-            line-height: 1.7;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         /* PROJECTS */
@@ -547,26 +552,26 @@
         }
 
         .project-card {
-            padding: 35px;
+            padding: 28px;
             background: white;
-            border-radius: 15px;
+            border-radius: 12px;
             border: 2px solid var(--border);
             transition: all 0.3s ease;
             position: relative;
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px var(--shadow);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px var(--shadow);
             border-color: var(--primary);
         }
 
         .project-number {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
+            top: 18px;
+            right: 18px;
+            width: 35px;
+            height: 35px;
             background: var(--primary);
             color: white;
             border-radius: 50%;
@@ -575,24 +580,32 @@
             justify-content: center;
             font-weight: 700;
             font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
         }
 
         .project-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: var(--text-dark);
-            margin-bottom: 15px;
-            padding-right: 50px;
+            margin-bottom: 12px;
+            padding-right: 45px;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-medium);
         }
 
         .project-link {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 8px 18px;
             background: var(--primary);
             color: white;
-            border-radius: 25px;
+            border-radius: 20px;
             font-weight: 600;
-            margin-top: 15px;
+            margin-top: 12px;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
 
         .project-link:hover {
@@ -608,38 +621,38 @@
         }
 
         .talk-item, .conference-item {
-            padding: 25px;
+            padding: 20px;
             background: var(--bg-cream);
-            border-radius: 12px;
-            border-left: 5px solid var(--accent);
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
             display: flex;
-            gap: 20px;
+            gap: 18px;
             transition: all 0.3s ease;
         }
 
         .talk-item:hover, .conference-item:hover {
             background: white;
-            box-shadow: 0 6px 20px var(--shadow);
-            transform: translateX(8px);
+            box-shadow: 0 5px 18px var(--shadow);
+            transform: translateX(6px);
         }
 
         .talk-date {
-            min-width: 120px;
+            min-width: 110px;
             font-weight: 700;
             color: var(--primary);
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
         }
 
         .talk-details h4 {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             color: var(--text-dark);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .talk-location {
             color: var(--text-light);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         /* SKILLS */
@@ -650,33 +663,33 @@
         }
 
         .skill-category {
-            padding: 30px;
+            padding: 25px;
             background: var(--bg-cream);
-            border-radius: 15px;
+            border-radius: 12px;
         }
 
         .skill-category h3 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: var(--primary);
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
             border-bottom: 2px solid var(--border);
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
         }
 
         .skill-tag {
-            padding: 8px 16px;
+            padding: 6px 14px;
             background: white;
             border: 2px solid var(--border);
-            border-radius: 20px;
+            border-radius: 18px;
             font-weight: 600;
             color: var(--text-medium);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: all 0.3s ease;
         }
 
@@ -695,37 +708,37 @@
         }
 
         .membership-card {
-            padding: 30px;
+            padding: 25px;
             background: linear-gradient(135deg, var(--bg-cream) 0%, white 100%);
-            border-radius: 15px;
+            border-radius: 12px;
             border: 2px solid var(--border);
             text-align: center;
         }
 
         .membership-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            font-size: 2.5rem;
+            margin-bottom: 12px;
         }
 
         .membership-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             color: var(--text-dark);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .membership-date {
             color: var(--text-light);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         /* CTA SECTION */
         .cta-section {
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
             color: white;
-            padding: 80px 50px;
-            border-radius: 25px;
+            padding: 50px 40px;
+            border-radius: 20px;
             text-align: center;
-            margin: 60px 0;
+            margin: 50px 0;
             position: relative;
             overflow: hidden;
         }
@@ -752,13 +765,13 @@
         }
 
         .cta-section h2 {
-            font-size: 3rem;
-            margin-bottom: 25px;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
         .cta-section p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
             opacity: 0.95;
             max-width: 700px;
             margin-left: auto;
@@ -773,21 +786,21 @@
         }
 
         .cta-btn {
-            padding: 15px 35px;
+            padding: 12px 28px;
             background: white;
             color: var(--primary);
-            border-radius: 30px;
+            border-radius: 25px;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             transition: all 0.3s ease;
         }
 
         .cta-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
             background: var(--gold);
             color: white;
         }
@@ -796,30 +809,31 @@
         footer {
             background: var(--text-dark);
             color: white;
-            padding: 60px 0 30px;
-            margin-top: 80px;
+            padding: 40px 0 25px;
+            margin-top: 60px;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 40px;
+            gap: 40px;
+            margin-bottom: 30px;
         }
 
         .footer-about h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
         }
 
         .footer-about p {
             opacity: 0.8;
-            line-height: 1.8;
+            line-height: 1.7;
+            font-size: 0.95rem;
         }
 
         .footer-links h4 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
             color: var(--gold);
         }
 
@@ -828,11 +842,12 @@
         }
 
         .footer-links ul li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .footer-links a {
             color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
         }
 
         .footer-links a:hover {
@@ -873,15 +888,19 @@
 
         @media (max-width: 768px) {
             .hero-text h1 {
-                font-size: 3rem;
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
             }
 
             .section {
-                padding: 30px 25px;
+                padding: 25px 20px;
             }
 
             .section-header h2 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .projects-grid,
@@ -891,7 +910,11 @@
             }
 
             .cta-section h2 {
-                font-size: 2rem;
+                font-size: 1.6rem;
+            }
+
+            .cta-section p {
+                font-size: 0.95rem;
             }
 
             .experience-timeline {
@@ -1015,7 +1038,7 @@
             </div>
             <div class="about-text">
                 <p>
-                    I am a computational linguist with extensive expertise in Natural Language Processing, corpus linguistics, 
+                    I am a computational linguist with expertise in Natural Language Processing, corpus linguistics, 
                     and linguistic resource development. I hold an <strong>M.Phil. in Applied Linguistics</strong> from 
                     Government College University Faisalabad, where my thesis focused on developing Punjabi Synset using 
                     expansion approaches from English WordNet under the supervision of Prof. Dr. Muhammad Asim Mahmood.
@@ -1023,20 +1046,8 @@
                 <p>
                     My research focuses on developing computational tools and resources for low-resource languages, particularly 
                     Punjabi, with applications in morphological analysis, POS tagging, and WordNet development. I have published 
-                    over 10 research papers, authored 2 books, and delivered 13+ invited talks at prestigious institutions 
-                    across Pakistan and internationally.
-                </p>
-                <p>
-                    Currently, I serve as a Visiting Lecturer at Government College University Faisalabad and University of 
-                    Education Lahore, teaching courses in Corpus Linguistics, Computational Linguistics, Morphology, and 
-                    Computer Assisted Language Learning. I am also actively involved with the Linguistic Association of 
-                    Pakistan and Pakistan Corpus Studio, contributing to corpus development and language resource planning 
-                    at the national level.
-                </p>
-                <p>
-                    I am passionate about bridging the gap between theoretical linguistics and computational applications, 
-                    and I am eager to contribute to cutting-edge research in multilingual NLP, corpus-driven linguistics, 
-                    and language technology for underrepresented languages through a PhD program.
+                    over 10 research papers, authored 2 books, and delivered 13+ invited talks at institutions across Pakistan 
+                    and internationally.
                 </p>
             </div>
         </section>
@@ -1122,7 +1133,7 @@
                 <div class="experience-item">
                     <h3>Visiting Lecturer</h3>
                     <div class="experience-meta">
-                        <span><i class="fa-solid fa-building"></i> Government College University Faisalabad</span>
+                        <span><i class="fa-solid fa-building"></i> COMSATS University Islamabad, Lahore Campus</span>
                         <span><i class="fa-solid fa-calendar"></i> Oct 2024 – July 2025</span>
                     </div>
                     <div class="experience-description">
@@ -1248,7 +1259,7 @@
                         <p><strong>Format:</strong> Guide Book</p>
                         <p><strong>Publisher:</strong> Amazon</p>
                         <p><strong>Year:</strong> 2025</p>
-                        <p style="margin-top: 12px;">A practical guide to statistical methods and analysis techniques 
+                        <p style="margin-top: 10px;">A practical guide to statistical methods and analysis techniques 
                         in corpus linguistics, designed for researchers and students.</p>
                     </div>
                 </div>
@@ -1260,7 +1271,7 @@
                         <p><strong>Type:</strong> Book Chapter</p>
                         <p><strong>In:</strong> Handbook of Corpus Linguistics: Theories, Methods, and Applications</p>
                         <p><strong>Publisher:</strong> The Corpus Research Center (CRC), Minhaj University Lahore</p>
-                        <p style="margin-top: 12px;">Exploring the intersection of NLP techniques and corpus-based 
+                        <p style="margin-top: 10px;">Exploring the intersection of NLP techniques and corpus-based 
                         methodologies for linguistic analysis.</p>
                     </div>
                 </div>

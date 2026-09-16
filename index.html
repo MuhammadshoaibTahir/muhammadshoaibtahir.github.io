@@ -255,18 +255,15 @@ nav.top-nav a:hover {
 ========================================================= */
 
 /*
-    IMPORTANT:
-
-    The photo is SQUARE.
-    It is NOT circular.
-    The complete original image remains visible.
-
-    object-fit: cover fills the box by cropping edges.
+    The photo box is a fixed square frame.
+    object-fit: contain keeps the ENTIRE original photo
+    visible inside the frame, scaled down as needed,
+    rather than cropping the edges to fill the box.
 */
 
 .profile-photo-wrapper {
 
-    width: 230px;
+    width: 220px;
 
     height: 220px;
 
@@ -277,32 +274,36 @@ nav.top-nav a:hover {
     align-items: center;
 
     justify-content: center;
+
+    background: #ffffff;
+
+    border: 1px solid var(--line);
 }
 
 
 /*
-    Square photograph
+    Square photograph, fitted (not cropped) inside its frame
 */
 
 .profile-photo {
 
-    width: 210px;
+    width: 100%;
 
-    height: 210px;
+    height: 100%;
 
     display: block;
 
-    object-fit: cover;
+    object-fit: contain;
 
     object-position: center center;
 
     background: #ffffff;
 
-    border: 1px solid var(--line);
+    border: none;
 
     border-radius: 0;
 
-    padding: 0;
+    padding: 6px;
 }
 
 
@@ -791,13 +792,6 @@ footer.site-footer {
         order: -1;
     }
 
-    .profile-photo {
-
-        width: 190px;
-
-        height: 190px;
-    }
-
 
     /* TIMELINE */
 
@@ -955,7 +949,7 @@ footer.site-footer {
         <div class="profile-photo-wrapper">
 
             <img
-                src="profile.png"
+                src="PROFILE_IMAGE_DATA_URI"
                 alt="Muhammad Shoaib Tahir"
                 class="profile-photo"
             >

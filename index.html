@@ -1,514 +1,1537 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Muhammad Shoaib Tahir | Linguistics</title>
-<meta name="description" content="Muhammad Shoaib Tahir, looking for PhD admission in Computational Linguistics and Corpus Linguistics.">
+
+<meta name="description"
+content="Muhammad Shoaib Tahir, looking for PhD admission in Computational Linguistics and Corpus Linguistics.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+rel="stylesheet">
+
+
 <style>
-  :root{
-    --paper:#FFFFFF;
-    --panel:#F6F7F9;
-    --ink:#1B1F27;
-    --muted:#5C6370;
-    --line:#C7CCD6;
-    --navy:#1F3A5F;
-    --navy-dark:#14283F;
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+  --paper:#FFFFFF;
+  --panel:#F6F7F9;
+  --ink:#1B1F27;
+  --muted:#5C6370;
+  --line:#C7CCD6;
+  --navy:#1F3A5F;
+  --navy-dark:#14283F;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'IBM Plex Sans', sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,
+h2,
+h3{
+  font-family:'Source Serif 4', serif;
+  font-weight:600;
+  margin:0;
+  color:var(--ink);
+}
+
+a{
+  color:var(--navy);
+  text-decoration:none;
+}
+
+a:hover{
+  color:var(--navy-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible{
+  outline:2px solid var(--navy);
+  outline-offset:3px;
+}
+
+.wrap{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 48px;
+}
+
+
+/* =========================================================
+   HEADER / NAVIGATION
+========================================================= */
+
+header.site{
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,0.94);
+  backdrop-filter:blur(6px);
+  z-index:10;
+}
+
+header.site .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding-top:18px;
+  padding-bottom:18px;
+}
+
+header.site .brand{
+  font-family:'Source Serif 4', serif;
+  font-size:1.05rem;
+  font-weight:600;
+  white-space:nowrap;
+}
+
+nav.top-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px 22px;
+  overflow-x:auto;
+}
+
+nav.top-nav a{
+  font-size:0.88rem;
+  color:var(--muted);
+  white-space:nowrap;
+  padding:4px 0;
+  border-bottom:2px solid transparent;
+}
+
+nav.top-nav a:hover{
+  color:var(--ink);
+  border-color:var(--navy);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  padding:56px 0 40px;
+}
+
+/* Main hero layout */
+.hero-content{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+}
+
+/* Left side of hero */
+.hero-text{
+  flex:1;
+  min-width:0;
+}
+
+/* Profile picture */
+.profile-photo{
+  width:190px;
+  height:190px;
+  object-fit:cover;
+  border-radius:50%;
+  border:1px solid var(--line);
+  flex-shrink:0;
+  display:block;
+}
+
+/* Name */
+.hero h1{
+  font-size:2.1rem;
+  line-height:1.2;
+}
+
+/* Position */
+.hero .role{
+  margin-top:10px;
+  font-size:1.02rem;
+  color:var(--navy);
+  font-weight:500;
+}
+
+/* Location */
+.hero .loc{
+  margin-top:8px;
+  font-size:0.88rem;
+  color:var(--muted);
+}
+
+/* Introduction */
+.hero .intro{
+  margin-top:24px;
+  font-size:1.05rem;
+  color:var(--ink);
+  max-width:64ch;
+}
+
+
+/* =========================================================
+   NOTICE
+========================================================= */
+
+.notice{
+  margin-top:26px;
+  padding:16px 20px;
+  background:var(--panel);
+  border-left:3px solid var(--navy);
+  font-size:0.94rem;
+  color:var(--ink);
+  max-width:64ch;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section{
+  padding:48px 0;
+  border-top:1px solid var(--line);
+  scroll-margin-top:88px;
+}
+
+section:first-of-type{
+  border-top:none;
+}
+
+section h2{
+  font-size:1.3rem;
+  margin-bottom:24px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about p{
+  max-width:66ch;
+  color:var(--ink);
+  text-align:justify;
+}
+
+.about p + p{
+  margin-top:14px;
+}
+
+
+/* =========================================================
+   RESEARCH TAGS
+========================================================= */
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.tags span{
+  font-size:0.85rem;
+  padding:7px 14px;
+  border:1px solid var(--line);
+  border-radius:3px;
+  color:var(--ink);
+  background:var(--panel);
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.tl-item{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:20px;
+  padding:18px 0;
+  border-top:1px solid var(--line);
+}
+
+.tl-item:last-child{
+  border-bottom:1px solid var(--line);
+}
+
+.tl-date{
+  font-size:0.85rem;
+  color:var(--muted);
+  padding-top:2px;
+}
+
+.tl-body h3{
+  font-size:1.02rem;
+  font-weight:600;
+}
+
+.tl-body .org{
+  font-size:0.9rem;
+  color:var(--navy);
+  margin-top:2px;
+}
+
+.tl-body .desc{
+  font-size:0.92rem;
+  color:var(--muted);
+  margin-top:6px;
+  max-width:56ch;
+}
+
+
+/* =========================================================
+   PUBLICATIONS
+========================================================= */
+
+.pubs{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.pubs li{
+  padding:16px 0;
+  border-top:1px solid var(--line);
+  font-size:0.95rem;
+  max-width:70ch;
+}
+
+.pubs li:last-child{
+  border-bottom:1px solid var(--line);
+}
+
+.pubs .num{
+  color:var(--navy);
+  font-weight:600;
+  margin-right:8px;
+}
+
+.pubs .venue{
+  color:var(--muted);
+  font-style:italic;
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.proj-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+
+.proj-card{
+  background:var(--paper);
+  padding:22px;
+}
+
+.proj-card h3{
+  font-size:0.98rem;
+}
+
+.proj-card p{
+  font-size:0.88rem;
+  color:var(--muted);
+  margin-top:8px;
+}
+
+
+/* =========================================================
+   TALKS / DETAILS
+========================================================= */
+
+details.talks-group{
+  border-top:1px solid var(--line);
+  padding:14px 0;
+}
+
+details.talks-group:last-of-type{
+  border-bottom:1px solid var(--line);
+}
+
+details.talks-group summary{
+  cursor:pointer;
+  font-weight:500;
+  font-size:0.98rem;
+  list-style:none;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+details.talks-group summary::-webkit-details-marker{
+  display:none;
+}
+
+details.talks-group summary::after{
+  content:"+";
+  color:var(--navy);
+  font-size:1.1rem;
+}
+
+details.talks-group[open] summary::after{
+  content:"\2212";
+}
+
+.talk-list{
+  list-style:none;
+  padding:0;
+  margin:14px 0 0;
+}
+
+.talk-list li{
+  font-size:0.88rem;
+  color:var(--muted);
+  padding:9px 0;
+  border-top:1px dotted var(--line);
+}
+
+.talk-list li:first-child{
+  border-top:none;
+}
+
+.talk-list .t-date{
+  color:var(--ink);
+  font-weight:500;
+  margin-right:8px;
+}
+
+
+/* =========================================================
+   SKILLS / MEMBERSHIPS
+========================================================= */
+
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:14px;
+}
+
+.split h3{
+  font-size:0.9rem;
+  color:var(--navy);
+  font-family:'IBM Plex Sans',sans-serif;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.split ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  font-size:0.9rem;
+  color:var(--ink);
+}
+
+.split li{
+  padding:5px 0;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-box{
+  border:1px solid var(--line);
+  padding:32px;
+  background:var(--panel);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+}
+
+.contact-box .email{
+  font-size:1.02rem;
+  font-weight:500;
+}
+
+.contact-box .socials-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.contact-box .socials-row a{
+  font-size:0.85rem;
+  padding:8px 14px;
+  border:1px solid var(--line);
+  border-radius:3px;
+  color:var(--ink);
+  background:var(--paper);
+}
+
+.contact-box .socials-row a:hover{
+  border-color:var(--navy);
+  color:var(--navy);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer.site-footer{
+  text-align:center;
+  font-size:0.82rem;
+  color:var(--muted);
+  padding:32px 0 48px;
+}
+
+
+/* =========================================================
+   RESPONSIVE / MOBILE
+========================================================= */
+
+@media (max-width:640px){
+
+  .wrap{
+    padding:0 20px;
   }
 
-  *{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
-
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'IBM Plex Sans', sans-serif;
-    font-size:16px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  h1,h2,h3{
-    font-family:'Source Serif 4', serif;
-    font-weight:600;
-    margin:0;
-    color:var(--ink);
-  }
-
-  a{ color:var(--navy); text-decoration:none; }
-  a:hover{ color:var(--navy-dark); }
-
-  a:focus-visible, button:focus-visible, summary:focus-visible{
-    outline:2px solid var(--navy);
-    outline-offset:3px;
-  }
-
-  .wrap{ max-width:1200px; margin:0 auto; padding:0 48px; }
-
-  /* ---------- header / nav ---------- */
-  header.site{
-    border-bottom:1px solid var(--line);
-    position:sticky;
-    top:0;
-    background:rgba(255,255,255,0.94);
-    backdrop-filter:blur(6px);
-    z-index:10;
-  }
   header.site .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    padding-top:18px;
-    padding-bottom:18px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
   }
-  header.site .brand{
-    font-family:'Source Serif 4', serif;
-    font-size:1.05rem;
-    font-weight:600;
-    white-space:nowrap;
-  }
+
   nav.top-nav{
-    display:flex;
-    flex-wrap:wrap;
-    gap:4px 22px;
-    overflow-x:auto;
-  }
-  nav.top-nav a{
-    font-size:0.88rem;
-    color:var(--muted);
-    white-space:nowrap;
-    padding:4px 0;
-    border-bottom:2px solid transparent;
-  }
-  nav.top-nav a:hover{ color:var(--ink); border-color:var(--navy); }
-
-  /* ---------- hero ---------- */
-  .hero{ padding:56px 0 40px; }
-  .hero h1{ font-size:2.1rem; line-height:1.2; }
-  .hero .role{
-    margin-top:10px;
-    font-size:1.02rem;
-    color:var(--navy);
-    font-weight:500;
-  }
-  .hero .loc{
-    margin-top:8px;
-    font-size:0.88rem;
-    color:var(--muted);
-  }
-  .hero .intro{
-    margin-top:24px;
-    font-size:1.05rem;
-    color:var(--ink);
-    max-width:64ch;
+    width:100%;
   }
 
-  .notice{
-    margin-top:26px;
-    padding:16px 20px;
-    background:var(--panel);
-    border-left:3px solid var(--navy);
-    font-size:0.94rem;
-    color:var(--ink);
-    max-width:64ch;
+  /* Hero becomes vertical on mobile */
+  .hero-content{
+    flex-direction:column-reverse;
+    align-items:flex-start;
+    gap:30px;
   }
 
-  /* ---------- sections ---------- */
-  section{ padding:48px 0; border-top:1px solid var(--line); scroll-margin-top:88px; }
-  section:first-of-type{ border-top:none; }
-  section h2{ font-size:1.3rem; margin-bottom:24px; }
-
-  .about p{ max-width:66ch; color:var(--ink); text-align:justify; }
-  .about p + p{ margin-top:14px; }
-
-  /* ---------- research tags ---------- */
-  .tags{ display:flex; flex-wrap:wrap; gap:10px; }
-  .tags span{
-    font-size:0.85rem;
-    padding:7px 14px;
-    border:1px solid var(--line);
-    border-radius:3px;
-    color:var(--ink);
-    background:var(--panel);
+  /* Smaller image on mobile */
+  .profile-photo{
+    width:145px;
+    height:145px;
+    align-self:center;
   }
 
-  /* ---------- timeline ---------- */
   .tl-item{
-    display:grid;
-    grid-template-columns:150px 1fr;
-    gap:20px;
-    padding:18px 0;
-    border-top:1px solid var(--line);
+    grid-template-columns:1fr;
+    gap:4px;
   }
-  .tl-item:last-child{ border-bottom:1px solid var(--line); }
-  .tl-date{ font-size:0.85rem; color:var(--muted); padding-top:2px; }
-  .tl-body h3{ font-size:1.02rem; font-weight:600; }
-  .tl-body .org{ font-size:0.9rem; color:var(--navy); margin-top:2px; }
-  .tl-body .desc{ font-size:0.92rem; color:var(--muted); margin-top:6px; max-width:56ch; }
 
-  /* ---------- publications ---------- */
-  .pubs{ list-style:none; margin:0; padding:0; }
-  .pubs li{
-    padding:16px 0;
-    border-top:1px solid var(--line);
-    font-size:0.95rem;
-    max-width:70ch;
-  }
-  .pubs li:last-child{ border-bottom:1px solid var(--line); }
-  .pubs .num{ color:var(--navy); font-weight:600; margin-right:8px; }
-  .pubs .venue{ color:var(--muted); font-style:italic; }
-
-  /* ---------- projects ---------- */
   .proj-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
+    grid-template-columns:1fr;
   }
-  .proj-card{ background:var(--paper); padding:22px; }
-  .proj-card h3{ font-size:0.98rem; }
-  .proj-card p{ font-size:0.88rem; color:var(--muted); margin-top:8px; }
 
-  /* ---------- talks / details ---------- */
-  details.talks-group{ border-top:1px solid var(--line); padding:14px 0; }
-  details.talks-group:last-of-type{ border-bottom:1px solid var(--line); }
-  details.talks-group summary{
-    cursor:pointer;
-    font-weight:500;
-    font-size:0.98rem;
-    list-style:none;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-  }
-  details.talks-group summary::-webkit-details-marker{ display:none; }
-  details.talks-group summary::after{
-    content:"+";
-    color:var(--navy);
-    font-size:1.1rem;
-  }
-  details.talks-group[open] summary::after{ content:"\2212"; }
-  .talk-list{ list-style:none; padding:0; margin:14px 0 0; }
-  .talk-list li{
-    font-size:0.88rem;
-    color:var(--muted);
-    padding:9px 0;
-    border-top:1px dotted var(--line);
-  }
-  .talk-list li:first-child{ border-top:none; }
-  .talk-list .t-date{ color:var(--ink); font-weight:500; margin-right:8px; }
-
-  /* ---------- skills / memberships ---------- */
-  .split{ display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:14px; }
-  .split h3{ font-size:0.9rem; color:var(--navy); font-family:'IBM Plex Sans',sans-serif; font-weight:600; margin-bottom:10px; }
-  .split ul{ list-style:none; margin:0; padding:0; font-size:0.9rem; color:var(--ink); }
-  .split li{ padding:5px 0; }
-
-  /* ---------- contact ---------- */
-  .contact-box{
-    border:1px solid var(--line);
-    padding:32px;
-    background:var(--panel);
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    align-items:center;
+  .split{
+    grid-template-columns:1fr;
     gap:24px;
   }
-  .contact-box .email{ font-size:1.02rem; font-weight:500; }
-  .contact-box .socials-row{ display:flex; flex-wrap:wrap; gap:10px; }
-  .contact-box .socials-row a{
-    font-size:0.85rem;
-    padding:8px 14px;
-    border:1px solid var(--line);
-    border-radius:3px;
-    color:var(--ink);
-    background:var(--paper);
-  }
-  .contact-box .socials-row a:hover{ border-color:var(--navy); color:var(--navy); }
 
-  footer.site-footer{
-    text-align:center;
-    font-size:0.82rem;
-    color:var(--muted);
-    padding:32px 0 48px;
+  .contact-box{
+    flex-direction:column;
+    align-items:flex-start;
   }
 
-  /* ---------- responsive ---------- */
-  @media (max-width:640px){
-    .wrap{ padding:0 20px; }
-    header.site .wrap{ flex-direction:column; align-items:flex-start; gap:12px; }
-    nav.top-nav{ width:100%; }
-    .tl-item{ grid-template-columns:1fr; gap:4px; }
-    .proj-grid{ grid-template-columns:1fr; }
-    .split{ grid-template-columns:1fr; gap:24px; }
-    .contact-box{ flex-direction:column; align-items:flex-start; }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce){
+
+  html{
+    scroll-behavior:auto;
   }
 
-  @media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior:auto; }
-  }
+}
+
 </style>
+
 </head>
+
+
 <body>
 
+
+<!-- =======================================================
+     HEADER
+======================================================== -->
+
 <header class="site">
+
   <div class="wrap">
-    <div class="brand">Muhammad Shoaib Tahir</div>
+
+    <div class="brand">
+      Muhammad Shoaib Tahir
+    </div>
+
     <nav class="top-nav" aria-label="Section navigation">
+
       <a href="#about">About</a>
+
       <a href="#research">Research</a>
+
       <a href="#education">Education</a>
+
       <a href="#experience">Experience</a>
+
       <a href="#publications">Publications</a>
+
       <a href="#projects">Projects</a>
+
       <a href="#talks">Talks &amp; Service</a>
+
       <a href="#contact">Contact</a>
+
     </nav>
+
   </div>
+
 </header>
+
+
 
 <div class="wrap">
 
-  <section class="hero" id="top" style="border-top:none;">
-    <h1>Muhammad Shoaib Tahir</h1>
-    <div class="role">PhD Applicant, Computational Linguistics</div>
-    <div class="loc">Faisalabad, Pakistan</div>
-    <p class="intro">I teach and research in Corpus Linguistics, Computational Linguistics, and Morphology across universities in Pakistan, and I am now looking for a PhD position to grow further in Computational Linguistics.</p>
-    <div class="notice">Looking for PhD admission in Linguistics, with a focus on Computational Linguistics or Corpus Linguistics.</div>
-  </section>
 
-  <section id="about">
-    <h2>About</h2>
-    <div class="about">
-      <p>I am based in Faisalabad, Pakistan, and have been teaching and researching across Corpus Linguistics, Computational Linguistics, and Morphology at several Pakistani universities. My M.Phil. thesis at Government College University, Faisalabad worked on developing a Punjabi synset through an expansion approach from the English WordNet, and my time as a Research Assistant under the HEC-NRPU project involved helping build linguistic tools, including taggers, analyzers, and stemmers, for Shahmukhi Punjabi.</p>
-      <p>I am looking for a PhD position in Computational Linguistics, to build on this experience and keep learning through further research on digital language resources for under-resourced South Asian languages.</p>
+<!-- =======================================================
+     HERO
+======================================================== -->
+
+<section class="hero" id="top" style="border-top:none;">
+
+  <div class="hero-content">
+
+
+    <!-- LEFT SIDE -->
+
+    <div class="hero-text">
+
+      <h1>
+        Muhammad Shoaib Tahir
+      </h1>
+
+      <div class="role">
+        PhD Applicant, Computational Linguistics
+      </div>
+
+      <div class="loc">
+        Faisalabad, Pakistan
+      </div>
+
+      <p class="intro">
+        I teach and research in Corpus Linguistics,
+        Computational Linguistics, and Morphology across
+        universities in Pakistan, and I am now looking for
+        a PhD position to grow further in Computational Linguistics.
+      </p>
+
+      <div class="notice">
+        Looking for PhD admission in Linguistics, with a focus on
+        Computational Linguistics or Corpus Linguistics.
+      </div>
+
     </div>
-  </section>
 
-  <section id="research">
-    <h2>Research interests</h2>
-    <div class="tags">
-      <span>Computational Linguistics</span>
-      <span>Corpus Linguistics</span>
-      <span>Computational Morphology</span>
-      <span>WordNet and Lexical Resource Development</span>
-      <span>Low-Resource and South Asian Languages</span>
-      <span>Punjabi NLP (POS Tagging, Stemming)</span>
-      <span>Computer-Assisted Language Learning</span>
+
+    <!-- RIGHT SIDE PROFILE PHOTO -->
+
+    <img
+      src="profile.png"
+      alt="Muhammad Shoaib Tahir"
+      class="profile-photo"
+    >
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     ABOUT
+======================================================== -->
+
+<section id="about">
+
+  <h2>
+    About
+  </h2>
+
+  <div class="about">
+
+    <p>
+      I am based in Faisalabad, Pakistan, and have been teaching
+      and researching across Corpus Linguistics, Computational
+      Linguistics, and Morphology at several Pakistani universities.
+      My M.Phil. thesis at Government College University, Faisalabad
+      worked on developing a Punjabi synset through an expansion
+      approach from the English WordNet, and my time as a Research
+      Assistant under the HEC-NRPU project involved helping build
+      linguistic tools, including taggers, analyzers, and stemmers,
+      for Shahmukhi Punjabi.
+    </p>
+
+    <p>
+      I am looking for a PhD position in Computational Linguistics,
+      to build on this experience and keep learning through further
+      research on digital language resources for under-resourced
+      South Asian languages.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     RESEARCH
+======================================================== -->
+
+<section id="research">
+
+  <h2>
+    Research interests
+  </h2>
+
+  <div class="tags">
+
+    <span>
+      Computational Linguistics
+    </span>
+
+    <span>
+      Corpus Linguistics
+    </span>
+
+    <span>
+      Computational Morphology
+    </span>
+
+    <span>
+      WordNet and Lexical Resource Development
+    </span>
+
+    <span>
+      Low-Resource and South Asian Languages
+    </span>
+
+    <span>
+      Punjabi NLP (POS Tagging, Stemming)
+    </span>
+
+    <span>
+      Computer-Assisted Language Learning
+    </span>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     EDUCATION
+======================================================== -->
+
+<section id="education">
+
+  <h2>
+    Education
+  </h2>
+
+  <div class="tl">
+
+
+    <div class="tl-item">
+
+      <div class="tl-date">
+        2020 to 2022
+      </div>
+
+      <div class="tl-body">
+
+        <h3>
+          M.Phil. in Applied Linguistics
+        </h3>
+
+        <div class="org">
+          Government College University, Faisalabad
+        </div>
+
+        <div class="desc">
+          Thesis: Development of Punjabi Synset Using Expansion
+          Approach from English WordNet.
+        </div>
+
+      </div>
+
     </div>
-  </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="tl">
-      <div class="tl-item">
-        <div class="tl-date">2020 to 2022</div>
-        <div class="tl-body">
-          <h3>M.Phil. in Applied Linguistics</h3>
-          <div class="org">Government College University, Faisalabad</div>
-          <div class="desc">Thesis: Development of Punjabi Synset Using Expansion Approach from English WordNet.</div>
-        </div>
+
+
+    <div class="tl-item">
+
+      <div class="tl-date">
+        2016 to 2020
       </div>
-      <div class="tl-item">
-        <div class="tl-date">2016 to 2020</div>
-        <div class="tl-body">
-          <h3>B.S. in English (Linguistics)</h3>
-          <div class="org">University of Education, Faisalabad Campus</div>
+
+      <div class="tl-body">
+
+        <h3>
+          B.S. in English (Linguistics)
+        </h3>
+
+        <div class="org">
+          University of Education, Faisalabad Campus
         </div>
+
       </div>
+
     </div>
-  </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="tl">
-      <div class="tl-item">
-        <div class="tl-date">Sept 2026 to Present</div>
-        <div class="tl-body">
-          <h3>Visiting Lecturer</h3>
-          <div class="org">National University of Modern Languages (NUML), Faisalabad Campus</div>
-          <div class="desc">Courses taught: Morphology, Phonetics and Phonology, Psycholinguistics.</div>
-        </div>
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     EXPERIENCE
+======================================================== -->
+
+<section id="experience">
+
+  <h2>
+    Experience
+  </h2>
+
+  <div class="tl">
+
+
+    <div class="tl-item">
+
+      <div class="tl-date">
+        Sept 2026 to Present
       </div>
-      <div class="tl-item">
-        <div class="tl-date">Feb 2026 to July 2026</div>
-        <div class="tl-body">
-          <h3>Visiting Lecturer</h3>
-          <div class="org">COMSATS University Islamabad, Lahore Campus</div>
-          <div class="desc">Teaching Computational Linguistics to BS and MS students.</div>
+
+      <div class="tl-body">
+
+        <h3>
+          Visiting Lecturer
+        </h3>
+
+        <div class="org">
+          National University of Modern Languages (NUML),
+          Faisalabad Campus
         </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">Dec 2025</div>
-        <div class="tl-body">
-          <h3>Course Instructor</h3>
-          <div class="org">University of Education, Faisalabad Campus</div>
-          <div class="desc">Resource Person for a short course on Corpus Linguistics.</div>
+
+        <div class="desc">
+          Courses taught: Morphology, Phonetics and Phonology,
+          Psycholinguistics.
         </div>
+
       </div>
-      <div class="tl-item">
-        <div class="tl-date">Jan 2025 to Apr 2025</div>
-        <div class="tl-body">
-          <h3>Corpus Linguistics Course Instructor</h3>
-          <div class="org">University of Agriculture, Faisalabad</div>
-          <div class="desc">Taught Corpus Linguistics to undergraduate and graduate students.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">Oct 2024 to July 2025</div>
-        <div class="tl-body">
-          <h3>Visiting Lecturer</h3>
-          <div class="org">Government College University, Faisalabad</div>
-          <div class="desc">Courses taught: Corpus Linguistics, Computer Assisted Language Learning, Morphology.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">Sept 2024 to Feb 2025</div>
-        <div class="tl-body">
-          <h3>Visiting Lecturer</h3>
-          <div class="org">University of Education Lahore, Faisalabad Campus</div>
-          <div class="desc">Courses taught: Morphology, Syntax, Sociolinguistics.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">Oct 2022 to Oct 2024</div>
-        <div class="tl-body">
-          <h3>Research Assistant</h3>
-          <div class="org">Government College University, Faisalabad</div>
-          <div class="desc">Worked under the HEC-NRPU Project, developing linguistic tools for Shahmukhi Punjabi.</div>
-        </div>
-      </div>
+
     </div>
-  </section>
 
-  <section id="publications">
-    <h2>Selected publications</h2>
-    <ul class="pubs">
-      <li><span class="num">1.</span>Morphological Description of Nouns in Shahmukhi Punjabi: A Corpus Based Study (2023). <span class="venue">Journal of Positive School Psychology</span>, pp. 1259 to 1269.</li>
-      <li><span class="num">2.</span>Developing Digital Resources of Shahmukhi Punjabi (2024). <span class="venue">Russian Law Journal</span>, Vol. 11, pp. 998 to 1006.</li>
-      <li><span class="num">3.</span>Mapping of English and Punjabi Verb Classes: A Corpus Based Study (2024). <span class="venue">Journal of Arts and Linguistics Studies</span>, Vol. 2, No. 2, pp. 727 to 751.</li>
+
+
+    <div class="tl-item">
+
+      <div class="tl-date">
+        Feb 2026 to July 2026
+      </div>
+
+      <div class="tl-body">
+
+        <h3>
+          Visiting Lecturer
+        </h3>
+
+        <div class="org">
+          COMSATS University Islamabad, Lahore Campus
+        </div>
+
+        <div class="desc">
+          Teaching Computational Linguistics to BS and MS students.
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="tl-item">
+
+      <div class="tl-date">
+        Dec 2025
+      </div>
+
+      <div class="tl-body">
+
+        <h3>
+          Course Instructor
+        </h3>
+
+        <div class="org">
+          University of Education, Faisalabad Campus
+        </div>
+
+        <div class="desc">
+          Resource Person for a short course on Corpus Linguistics.
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="tl-item">
+
+      <div class="tl-date">
+        Jan 2025 to Apr 2025
+      </div>
+
+      <div class="tl-body">
+
+        <h3>
+          Corpus Linguistics Course Instructor
+        </h3>
+
+        <div class="org">
+          University of Agriculture, Faisalabad
+        </div>
+
+        <div class="desc">
+          Taught Corpus Linguistics to undergraduate and graduate students.
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="tl-item">
+
+      <div class="tl-date">
+        Oct 2024 to July 2025
+      </div>
+
+      <div class="tl-body">
+
+        <h3>
+          Visiting Lecturer
+        </h3>
+
+        <div class="org">
+          Government College University, Faisalabad
+        </div>
+
+        <div class="desc">
+          Courses taught: Corpus Linguistics, Computer Assisted
+          Language Learning, Morphology.
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="tl-item">
+
+      <div class="tl-date">
+        Sept 2024 to Feb 2025
+      </div>
+
+      <div class="tl-body">
+
+        <h3>
+          Visiting Lecturer
+        </h3>
+
+        <div class="org">
+          University of Education Lahore, Faisalabad Campus
+        </div>
+
+        <div class="desc">
+          Courses taught: Morphology, Syntax, Sociolinguistics.
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="tl-item">
+
+      <div class="tl-date">
+        Oct 2022 to Oct 2024
+      </div>
+
+      <div class="tl-body">
+
+        <h3>
+          Research Assistant
+        </h3>
+
+        <div class="org">
+          Government College University, Faisalabad
+        </div>
+
+        <div class="desc">
+          Worked under the HEC-NRPU Project, developing linguistic
+          tools for Shahmukhi Punjabi.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PUBLICATIONS
+======================================================== -->
+
+<section id="publications">
+
+  <h2>
+    Selected publications
+  </h2>
+
+  <ul class="pubs">
+
+    <li>
+      <span class="num">1.</span>
+      Morphological Description of Nouns in Shahmukhi Punjabi:
+      A Corpus Based Study (2023).
+      <span class="venue">
+        Journal of Positive School Psychology
+      </span>,
+      pp. 1259 to 1269.
+    </li>
+
+    <li>
+      <span class="num">2.</span>
+      Developing Digital Resources of Shahmukhi Punjabi (2024).
+      <span class="venue">
+        Russian Law Journal
+      </span>,
+      Vol. 11, pp. 998 to 1006.
+    </li>
+
+    <li>
+      <span class="num">3.</span>
+      Mapping of English and Punjabi Verb Classes:
+      A Corpus Based Study (2024).
+      <span class="venue">
+        Journal of Arts and Linguistics Studies
+      </span>,
+      Vol. 2, No. 2, pp. 727 to 751.
+    </li>
+
+  </ul>
+
+</section>
+
+
+
+<!-- =======================================================
+     PROJECTS
+======================================================== -->
+
+<section id="projects">
+
+  <h2>
+    Projects
+  </h2>
+
+  <div class="proj-grid">
+
+
+    <div class="proj-card">
+
+      <h3>
+        Punjabi POS Tagger
+      </h3>
+
+      <p>
+        Part-of-speech tagging tool for the Punjabi language.
+      </p>
+
+    </div>
+
+
+
+    <div class="proj-card">
+
+      <h3>
+        Punjabi WordNet
+      </h3>
+
+      <p>
+        Lexical database expanding Punjabi synsets from English WordNet.
+      </p>
+
+    </div>
+
+
+
+    <div class="proj-card">
+
+      <h3>
+        Morphological Analyzer for Punjabi
+      </h3>
+
+      <p>
+        Rule-based analysis of Punjabi word structure.
+      </p>
+
+    </div>
+
+
+
+    <div class="proj-card">
+
+      <h3>
+        Rule-Based Stemmer for Punjabi
+      </h3>
+
+      <p>
+        Stemming tool for Punjabi text processing.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     TALKS
+======================================================== -->
+
+<section id="talks">
+
+  <h2>
+    Talks, workshops and service
+  </h2>
+
+
+  <!-- INVITED TALKS -->
+
+  <details class="talks-group" open>
+
+    <summary>
+      Invited talks and workshops
+    </summary>
+
+    <ul class="talk-list">
+
+      <li>
+        <span class="t-date">Jul 2026</span>
+        Computational Methods for Analysis in Humanities and
+        Engineering, NUST (CEME), Rawalpindi.
+      </li>
+
+      <li>
+        <span class="t-date">Apr 2026</span>
+        Statistics in Corpus Linguistics: Theory, Methods and
+        Application, NED University, Karachi.
+      </li>
+
+      <li>
+        <span class="t-date">Mar 2026</span>
+        From Raw Indigenous Language Data to a Searchable Digital
+        Corpus, Government Sadiq College Women University, Bahawalpur.
+      </li>
+
+      <li>
+        <span class="t-date">Feb 2026</span>
+        Seminar on Python Applications in Computational Linguistics,
+        FAST-NUCES, Lahore.
+      </li>
+
+      <li>
+        <span class="t-date">Dec 2025</span>
+        Python, Semiotika International Scientific Virtual Talk #12,
+        Indonesia.
+      </li>
+
+      <li>
+        <span class="t-date">Oct 2025</span>
+        Opportunities and Trends in Computational Linguistics,
+        Capital University of Science and Technology, Islamabad.
+      </li>
+
+      <li>
+        <span class="t-date">Oct 2025</span>
+        Python for Computational Linguistics: Practical NLP for
+        Linguists, Linguistic Association of Pakistan.
+      </li>
+
+      <li>
+        <span class="t-date">Oct 2025</span>
+        Introduction to Corpus Analysis Using LancsBox,
+        Ghazi University, Dera Ghazi Khan.
+      </li>
+
+      <li>
+        <span class="t-date">May 2025</span>
+        Workshop on Computational Linguistics, NUML,
+        Faisalabad Campus.
+      </li>
+
+      <li>
+        <span class="t-date">May 2025</span>
+        Decoding Translation Using Corpora: Frameworks, Tools,
+        and Empirical Studies, UMT, Lahore.
+      </li>
+
+      <li>
+        <span class="t-date">Apr 2025</span>
+        Three-Day Training Workshop on Corpus Linguistics Tools,
+        University of Agriculture, Faisalabad.
+      </li>
+
+      <li>
+        <span class="t-date">Jan 2025</span>
+        Introduction to Python, Corpus and Computational Linguistics,
+        The University of Faisalabad.
+      </li>
+
+      <li>
+        <span class="t-date">Nov 2024</span>
+        Corpus Linguistics Essentials: From Theory to Practical
+        Applications, Pakistan Corpus Studio.
+      </li>
+
+      <li>
+        <span class="t-date">Nov 2024</span>
+        Computational Linguistics, The University of Faisalabad.
+      </li>
+
     </ul>
-  </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="proj-grid">
-      <div class="proj-card">
-        <h3>Punjabi POS Tagger</h3>
-        <p>Part-of-speech tagging tool for the Punjabi language.</p>
+  </details>
+
+
+
+  <!-- CONFERENCES -->
+
+  <details class="talks-group">
+
+    <summary>
+      Conferences and webinars
+    </summary>
+
+    <ul class="talk-list">
+
+      <li>
+        <span class="t-date">Apr 2026</span>
+        Teaching with AI: Practical Strategies to Integrate AI
+        in the Classroom, international webinar with IELTA and
+        STEP Azerbaijan.
+      </li>
+
+      <li>
+        <span class="t-date">Apr 2026</span>
+        5th Language, Media, and Intercultural Communication Forum,
+        Prince Sultan University (Virtual).
+      </li>
+
+      <li>
+        <span class="t-date">Dec 2025</span>
+        Webinar on Datasets for Pakistani Languages,
+        Mohammad Ali Jinnah University, Karachi.
+      </li>
+
+      <li>
+        <span class="t-date">May 2025</span>
+        Weaving Unity in Diversity: Many Threads, One Tapestry,
+        Air University, Islamabad.
+      </li>
+
+      <li>
+        <span class="t-date">Oct 2024</span>
+        10th International Conference of the Linguistic Association
+        of Pakistan, University of Balochistan, Quetta.
+      </li>
+
+      <li>
+        <span class="t-date">Aug 2024</span>
+        Using Corpus to Find Useful Phrases for Novice Writers in
+        Health Sciences, Bahria University, Islamabad.
+      </li>
+
+      <li>
+        <span class="t-date">Dec 2023</span>
+        9th International Conference of the Linguistic Association
+        of Pakistan, GCU Faisalabad.
+      </li>
+
+      <li>
+        <span class="t-date">Dec 2023</span>
+        Developing and Teaching Academic Writing Courses (MOOC),
+        U.S. Department of State (OPEN MOOCs).
+      </li>
+
+    </ul>
+
+  </details>
+
+
+
+  <!-- SERVICE -->
+
+  <details class="talks-group">
+
+    <summary>
+      Academic and professional service
+    </summary>
+
+    <ul class="talk-list">
+
+      <li>
+        <span class="t-date">2026 to Present</span>
+        Head of Information Technology Department,
+        Pakistan Association of Phonetics and Phonology Scholars.
+      </li>
+
+      <li>
+        <span class="t-date">2026 to Present</span>
+        Executive Committee Member,
+        Computational Linguistics Society of Pakistan.
+      </li>
+
+      <li>
+        <span class="t-date">2024 to Present</span>
+        Assistant Manager (Human Resources),
+        Linguistic Association of Pakistan.
+      </li>
+
+      <li>
+        <span class="t-date">2024 to 2025</span>
+        National Resource Person, Pakistan Corpus Studio.
+      </li>
+
+    </ul>
+
+  </details>
+
+
+
+  <!-- SKILLS -->
+
+  <details class="talks-group">
+
+    <summary>
+      Skills, languages and memberships
+    </summary>
+
+    <div class="split">
+
+
+      <div>
+
+        <h3>
+          Skills and languages
+        </h3>
+
+        <ul>
+
+          <li>
+            Python, R / RStudio
+          </li>
+
+          <li>
+            Web scraping and automation
+          </li>
+
+          <li>
+            Research design and statistical analysis
+          </li>
+
+          <li>
+            Google Apps Script
+          </li>
+
+          <li>
+            Urdu, Punjabi, English, Chinese (beginner)
+          </li>
+
+        </ul>
+
       </div>
-      <div class="proj-card">
-        <h3>Punjabi WordNet</h3>
-        <p>Lexical database expanding Punjabi synsets from English WordNet.</p>
+
+
+
+      <div>
+
+        <h3>
+          Memberships
+        </h3>
+
+        <ul>
+
+          <li>
+            Linguistic Association of Pakistan (LAP),
+            Dec 2023 to Present
+          </li>
+
+          <li>
+            Linguistic Society of America (LSA),
+            Dec 2024 to Present
+          </li>
+
+        </ul>
+
       </div>
-      <div class="proj-card">
-        <h3>Morphological Analyzer for Punjabi</h3>
-        <p>Rule-based analysis of Punjabi word structure.</p>
-      </div>
-      <div class="proj-card">
-        <h3>Rule-Based Stemmer for Punjabi</h3>
-        <p>Stemming tool for Punjabi text processing.</p>
-      </div>
+
+
     </div>
-  </section>
 
-  <section id="talks">
-    <h2>Talks, workshops and service</h2>
+  </details>
 
-    <details class="talks-group" open>
-      <summary>Invited talks and workshops</summary>
-      <ul class="talk-list">
-        <li><span class="t-date">Jul 2026</span>Computational Methods for Analysis in Humanities and Engineering, NUST (CEME), Rawalpindi.</li>
-        <li><span class="t-date">Apr 2026</span>Statistics in Corpus Linguistics: Theory, Methods and Application, NED University, Karachi.</li>
-        <li><span class="t-date">Mar 2026</span>From Raw Indigenous Language Data to a Searchable Digital Corpus, Government Sadiq College Women University, Bahawalpur.</li>
-        <li><span class="t-date">Feb 2026</span>Seminar on Python Applications in Computational Linguistics, FAST-NUCES, Lahore.</li>
-        <li><span class="t-date">Dec 2025</span>Python, Semiotika International Scientific Virtual Talk #12, Indonesia.</li>
-        <li><span class="t-date">Oct 2025</span>Opportunities and Trends in Computational Linguistics, Capital University of Science and Technology, Islamabad.</li>
-        <li><span class="t-date">Oct 2025</span>Python for Computational Linguistics: Practical NLP for Linguists, Linguistic Association of Pakistan.</li>
-        <li><span class="t-date">Oct 2025</span>Introduction to Corpus Analysis Using LancsBox, Ghazi University, Dera Ghazi Khan.</li>
-        <li><span class="t-date">May 2025</span>Workshop on Computational Linguistics, NUML, Faisalabad Campus.</li>
-        <li><span class="t-date">May 2025</span>Decoding Translation Using Corpora: Frameworks, Tools, and Empirical Studies, UMT, Lahore.</li>
-        <li><span class="t-date">Apr 2025</span>Three-Day Training Workshop on Corpus Linguistics Tools, University of Agriculture, Faisalabad.</li>
-        <li><span class="t-date">Jan 2025</span>Introduction to Python, Corpus and Computational Linguistics, The University of Faisalabad.</li>
-        <li><span class="t-date">Nov 2024</span>Corpus Linguistics Essentials: From Theory to Practical Applications, Pakistan Corpus Studio.</li>
-        <li><span class="t-date">Nov 2024</span>Computational Linguistics, The University of Faisalabad.</li>
-      </ul>
-    </details>
+</section>
 
-    <details class="talks-group">
-      <summary>Conferences and webinars</summary>
-      <ul class="talk-list">
-        <li><span class="t-date">Apr 2026</span>Teaching with AI: Practical Strategies to Integrate AI in the Classroom, international webinar with IELTA and STEP Azerbaijan.</li>
-        <li><span class="t-date">Apr 2026</span>5th Language, Media, and Intercultural Communication Forum, Prince Sultan University (Virtual).</li>
-        <li><span class="t-date">Dec 2025</span>Webinar on Datasets for Pakistani Languages, Mohammad Ali Jinnah University, Karachi.</li>
-        <li><span class="t-date">May 2025</span>Weaving Unity in Diversity: Many Threads, One Tapestry, Air University, Islamabad.</li>
-        <li><span class="t-date">Oct 2024</span>10th International Conference of the Linguistic Association of Pakistan, University of Balochistan, Quetta.</li>
-        <li><span class="t-date">Aug 2024</span>Using Corpus to Find Useful Phrases for Novice Writers in Health Sciences, Bahria University, Islamabad.</li>
-        <li><span class="t-date">Dec 2023</span>9th International Conference of the Linguistic Association of Pakistan, GCU Faisalabad.</li>
-        <li><span class="t-date">Dec 2023</span>Developing and Teaching Academic Writing Courses (MOOC), U.S. Department of State (OPEN MOOCs).</li>
-      </ul>
-    </details>
 
-    <details class="talks-group">
-      <summary>Academic and professional service</summary>
-      <ul class="talk-list">
-        <li><span class="t-date">2026 to Present</span>Head of Information Technology Department, Pakistan Association of Phonetics and Phonology Scholars.</li>
-        <li><span class="t-date">2026 to Present</span>Executive Committee Member, Computational Linguistics Society of Pakistan.</li>
-        <li><span class="t-date">2024 to Present</span>Assistant Manager (Human Resources), Linguistic Association of Pakistan.</li>
-        <li><span class="t-date">2024 to 2025</span>National Resource Person, Pakistan Corpus Studio.</li>
-      </ul>
-    </details>
 
-    <details class="talks-group">
-      <summary>Skills, languages and memberships</summary>
-      <div class="split">
-        <div>
-          <h3>Skills and languages</h3>
-          <ul>
-            <li>Python, R / RStudio</li>
-            <li>Web scraping and automation</li>
-            <li>Research design and statistical analysis</li>
-            <li>Google Apps Script</li>
-            <li>Urdu, Punjabi, English, Chinese (beginner)</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Memberships</h3>
-          <ul>
-            <li>Linguistic Association of Pakistan (LAP), Dec 2023 to Present</li>
-            <li>Linguistic Society of America (LSA), Dec 2024 to Present</li>
-          </ul>
-        </div>
-      </div>
-    </details>
-  </section>
+<!-- =======================================================
+     CONTACT
+======================================================== -->
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-box">
-      <div class="email">
-        <a href="mailto:shoaibtahir410@gmail.com">shoaibtahir410@gmail.com</a>
-      </div>
-      <div class="socials-row">
-        <a href="https://www.linkedin.com/in/muhammad-shoaib-tahir-3a9103179/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/MuhammadshoaibTahir" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://scholar.google.com/citations?hl=en&user=YNAz_0kAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://orcid.org/0000-0001-5355-2376" target="_blank" rel="noopener">ORCID</a>
-        <a href="https://www.facebook.com/muhammad.shoaib.tahir.166555" target="_blank" rel="noopener">Facebook</a>
-      </div>
+<section id="contact">
+
+  <h2>
+    Contact
+  </h2>
+
+  <div class="contact-box">
+
+    <div class="email">
+
+      <a href="mailto:shoaibtahir410@gmail.com">
+        shoaibtahir410@gmail.com
+      </a>
+
     </div>
-  </section>
 
-  <footer class="site-footer">Muhammad Shoaib Tahir, Faisalabad, Pakistan</footer>
+
+    <div class="socials-row">
+
+      <a
+        href="https://www.linkedin.com/in/muhammad-shoaib-tahir-3a910317/"
+        target="_blank"
+        rel="noopener">
+        LinkedIn
+      </a>
+
+      <a
+        href="https://github.com/MuhammadshoaibTahir"
+        target="_blank"
+        rel="noopener">
+        GitHub
+      </a>
+
+      <a
+        href="https://scholar.google.com/citations?hl=en&user=YNAz_0kAAAAJ"
+        target="_blank"
+        rel="noopener">
+        Google Scholar
+      </a>
+
+      <a
+        href="https://orcid.org/0000-0001-5355-2376"
+        target="_blank"
+        rel="noopener">
+        ORCID
+      </a>
+
+      <a
+        href="https://www.facebook.com/muhammad.shoaib.tahir.166555"
+        target="_blank"
+        rel="noopener">
+        Facebook
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+
+<footer class="site-footer">
+
+  Muhammad Shoaib Tahir, Faisalabad, Pakistan
+
+</footer>
+
 
 </div>
 
+
 </body>
+
 </html>

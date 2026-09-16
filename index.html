@@ -146,38 +146,67 @@ nav.top-nav a:hover{
   padding:56px 0 40px;
 }
 
-/* Main hero layout */
 .hero-content{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:60px;
+  gap:70px;
 }
 
-/* Left side of hero */
+
+/* LEFT SIDE */
+
 .hero-text{
   flex:1;
   min-width:0;
 }
 
-/* Profile picture */
+
+/* RIGHT SIDE PHOTO */
+
+.profile-photo-wrapper{
+  width:210px;
+  height:210px;
+  flex-shrink:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+/*
+   IMPORTANT:
+   contain = entire image remains visible
+   No cropping from top, bottom, left or right.
+*/
+
 .profile-photo{
   width:190px;
   height:190px;
-  object-fit:cover;
-  border-radius:50%;
-  border:1px solid var(--line);
-  flex-shrink:0;
+
+  object-fit:contain;
+
   display:block;
+
+  border-radius:50%;
+
+  border:1px solid var(--line);
+
+  background:white;
 }
 
-/* Name */
+
+/* NAME */
+
 .hero h1{
   font-size:2.1rem;
   line-height:1.2;
 }
 
-/* Position */
+
+/* ROLE */
+
 .hero .role{
   margin-top:10px;
   font-size:1.02rem;
@@ -185,14 +214,18 @@ nav.top-nav a:hover{
   font-weight:500;
 }
 
-/* Location */
+
+/* LOCATION */
+
 .hero .loc{
   margin-top:8px;
   font-size:0.88rem;
   color:var(--muted);
 }
 
-/* Introduction */
+
+/* INTRO */
+
 .hero .intro{
   margin-top:24px;
   font-size:1.05rem;
@@ -520,7 +553,7 @@ footer.site-footer{
 
 
 /* =========================================================
-   RESPONSIVE / MOBILE
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width:640px){
@@ -539,19 +572,33 @@ footer.site-footer{
     width:100%;
   }
 
-  /* Hero becomes vertical on mobile */
+
+  /* Hero becomes vertical */
+
   .hero-content{
     flex-direction:column-reverse;
-    align-items:flex-start;
+    align-items:center;
     gap:30px;
   }
 
-  /* Smaller image on mobile */
-  .profile-photo{
-    width:145px;
-    height:145px;
-    align-self:center;
+
+  .hero-text{
+    width:100%;
   }
+
+
+  /* Mobile photo */
+
+  .profile-photo-wrapper{
+    width:170px;
+    height:170px;
+  }
+
+  .profile-photo{
+    width:150px;
+    height:150px;
+  }
+
 
   .tl-item{
     grid-template-columns:1fr;
@@ -645,7 +692,7 @@ footer.site-footer{
   <div class="hero-content">
 
 
-    <!-- LEFT SIDE -->
+    <!-- LEFT -->
 
     <div class="hero-text">
 
@@ -676,13 +723,17 @@ footer.site-footer{
     </div>
 
 
-    <!-- RIGHT SIDE PROFILE PHOTO -->
+    <!-- RIGHT PHOTO -->
 
-    <img
-      src="profile.png"
-      alt="Muhammad Shoaib Tahir"
-      class="profile-photo"
-    >
+    <div class="profile-photo-wrapper">
+
+      <img
+        src="profile.png"
+        alt="Muhammad Shoaib Tahir"
+        class="profile-photo"
+      >
+
+    </div>
 
   </div>
 
@@ -703,15 +754,11 @@ footer.site-footer{
   <div class="about">
 
     <p>
-      I am based in Faisalabad, Pakistan, and have been teaching
-      and researching across Corpus Linguistics, Computational
+      I am based in Faisalabad, Pakistan, and have been teaching and researching across Corpus Linguistics, Computational
       Linguistics, and Morphology at several Pakistani universities.
-      My M.Phil. thesis at Government College University, Faisalabad
-      worked on developing a Punjabi synset through an expansion
-      approach from the English WordNet, and my time as a Research
-      Assistant under the HEC-NRPU project involved helping build
-      linguistic tools, including taggers, analyzers, and stemmers,
-      for Shahmukhi Punjabi.
+      My M.Phil. thesis at Government College University, Faisalabad worked on developing a Punjabi synset through an expansion
+      approach from the English WordNet, and my time as a Research Assistant under the HEC-NRPU project involved helping build
+      linguistic tools, including taggers, analyzers, and stemmers, for Shahmukhi Punjabi.
     </p>
 
     <p>
@@ -739,33 +786,19 @@ footer.site-footer{
 
   <div class="tags">
 
-    <span>
-      Computational Linguistics
-    </span>
+    <span>Computational Linguistics</span>
 
-    <span>
-      Corpus Linguistics
-    </span>
+    <span>Corpus Linguistics</span>
 
-    <span>
-      Computational Morphology
-    </span>
+    <span>Computational Morphology</span>
 
-    <span>
-      WordNet and Lexical Resource Development
-    </span>
+    <span>WordNet and Lexical Resource Development</span>
 
-    <span>
-      Low-Resource and South Asian Languages
-    </span>
+    <span>Low-Resource and South Asian Languages</span>
 
-    <span>
-      Punjabi NLP (POS Tagging, Stemming)
-    </span>
+    <span>Punjabi NLP (POS Tagging, Stemming)</span>
 
-    <span>
-      Computer-Assisted Language Learning
-    </span>
+    <span>Computer-Assisted Language Learning</span>
 
   </div>
 
@@ -784,7 +817,6 @@ footer.site-footer{
   </h2>
 
   <div class="tl">
-
 
     <div class="tl-item">
 
@@ -810,7 +842,6 @@ footer.site-footer{
       </div>
 
     </div>
-
 
 
     <div class="tl-item">
@@ -879,7 +910,6 @@ footer.site-footer{
     </div>
 
 
-
     <div class="tl-item">
 
       <div class="tl-date">
@@ -903,7 +933,6 @@ footer.site-footer{
       </div>
 
     </div>
-
 
 
     <div class="tl-item">
@@ -931,7 +960,6 @@ footer.site-footer{
     </div>
 
 
-
     <div class="tl-item">
 
       <div class="tl-date">
@@ -955,7 +983,6 @@ footer.site-footer{
       </div>
 
     </div>
-
 
 
     <div class="tl-item">
@@ -984,7 +1011,6 @@ footer.site-footer{
     </div>
 
 
-
     <div class="tl-item">
 
       <div class="tl-date">
@@ -1008,7 +1034,6 @@ footer.site-footer{
       </div>
 
     </div>
-
 
 
     <div class="tl-item">
@@ -1101,7 +1126,6 @@ footer.site-footer{
 
   <div class="proj-grid">
 
-
     <div class="proj-card">
 
       <h3>
@@ -1113,7 +1137,6 @@ footer.site-footer{
       </p>
 
     </div>
-
 
 
     <div class="proj-card">
@@ -1129,7 +1152,6 @@ footer.site-footer{
     </div>
 
 
-
     <div class="proj-card">
 
       <h3>
@@ -1141,7 +1163,6 @@ footer.site-footer{
       </p>
 
     </div>
-
 
 
     <div class="proj-card">
@@ -1172,8 +1193,6 @@ footer.site-footer{
     Talks, workshops and service
   </h2>
 
-
-  <!-- INVITED TALKS -->
 
   <details class="talks-group" open>
 
@@ -1272,8 +1291,6 @@ footer.site-footer{
 
 
 
-  <!-- CONFERENCES -->
-
   <details class="talks-group">
 
     <summary>
@@ -1337,8 +1354,6 @@ footer.site-footer{
 
 
 
-  <!-- SERVICE -->
-
   <details class="talks-group">
 
     <summary>
@@ -1376,8 +1391,6 @@ footer.site-footer{
 
 
 
-  <!-- SKILLS -->
-
   <details class="talks-group">
 
     <summary>
@@ -1385,7 +1398,6 @@ footer.site-footer{
     </summary>
 
     <div class="split">
-
 
       <div>
 
@@ -1395,30 +1407,19 @@ footer.site-footer{
 
         <ul>
 
-          <li>
-            Python, R / RStudio
-          </li>
+          <li>Python, R / RStudio</li>
 
-          <li>
-            Web scraping and automation
-          </li>
+          <li>Web scraping and automation</li>
 
-          <li>
-            Research design and statistical analysis
-          </li>
+          <li>Research design and statistical analysis</li>
 
-          <li>
-            Google Apps Script
-          </li>
+          <li>Google Apps Script</li>
 
-          <li>
-            Urdu, Punjabi, English, Chinese (beginner)
-          </li>
+          <li>Urdu, Punjabi, English, Chinese (beginner)</li>
 
         </ul>
 
       </div>
-
 
 
       <div>
@@ -1442,7 +1443,6 @@ footer.site-footer{
         </ul>
 
       </div>
-
 
     </div>
 
@@ -1530,7 +1530,6 @@ footer.site-footer{
 
 
 </div>
-
 
 </body>
 
